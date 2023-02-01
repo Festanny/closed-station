@@ -1,0 +1,899 @@
+@media screen and (min-width: 1921px) {
+    :root {
+        --fz74: 3.85vw;
+        --fz48: 2.50vw;
+        --fz36: 1.87vw;
+        --fz32: 1.67vw;
+        --fz20: 1.04vw;
+        --fz18: 0.94vw;
+        --fz16: 0.83vw;
+        --fz14: 0.73vw;
+    }
+    body {
+        font-size: 0.83vw;
+    }
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 74.96vw;
+      }
+      .containerBig {
+        max-width: calc(74.96vw + 6.25vw);
+      }
+    header .header {
+        column-gap: 4.16vw;
+        row-gap: 1.04vw;
+        padding: 1.56vw 0;
+    }
+    header .header .logo-menu {
+        gap: 4.16vw;
+    }
+    header .header .logo-menu .logo,
+    footer .footer .logo {
+        width: 8.75vw;
+    }
+    header .header .logo-menu nav ul {
+        gap: 1.56vw;
+    }
+    header .header .social,
+    footer .footer .social {
+        gap: 0.52vw;
+    }
+    header .header .social a,
+    footer .footer .social a {
+        width: 1.87vw;
+        height: 1.87vw;
+        padding: 0.42vw;
+    }
+    main {
+        margin-top: 5.31vw;
+    }
+    .bannSection .bannBlock .info-block {
+        grid-template-columns: repeat(auto-fit, minmax(15.62vw, auto));
+        gap: 5.73vw;
+    }
+    .bannSection .bannBlock .info-block .item .text {
+        margin-bottom: 1.30vw;
+    }
+    .bannSection .bannBlock .info-block .item form {
+        gap: 1.04vw;
+    }
+    form input,
+    form select {
+        padding: 1.09vw 1.04vw;
+        border-radius: 0.21vw;
+    }
+    form select::before,
+    form .select::before {
+        font-size: 0.62vw;
+        right: 1.35vw;
+    }
+    .btn {
+        border-radius: 0.21vw;
+    }
+    .btn-blue {
+        padding: 0.94vw;
+    }
+    .blockTitle {
+        margin-bottom: 2.08vw;
+    }
+    .blockTitle .desc {
+        margin-top: 1.04vw;
+    }
+    .tasksSection {
+        padding-top: 8.33vw;
+    }
+    .tasksSection .tasksBlock {
+        padding: 3.12vw;
+        border-radius: 0.42vw;
+    }
+    .tasksSection .tasksBlock .block .info-block {
+        gap: 1.04vw;
+    }
+    .tasksSection .tasksBlock .block .info-block .item {
+        gap: 1.04vw;
+        padding: 1.56vw;
+        border-radius: 0.21vw;
+    }
+    .tasksSection .tasksBlock .block .info-block .item .icon-nameBlock {
+        gap: 1.04vw;
+    }
+    .tasksSection .tasksBlock .block .info-block .item .icon-nameBlock .icon {
+        width: 3.33vw;
+        height: 3.33vw;
+        border-radius: 0.16vw;
+    }
+    .tasksSection .tasksBlock .block .info-block .item .icon-nameBlock .icon img {
+        width: 1.67vw;
+        height: 1.67vw;
+    }
+    .functionalSection {
+        padding-top: 5.21vw;
+    }
+    .functionalSection .advantagesSystem {
+        margin-bottom: 5.21vw;
+    }
+    .functionalSection .advantagesSystem .info-block {
+        grid-template-columns: repeat(auto-fit, minmax(15.62vw, auto));
+        gap: 3.12vw;
+    }
+    .functionalSection .advantagesSystem .info-block .list {
+        row-gap: 2.86vw;
+    }
+    .functionalSection .advantagesSystem .info-block .list .item {
+        width: calc(50% - 1.56vw);
+        gap: 1.04vw;
+    }
+    .functionalSection .advantagesSystem .info-block .list .item .num .number {
+        width: 3.33vw;
+        height: 3.33vw;
+        border: 0.10vw dashed rgba(0, 0, 0, 0.1);
+    }
+    .functionalSection .problemSolving .info-block {
+        gap: 3.12vw;
+    }
+    .functionalSection .problemSolving .info-block .item {
+        width: calc(50% - 1.56vw);
+    }
+    .functionalSection .problemSolving .item.detailed .info {
+        margin-bottom: 2.08vw;
+    }
+    .functionalSection .problemSolving .item.detailed .list {
+        gap: 0.52vw;
+    }
+    .functionalSection .problemSolving .item.detailed .list .block {
+        gap: 0.52vw;
+    }
+    .functionalSection .problemSolving .item.detailed .list .block .img {
+        width: 4.69vw;
+        height: 4.69vw;
+        border-radius: 0.16vw;
+    }
+    .functionalSection .problemSolving .item.detailed .list .block .img img {
+        width: 2.39vw;
+        height: 2.39vw;
+    }
+    .demoVideoSection {
+        padding-top: 5.21vw;
+    }
+    .demoVideoSection .demoVideoBlock {
+        padding: 3.12vw;
+        border-radius: 0.42vw;
+    }
+    .demoVideoSection .play {
+        width: 4.69vw;
+        height: 4.69vw;
+    }
+    .manualSection {
+        margin-top: 2.08vw;
+    }
+    .manualSection .manualBlock {
+        padding: 3.12vw;
+        border-radius: 0.42vw;
+    }
+    .manualSection .info-block {
+        grid-template-columns: calc(24% - 0.52vw) calc(18% - 0.52vw) calc(27% - 0.52vw) calc(29% - 0.52vw);
+        gap: 0.52vw;
+    }
+    .manualSection .info-block::before {
+        height: 1.56vw;
+    }
+    .manualSection .info-block .item {
+        padding-top: 5.73vw;
+    }
+    .manualSection .info-block .item::before {
+        top: 1.56vw;
+        left: 1.04vw;
+        width: 0.26vw;
+        height: 3.75vw;
+    }
+    .manualSection .info-block .item .num {
+        margin-bottom: 1.04vw;
+    }
+    .manualSection .info-block .item .num .number {
+        width: 2.50vw;
+        height: 2.50vw;
+        border: 0.10vw dashed var(--blue);
+    }
+    .faqSection {
+        padding-top: 5.21vw;
+    }
+    .faqSection .accordion-button {
+        padding: 1.56vw 0;
+    }
+    .faqSection .accordion-body {
+        padding: 0 1.04vw 1.56vw 0;
+    }
+    .faqSection .accordion-item {
+        border-top: 0.05vw solid rgba(19, 19, 19, 0.1)!important;
+        border-bottom: 0.05vw solid rgba(19, 19, 19, 0.1)!important;
+    }
+    .faqSection .accordion {
+        column-gap: 3.12vw;
+        row-gap: 2.08vw;
+    }
+    .faqSection .accordion-button::after {
+        width: 0.73vw;
+        height: 0.10vw;
+    }
+    .faqSection .accordion-button::before {
+        right: 0.31vw;
+        width: 0.10vw;
+        height: 0.73vw;
+    }
+    .ratesSection {
+        padding-top: 5.21vw;
+    }
+    .ratesSection .ratesBlock {
+        padding: 3.12vw;
+        border-radius: 0.42vw;
+    }
+    .ratesSection .info-block {
+        grid-template-columns: 16.14vw 1fr;
+        gap: 2.60vw;
+    }
+    .ratesSection .info-block ul {
+        gap: 1.56vw;
+    }
+    .ratesSection .info-block .desc {
+        margin-top: 6.25vw;
+    }
+    .ratesSection .info-block .item .ratesSlider .swiper-slide {
+        padding: 1.56vw;
+        border-radius: 0.21vw;
+    }
+    .ratesSection .info-block .item .ratesSlider .swiper-slide .btn {
+        margin-top: 1.56vw;
+    }
+    .ratesSection .info-block .item .ratesSlider .swiper-slide .name-count {
+        gap: 10px;
+        padding-bottom: 1.56vw;
+        margin-bottom: 2.08vw;
+        border-bottom: 0.05vw solid rgba(0, 0, 0, 0.1);
+    }
+    .ratesSection .info-block .item .ratesSlider .swiper-wrapper {
+        width: 15.62vw;
+    }
+    footer {
+        padding: 4.42vw 0;
+    }
+    footer .info-block {
+        gap: 1.04vw;
+    }
+    footer .info-block nav {
+        gap: 4.16vw;
+    }
+    footer .info-block nav ul {
+        gap: 0.52vw;
+    }
+    footer .info-block .item {
+        gap: 0.52vw;
+    }
+    footer .info-block nav .list .name {
+        margin-bottom: 0.83vw;
+    }
+    .ratesSection .info-block ul li img {
+        width: 1.25vw;
+        height: 1.25vw;
+    }
+    .functionalSection .advantagesSystem .info-block .img,
+    .functionalSection .advantagesSystem .info-block .list,
+    .bannSection .bannBlock .info-block .item {
+        width: calc(50% - 1.56vw);
+    }
+    .bannSection .bannBlock .info-block .item {
+        width: calc(50% - 2.96vw);
+    }
+    .functionalSection .advantagesSystem .info-block .img::before,
+    .bannSection .bannBlock .info-block .item .text::before {
+        width: 15.62vw;
+        height: 7.81vw;
+    }
+    .bannSection .bannBlock .info-block .item .text::before {
+        left: -1.82vw;
+    }
+    .functionalSection .advantagesSystem .info-block .img::before {
+        top: -1.04vw;
+        left: -1.82vw;
+    }
+    .bannSection .bannBlock .info-block .item .img {
+        transform: translate(5.21vw, 5.21vw) scale(1.3);
+    }
+    .modal-xl {
+        --bs-modal-width: 59.34vw;
+    }
+    .modal-title {
+        font-size: 1.04vw;
+    }
+    .modal {
+        --bs-modal-header-padding: 0.83vw 0.83vw;
+        --bs-modal-padding: 0.83vw;
+    }
+    #upbutton {
+        width: 4.06vw;
+        height: 4.06vw;
+        right: 3.90vw;
+        bottom: 1.04vw;
+    }
+}
+@media screen and (max-width: 1579px) {
+    :root {
+        --fz74: 60px;
+        --fz48: 44px;
+        --fz36: 34px;
+        --fz32: 29px;
+        --fz20: 19px;
+        --fz18: 18px;
+        --fz16: 16px;
+        --fz14: 14px;
+    }
+    .bannSection .bannBlock .info-block {
+        gap: 80px;
+    }
+    .bannSection .bannBlock .info-block .item {
+        width: calc(50% - 40px);
+    }
+    .bannSection .bannBlock .info-block .item .img {
+        transform: translate(80px, 100px) scale(1.3);
+    }
+    .btn-blue {
+        font-size: 19px;
+    }
+    .tasksSection .tasksBlock .blockTitle {
+        width: 63%;
+    }
+    .functionalSection .advantagesSystem .info-block .list {
+        row-gap: 40px;
+    }
+    .manualSection .info-block .item .text {
+        font-size: 26px;
+    }
+    .ratesSection .info-block .item .ratesSlider .swiper-slide .name-count .name {
+        font-size: 25px;
+    }
+    .ratesSection .info-block .item .ratesSlider .swiper-slide .name-count .count {
+        font-size: 18px;
+    }
+    .ratesSection .info-block {
+        gap: 30px;
+    }
+    .ratesSection .info-block .desc {
+        margin-top: 115px;
+    }
+}
+@media screen and (max-width: 1279px) {
+    :root {
+        --fz74: 50px;
+        --fz48: 38px;
+    }
+    .bannSection .bannBlock .info-block {
+        gap: 50px;
+    }
+    .bannSection .bannBlock .info-block .item {
+        width: calc(50% - 25px);
+    }
+    .bannSection .bannBlock .info-block .item form {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .bannSection .bannBlock .info-block {
+        justify-content: flex-start;
+    }
+    .bannSection .bannBlock .info-block .item .img {
+        transform: translate(80px, 0px) scale(1.3);
+    }
+    #upbutton {
+        width: 64px;
+        height: 64px;
+        padding: 15px;
+    }
+    .ratesSection .info-block .item .ratesSlider .swiper-slide .name-count .name {
+        font-size: 20px;
+    }
+    .ratesSection .info-block .item .ratesSlider .swiper-slide .name-count .count {
+        font-size: 16px;
+    }
+    .ratesSection .info-block .item .ratesSlider .swiper-slide {
+        padding: 20px;
+    }
+    .ratesSection .info-block .item .ratesSlider .swiper-slide .detailed,
+    .ratesSection .info-block .desc {
+        font-size: 16px;
+    }
+    .ratesSection .info-block .item .ratesSlider .swiper-slide .detailed ul li:last-of-type span {
+        font-size: 17px;
+    }
+    .ratesSection .info-block .desc {
+        margin-top: 110px;
+    }
+    .ratesSection .info-block {
+        grid-template-columns: 270px 1fr;
+    }
+    footer .info-block nav {
+        gap: 40px;
+    }
+}
+@media screen and (max-width: 1099px) {
+    :root {
+        --fz74: 40px;
+        --fz48: 32px;
+        --fz32: 21px;
+        --fz20: 18px;
+        --fz18: 17px;
+        --fz16: 15px;
+        --fz14: 13px;
+    }
+    body {
+        font-size: 15px;
+    }
+    header .header {
+        row-gap: 5px;
+    }
+    header .header .logo-menu nav ul {
+        font-size: 15px;
+    }
+    header .header .logo-menu .logo, footer .footer .logo {
+        width: 150px;
+    }
+    header .header .social a, footer .footer .social a {
+        width: 33px;
+        height: 33px;
+    }
+    header .header .logo-menu {
+        gap: 40px;
+    }
+    main {
+        margin-top: 136px;
+    }
+    header .header .logo-menu nav ul {
+        column-gap: 15px;
+        row-gap: 5px;
+    }
+    header .header {
+        column-gap: 40px;
+    }
+    .functionalSection .advantagesSystem .info-block .img::before, .bannSection .bannBlock .info-block .item .text::before {
+        width: 230px;
+        height: 110px;
+    }
+    form input, form select,
+    .btn-blue {
+        padding: 15px;
+        font-size: 16px;
+    }
+    .bannSection .bannBlock .info-block {
+        gap: 40px;
+    }
+    .bannSection .bannBlock .info-block .item {
+        width: calc(50% - 20px);
+    }
+    .bannSection .bannBlock .info-block .item .img {
+        transform: translate(50px, -60px) scale(1.3);
+    }
+    .tasksSection {
+        padding-top: 100px;
+    }
+    .tasksSection .tasksBlock .blockTitle {
+        width: 100%;
+    }
+    .functionalSection .problemSolving .item.detailed .list .block .img {
+        width: 70px;
+        height: 70px;
+    }
+    .functionalSection .problemSolving .item.detailed .list .block .img img {
+        width: 37px;
+        height: 37px;
+    }
+    .functionalSection .problemSolving .item.detailed .list {
+        grid-template-columns: repeat(auto-fit, minmax(70px, auto));
+    }
+    .functionalSection .problemSolving .item.detailed .list .block .blockInside {
+        font-size: 14px;
+    }
+    .functionalSection .advantagesSystem .info-block {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .functionalSection .advantagesSystem .info-block .img {
+        order: 2;
+    }
+    .functionalSection .advantagesSystem .info-block .list-group-item {
+        order: 1;
+    }
+    .functionalSection .advantagesSystem .info-block .img, .functionalSection .advantagesSystem .info-block .list {
+        width: 100%
+    }
+    .functionalSection .problemSolving .info-block {
+        gap: 40px;
+    }
+    .functionalSection .problemSolving .info-block .item {
+        width: calc(50% - 20px);
+    }
+    .functionalSection .advantagesSystem {
+        margin-bottom: 50px;
+    }
+    .manualSection .manualBlock .blockTitle {
+        width: 100%;
+    }
+    .manualSection .info-block .item .text {
+        font-size: 16px;
+    }
+    .faqSection .accordion {
+        grid-template-columns: 1fr;
+        row-gap: 0px;
+    }
+    .faqSection .accordion-item:not(:last-of-type) {
+        border-bottom: 0!important;
+    }
+    .ratesSection .info-block ul {
+        gap: 20px;
+    }
+    .ratesSection .info-block .desc {
+        margin-top: 115px;
+    }
+    .ratesSection .info-block {
+        grid-template-columns: 250px 1fr;
+    }
+    .ratesSection .info-block .item .ratesSlider .swiper-slide .name-count .name {
+        font-size: 19px;
+    }
+    .ratesSection .info-block .item .ratesSlider .swiper-slide .name-count {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    .ratesSection .info-block .desc {
+        margin-top: 85px;
+    }
+    footer .info-block nav {
+        column-gap: 25px;
+        row-gap: 35px;
+    }
+    footer .info-block {
+        flex-wrap: wrap;
+    }
+    footer .footer .social {
+        width: 100%;
+    }
+    #upbutton {
+        width: 55px;
+        height: 55px;
+    }
+    #upbutton {
+        right: 35px;
+    }
+    .tasksSection .tasksBlock .block .info-block .item {
+        padding: 20px;
+    }
+    .functionalSection .advantagesSystem .info-block .list {
+        row-gap: 30px;
+    }
+    .functionalSection .advantagesSystem .info-block .list .item {
+        text-align: center;
+    }
+    .functionalSection .advantagesSystem .info-block .list .item .num {
+        display: flex;
+        justify-content: center;
+    }
+    .functionalSection .advantagesSystem .info-block .list .item:nth-of-type(1) {
+        order: 1;
+    }
+    .functionalSection .advantagesSystem .info-block .list .item:nth-of-type(2) {
+        order: 2;
+    }
+    .functionalSection .advantagesSystem .info-block .list .item:nth-of-type(3) {
+        order: 3;
+    }
+    .functionalSection .advantagesSystem .info-block .list .item:nth-of-type(4) {
+        order: 4;
+    }
+    .functionalSection .advantagesSystem .info-block .list .item:nth-of-type(5) {
+        order: 5;
+    }
+    .functionalSection .advantagesSystem .info-block .list .item:nth-of-type(6) {
+        order: 6;
+    }
+}
+@media screen and (max-width: 739px) {
+    .container,
+    .container-fluid,
+    .container-xxl,
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    header .header {
+        padding: 15px 25px;
+    }
+    .tasksSection .tasksBlock,
+    .demoVideoSection .demoVideoBlock,
+    .manualSection .manualBlock,
+    .ratesSection .ratesBlock {
+        padding: 25px;
+    }
+    footer {
+        padding: 85px 0 40px;
+    }
+    header .header .social {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    header .header .logo-menu {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .bannSection .bannBlock .info-block .item {
+        width: 100%;
+    }
+    .bannSection .bannBlock .info-block .item .img {
+        transform: none;
+        width: 60%;
+        margin: 0 auto;
+    }
+    .functionalSection .advantagesSystem .info-block .list {
+        gap: 30px;
+    }
+    .ratesSection .info-block ul li {
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ratesSection .info-block .desc ul li {
+        justify-content: flex-start;
+    }
+    .ratesSection .info-block .desc {
+        margin-top: 80px;
+    }
+    .functionalSection .problemSolving .info-block {
+        position: relative;
+    }
+}
+@media screen and (max-width: 625px) {
+    .functionalSection .problemSolving .info-block .item {
+        width: calc(100% - 46%);
+        margin-left: auto;
+    }
+    .functionalSection .problemSolving .info-block .item:not(.detailed) {
+        position: absolute;
+        left: -150px;
+        width: 70%;
+    }
+    .functionalSection .problemSolving .item.detailed .list {
+        grid-template-columns: repeat(auto-fit, minmax(65px, auto));
+    }
+    .functionalSection .problemSolving .item.detailed .list .block .img {
+        width: 65px;
+        height: 65px;
+    }
+    .functionalSection .problemSolving .item.detailed .list .block .blockInside {
+        font-size: 13px;
+    }
+    .demoVideoSection .play {
+        width: 70px;
+        height: 70px;
+        background-position: 17px center;
+    }
+    footer .info-block .item,
+    footer .info-block nav {
+        width: 100%;
+    }
+    footer .info-block nav {
+        justify-content: flex-start;
+    }
+    footer .info-block {
+        gap: 30px;
+    }
+}
+@media screen and (max-width: 580px) {
+    header .header .logo-menu nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    header .header .logo-menu {
+        gap: 10px;
+        justify-content: center;
+    }
+    header .header .social {
+        justify-content: center;
+    }
+    header .header {
+        gap: 10px;
+    }
+    header .header .logo-menu .logo, footer .footer .logo {
+        width: 130px;
+    }
+    header .header .logo-menu nav ul {
+        font-size: 14px;
+        justify-content: center;
+    }
+    .functionalSection .problemSolving .info-block .item:not(.detailed) {
+        left: -170px;
+    }
+    .functionalSection .problemSolving .info-block .item {
+        width: calc(100% - 40%);
+    }
+}
+@media screen and (max-width: 520px) {
+    .manualSection .info-block {
+        grid-template-columns: 1fr;
+    }
+    .manualSection .info-block::before {
+        display: none;
+    }
+    .manualSection .info-block .item {
+        padding-top: 70px;
+        text-align: center;
+    }
+    .manualSection .info-block .item::before {
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+    .manualSection .info-block .item .num {
+        display: flex;
+        justify-content: center;
+    }
+    .manualSection .info-block .item .num .number {
+        width: 64px;
+        height: 64px;
+    }
+    .manualSection .info-block .item::before {
+        top: -2px;
+    }
+    .manualSection .info-block .item .text {
+        font-size: 22px;
+    }
+    .tasksSection,
+    .functionalSection,
+    .demoVideoSection,
+    .faqSection,
+    .ratesSection {
+        padding-top: 80px;
+    }
+    .ratesSection .info-block ul li .mob {
+        display: block;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .ratesSection .info-block .desc {
+        display: none;
+    }
+    .ratesSection .info-block {
+        grid-template-columns: 1fr;
+    }
+    .ratesSection .info-block ul li {
+        height: auto;
+    }
+    .ratesSection .info-block .item .ratesSlider .swiper-slide .name-count .name {
+        font-size: 30px;
+    }
+    .ratesSection .info-block .item .ratesSlider .swiper-slide .name-count .count {
+        font-size: 18px;
+    }
+    .faqSection .accordion-button,
+    .faqSection .accordion-button:focus, .faqSection .accordion-button:not(.collapsed) {
+        font-size: 16px;
+    }
+    .functionalSection .problemSolving .info-block .item {
+        width: calc(100% - 36%);
+    }
+    .ratesSection .info-block {
+        gap: 0;
+    }
+}
+@media screen and (max-width: 400px) {
+    :root {
+        --fz74: 38px;
+        --fz48: 27px;
+        --fz20: 17px;
+    }
+    .bannSection .bannBlock .info-block .item .img {
+        width: 100%;
+    }
+    .functionalSection .advantagesSystem .info-block .list .item {
+        width: 100%;
+        text-align: left;
+        flex-direction: row;
+        align-items: center;
+    }
+    .functionalSection .advantagesSystem .info-block .list .item .desc {
+        display: flex;
+        align-items: center;
+    }
+    .functionalSection .advantagesSystem .info-block .list .item .num {
+        justify-content: flex-start;
+    }
+    .functionalSection .problemSolving .info-block .item:not(.detailed) {
+        display: none;
+    }
+    .functionalSection .problemSolving .info-block .item {
+        width: 100%;
+    }
+    .modal-title {
+        font-size: 18px;
+    }
+    .ratesSection .info-block .item .ratesSlider .swiper-slide .name-count .name {
+        font-size: 26px;
+    }
+    .manualSection .info-block .item::before {
+        height: 50px;
+    }
+    .manualSection .info-block .item {
+        padding-top: 60px;
+    }
+    header .header .social {
+        display: none;
+    }
+    .demoVideoSection .play {
+        width: 60px;
+        height: 60px;
+        background-position: 12px center;
+    }
+}
+@media screen and (max-width: 350px) {
+    :root {
+        --fz74: 33px;
+        --fz48: 25px;
+        --fz32: 18px;
+        --fz20: 16px;
+    }
+    .bannSection .bannBlock .info-block .item .img {
+        width: 80%;
+    }
+    .tasksSection .tasksBlock .block .info-block .item .icon-nameBlock {
+        gap: 15px;
+    }
+    .manualSection .info-block .item::before {
+        display: none;
+    }
+    .manualSection .info-block .item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-top: 0;
+        text-align: left;
+    }
+    .manualSection .info-block .item .num {
+        justify-content: flex-start;
+        margin-bottom: 0;
+    }
+    .manualSection .info-block .item .text {
+        font-size: 16px;
+    }
+    .manualSection .info-block,
+    .functionalSection .advantagesSystem .info-block .list {
+        gap: 20px;
+    }
+    .ratesSection .info-block .item .ratesSlider .swiper-slide .name-count .name {
+        font-size: 23px;
+    }
+    header .header,
+    .tasksSection .tasksBlock, .demoVideoSection .demoVideoBlock, .manualSection .manualBlock, .ratesSection .ratesBlock {
+        padding: 15px;
+    }
+    .container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #upbutton {
+        right: 25px;
+    }
+}
+@media screen and (max-width: 320px) {
+    :root {
+        --fz74: 31px;
+        --fz48: 25px;
+    }
+    header .header {
+        padding: 10px;
+    }
+    header .header, .tasksSection .tasksBlock, .demoVideoSection .demoVideoBlock, .manualSection .manualBlock, .ratesSection .ratesBlock {
+        padding: 15px 10px;
+    }
+    .container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

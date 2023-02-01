@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Массовое получение СМС - сервис для Сим банка и настройка оборудования</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <div class="header container">
+            <div class="logo-menu">
+                <div class="logo">
+                    <a href="/"><img src="img/other/logo.svg" alt="logo"></a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#tasks-link">Задачи</a></li>
+                        <li><a href="#functional-link">Функционал</a></li>
+                        <li><a href="#overview-link">Обзор</a></li>
+                        <li><a href="#faq-link">FAQ</a></li>
+                        <li><a href="#rates-link">Тарифы</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="social">
+                <a href="#"><img src="img/social/wa.svg" alt=""></a>
+                <a href="#"><img src="img/social/tg.svg" alt=""></a>
+                <a href="#"><img src="img/social/phone.svg" alt=""></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="bannSection">
+            <div class="bannBlock container">
+                <div class="info-block">
+                    <div class="item">
+                        <div class="text">Хочу <span class="blue">сим ферму</span> с&nbsp;удаленным управлением</div>
+                        <form action="">
+                            <input type="number" placeholder="Кол-во сим карт">
+                            <div class="select">
+                                <select name="">
+                                    <option disabled selected>Вид связи</option>
+                                    <option value="">fff</option>
+                                </select>
+                            </div>
+                            <input type="phone" id="phone" placeholder="Укажите номер телефона">
+                            <button type="button" class="btn btn-blue">Получить консультацию</button>
+                        </form>
+                    </div>
+                    <div class="item">
+                        <div class="img">
+                            <img src="img/other/Earth.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tasksSection" id="tasks-link">
+            <div class="tasksBlock containerBig">
+                <div class="block">
+                    <div class="blockTitle">
+                        <div class="title">Сим Ферма - своя ферма симок с удаленным управлением</div>
+                        <div class="desc">Какие задачи можно решить при помощи панели?</div>
+                    </div>
+                    <div class="info-block">
+                        <div class="item">
+                            <div class="icon-nameBlock">
+                                <div class="icon">
+                                    <img src="img/detail/sms.svg" alt="">
+                                </div>
+                                <div class="nameBlock">Работа с СМС</div>
+                            </div>
+                            <div class="text">Получение СМС в автоматическом (API) или ручном режиме с большого количества сим-карт</div>
+                        </div>
+                        <div class="item">
+                            <div class="icon-nameBlock">
+                                <div class="icon">
+                                    <img src="img/detail/simcard.svg" alt="">
+                                </div>
+                                <div class="nameBlock">Все SIM в одном месте</div>
+                            </div>
+                            <div class="text">Учёт сим-карт, увеличение срока жизни сим-карты (совершение платных действий)</div>
+                        </div>
+                        <div class="item">
+                            <div class="icon-nameBlock">
+                                <div class="icon">
+                                    <img src="img/detail/cloud.svg" alt="">
+                                </div>
+                                <div class="nameBlock">Хранилище для аккаунтов</div>
+                            </div>
+                            <div class="text">Получение СМС в автоматическом (API) или ручном режиме с большого количества сим-карт</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="functionalSection" id="functional-link">
+            <div class="functionalBlock container">
+                <div class="blockTitle">
+                    <div class="title">Функционал панели Simbank.pro</div>
+                </div>
+                <div class="advantagesSystem">
+                    <div class="info-block">
+                        <div class="img">
+                            <img src="img/other/img2.png" alt="">
+                        </div>
+                        <div class="list">
+                            <div class="item">
+                                <div class="num">
+                                    <div class="number">1</div>
+                                </div>
+                                <div class="desc">Управление неограниченным количеством сим-карт</div>
+                            </div>
+                            <div class="item">
+                                <div class="num">
+                                    <div class="number">2</div>
+                                </div>
+                                <div class="desc">Автосписание для поддержания жизни сим-карты</div>
+                            </div>
+                            <div class="item">
+                                <div class="num">
+                                    <div class="number">3</div>
+                                </div>
+                                <div class="desc">Личный сервис смс активаций (учитывает какие сервисы на какие номера зарегестрированы)</div>
+                            </div>
+                            <div class="item">
+                                <div class="num">
+                                    <div class="number">4</div>
+                                </div>
+                                <div class="desc">Приём, рассылка смс</div>
+                            </div>
+                            <div class="item">
+                                <div class="num">
+                                    <div class="number">5</div>
+                                </div>
+                                <div class="desc">Удобное хранилище аккаунтов (выгрузка, загрузка, сортировка)</div>
+                            </div>
+                            <div class="item">
+                                <div class="num">
+                                    <div class="number">6</div>
+                                </div>
+                                <div class="desc">API для управления аккаунтами и сим картами с помощью вашего софта</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="problemSolving">
+                    <div class="info-block">
+                        <div class="item">
+                            <div class="img">
+                                <img src="img/other/img3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="item detailed">
+                            <div class="info">Панель решит все проблемы тех людей, которые по каким либо причинам думают или уже используют большое количество сим-карт для приёма смс!</div>
+                            <div class="list">
+                                <div class="block">
+                                    <div class="blockInside">
+                                        <div class="img">
+                                            <img src="img/icon/router.svg" alt="">
+                                        </div>
+                                        <div class="name">Router</div>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="blockInside">
+                                        <div class="img">
+                                            <img src="img/icon/sms.svg" alt="">
+                                        </div>
+                                        <div class="name">SMS</div>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="blockInside">
+                                        <div class="img">
+                                            <img src="img/icon/sim.svg" alt="">
+                                        </div>
+                                        <div class="name">SIM</div>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="blockInside">
+                                        <div class="img">
+                                            <img src="img/icon/api.svg" alt="">
+                                        </div>
+                                        <div class="name">API</div>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="blockInside">
+                                        <div class="img">
+                                            <img src="img/icon/simbank.svg" alt="">
+                                        </div>
+                                        <div class="name">SIMBANK</div>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="blockInside">
+                                        <div class="img">
+                                            <img src="img/icon/faq.svg" alt="">
+                                        </div>
+                                        <div class="name">FAQ</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="demoVideoSection" id="overview-link">
+            <div class="demoVideoBlock containerBig">
+                <div class="block">
+                    <div class="blockTitle">
+                        <div class="title">Посмотреть демо-версию Simbank.Pro</div>
+                    </div>
+                    <div class="video">
+                        <div class="play" data-bs-toggle="modal" data-bs-target="#videoModal"></div>
+                        <div class="img">
+                            <img src="img/other/img4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="manualSection">
+            <div class="manualBlock containerBig">
+                <div class="block">
+                    <div class="blockTitle">
+                        <div class="title">Что нужно сделать чтобы создать симферму?</div>
+                    </div>
+                    <div class="info-block">
+                        <div class="item">
+                            <div class="num">
+                                <div class="number">1</div>
+                            </div>
+                            <div class="text">Покупаем оборудование</div>
+                        </div>
+                        <div class="item">
+                            <div class="num">
+                                <div class="number">2</div>
+                            </div>
+                            <div class="text">Покупаем симкарты</div>
+                        </div>
+                        <div class="item">
+                            <div class="num">
+                                <div class="number">3</div>
+                            </div>
+                            <div class="text">Регистрируемся на сервисе simbank.pro</div>
+                        </div>
+                        <div class="item">
+                            <div class="num">
+                                <div class="number">4</div>
+                            </div>
+                            <div class="text">Пользуемся симкартами и получаем профит</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faqSection" id="faq-link">
+            <div class="faqBlock container">
+                <div class="blockTitle">
+                    <div class="title">FAQ</div>
+                </div>
+                <div class="accordion accordion-flush" id="accordionFaq">
+                    <div class="accordion-item">
+                      <div class="h2 accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Каким максимальным количеством сим-карт я могу управлять?
+                        </button>
+                      </div>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFaq">
+                        <div class="accordion-body">Максимальное количество сим-карт - неограниченное. Архитектура специально выстроена так, чтобы без нагрузки управлять хоть миллионом симок.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <div class="h2 accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Какое оборудование необходимо для работы с Simbank.pro
+                        </button>
+                      </div>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFaq">
+                        <div class="accordion-body">Мы работаем со шлюзами и симбанками кампаний DBL и hybertone. Минимальный набор это шлюз на 4 слота(можно и меньше но не рекомендуем) Оборудование вы приобретаете сами, и его стоимость не входит в комплект сервисных услуг.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <div class="h2 accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                          Элемент аккордеона
+                        </button>
+                      </div>
+                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFaq">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ratesSection" id="rates-link">
+            <div class="ratesBlock containerBig">
+                <div class="info-block">
+                    <div class="item title-desc">
+                        <div class="blockTitle">
+                            <div class="title">Тарифы</div>
+                        </div>
+                        <div class="desc">
+                            <ul>
+                                <li>Количество GOIP</li>
+                                <li>Количество сим банков</li>
+                                <li>Скрипт автосписания баланса</li>
+                                <li>Скрипт отправки смс/ussd</li>
+                                <li>Приоритетная поддержка</li>
+                                <li>Абонентская плата</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="swiper ratesSlider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="name-count">
+                                        <div class="name">Newbie</div>
+                                        <div class="count">15000₽</div>
+                                    </div>
+                                    <div class="detailed">
+                                        <ul>
+                                            <li>
+                                                <div class="mob">Количество GOIP</div>
+                                                <div>3</div>
+                                            </li>
+                                            <li>
+                                                <div class="mob">Количество сим банков</div>
+                                                <div>3</div>
+                                            </li>
+                                            <li>
+                                                <div class="mob">Скрипт автосписания баланса</div>
+                                                <div><img src="img/detail/x-close.svg" alt=""></div>
+                                            </li>
+                                            <li>
+                                                <div class="mob">Скрипт отправки смс/ussd</div>
+                                                <div><img src="img/detail/x-close.svg" alt=""></div>
+                                            </li>
+                                            <li>
+                                                <div class="mob">Приоритетная поддержка</div>
+                                                <div><img src="img/detail/x-close.svg" alt=""></div>
+                                            </li>
+                                            <li>
+                                                <div class="mob">Абонентская плата</div>
+                                                <div><span>1000₽</span> / месяц</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a class="btn btn-blue">Выбрать</a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="name-count">
+                                        <div class="name">Master</div>
+                                        <div class="count">25000₽</div>
+                                    </div>
+                                    <div class="detailed">
+                                        <ul>
+                                            <li>
+                                                <div class="mob">Количество GOIP</div>
+                                                <div>до 10-и</div>
+                                            </li>
+                                            <li>
+                                                <div class="mob">Количество сим банков</div>
+                                                <div>до 10-и</div>
+                                            </li>
+                                            <li>
+                                                <div class="mob">Скрипт автосписания баланса</div>
+                                                <div><img src="img/detail/check.svg" alt=""></div>
+                                            </li>
+                                            <li>
+                                                <div class="mob">Скрипт отправки смс/ussd</div>
+                                                <div><img src="img/detail/check.svg" alt=""></div>
+                                            </li>
+                                            <li>
+                                                <div class="mob">Приоритетная поддержка</div>
+                                                <div><img src="img/detail/x-close.svg" alt=""></div>
+                                            </li>
+                                            <li>
+                                                <div class="mob">Абонентская плата</div>
+                                                <div><span>1000₽</span> / месяц</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a class="btn btn-blue">Выбрать</a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="name-count">
+                                        <div class="name">Professional</div>
+                                        <div class="count">Индивидуально</div>
+                                    </div>
+                                    <div class="detailed">
+                                        <ul>
+                                            <li>
+                                                <div class="mob">Количество GOIP</div>
+                                                <div>Неограниченно</div>
+                                            </li>
+                                            <li>
+                                                <div class="mob">Количество сим банков</div>
+                                                <div>Неограниченно</div>
+                                            </li>
+                                            <li>
+                                                <div class="mob">Скрипт автосписания баланса</div>
+                                                <div><img src="img/detail/check.svg" alt=""></div>
+                                            </li>
+                                            <li>
+                                                <div class="mob">Скрипт отправки смс/ussd</div>
+                                                <div><img src="img/detail/check.svg" alt=""></div>
+                                            </li>
+                                            <li>
+                                                <div class="mob">Приоритетная поддержка</div>
+                                                <div><img src="img/detail/check.svg" alt=""></div>
+                                            </li>
+                                            <li>
+                                                <div class="mob">Абонентская плата</div>
+                                                <div><span>Индивидуально</span></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a class="btn btn-blue">Выбрать</a>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer container">
+            <div class="info-block">
+                <div class="item">
+                    <div class="logo"><img src="img/other/logo.svg" alt="logo"></div>
+                    <div class="desc">Разработано - <a href="https://seo-rocket.ru/" target="_blank">SEORocket<br>2023 by Студия Сайтов</a></div>
+                </div>
+                <nav>
+                    <div class="list">
+                        <div class="name">Главная</div>
+                        <ul>
+                            <li><a href="#tasks-link">Задачи</a></li>
+                            <li><a href="#functional-link">Функционал</a></li>
+                            <li><a href="#overview-link">Обзор</a></li>
+                            <li><a href="#faq-link">FAQ</a></li>
+                            <li><a href="#rates-link">Тарифы</a></li>
+                        </ul>
+                    </div>
+                    <div class="list">
+                        <div class="name">Личный кабинет</div>
+                        <ul>
+                            <li><a href="#">Аккаунт</a></li>
+                            <li><a href="#">Устройства</a></li>
+                            <li><a href="#">Сим-карты</a></li>
+                            <li><a href="#">Профиль</a></li>
+                        </ul>
+                    </div>
+                    <div class="list">
+                        <div class="name">Прочее</div>
+                        <ul>
+                            <li><a href="#">Пользовательское соглашение</a></li>
+                            <li><a href="#">Условия пользования</a></li>
+                            <li><a href="#">Политика конфеденциальности</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="social">
+                    <a href="#"><img src="img/social/wa.svg" alt=""></a>
+                    <a href="#"><img src="img/social/tg.svg" alt=""></a>
+                    <a href="#"><img src="img/social/phone.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="upbutton"><img src="img/icon/upButton.svg"></div>
+
+    <!-- Модальное окно -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Видео-гайд "Как устроен SIMBANK"</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <video controls="controls" poster="img/other/posterVideo.png">
+                    <source src="video/test-video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                </video>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
