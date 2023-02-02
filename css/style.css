@@ -5,14 +5,12 @@
     --pink: #FF72D5;
     --bg: #000000;
 
-    --fz74: 74px;
+    --fz64: 64px;
     --fz48: 48px;
-    --fz36: 36px;
-    --fz32: 32px;
+    --fz24: 24px;
     --fz20: 20px;
     --fz18: 18px;
     --fz16: 16px;
-    --fz14: 14px;
 }
 
 html,
@@ -234,7 +232,6 @@ header nav li > .submenu li:last-of-type a {
     display: none;
     position: fixed;
     background: var(--blue);
-    border-radius: 50%;
     color: #fff;
     width: 78px;
     height: 78px;
@@ -245,7 +242,6 @@ header nav li > .submenu li:last-of-type a {
     bottom: 20px;
     padding: 20px;
     z-index: 500;
-    transition: all .3s;
 }
 #upbutton img {
     width: 100%;
@@ -266,4 +262,38 @@ header nav li > .submenu li:last-of-type a {
         filter: blur(0px);
         transform: scale(1);
     }
+}
+
+.bannSection .info-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.bannSection .info-block .item {
+    width: 50%;
+}
+.bannSection .info-block .item .img img {
+    width: 100%;
+}
+.bannSection .info-block .item.infoBann {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bannSection .info-block .item.infoBann .block .connection {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 43px;
+}
+.bannSection .info-block .item.infoBann .nameCompany {
+    font-size: var(--fz64);
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 110%;
+}
+.bannSection .info-block .item.infoBann .desc {
+    font-size: var(--fz24);
+    max-width: 300px;
+    margin: 40px 0 0 90px;
 }
