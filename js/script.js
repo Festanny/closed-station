@@ -94,11 +94,20 @@ $('#upbutton').click(function () {
     }, 500);
 });
 
-$( window ).resize(function() {
-    mtMain()
-});
-mtMain()
-
-function mtMain() {
-    $('main').css({'margin-top': $('header').height()})
+function marginsMain() {
+    // $('main').css({'padding-top': $('header').height() + 40})
+    $('.bannSection .info-block .item.infoBann').css({
+        'padding-left': ($('body').width()-$('.container').width())/2,
+    })
+    $('.bannSection .bannBlock').css({'padding-top': $('header').height() + 40})
 }
+
+(function($) {
+    $(window).scroll(function () {
+        $(window).scrollTop() > 0 ? $('header').addClass('fixed') : $('header').removeClass('fixed');
+    })
+    $( window ).resize(function() {
+        marginsMain()
+    });
+    marginsMain()
+})(jQuery);
