@@ -3,6 +3,7 @@
     --black: #000000;
     --teal: #1BD3B2;
     --pink: #FF72D5;
+    --blue: #6297BD;
     --bg: #000000;
 
     --fz64: 64px;
@@ -135,21 +136,28 @@ a:hover {
 .btn.btn-pink span {
     background-color: var(--pink);
 }
-.lineEffects-1 {
+.lineEffects-1,
+.lineEffects-2,
+.lineEffects-3 {
     position: relative;
+}
+.lineEffects-1::before,
+.lineEffects-1::after,
+.lineEffects-2::before,
+.lineEffects-2::after,
+.lineEffects-3::before {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .lineEffects-1::before {
     content: url('../img/details/line-1.svg');
-    position: absolute;
     left: 50%;
     top: 100px;
-    background-repeat: no-repeat;
-    background-size: cover;
     transform: translateX(-50%);
 }
 .lineEffects-1::after {
-    content: url('../img/details/line-1.svg');
-    position: absolute;
+    content: '';
     left: 50%;
     top: 200px;
     width: 5px;
@@ -158,6 +166,27 @@ a:hover {
     background-color: var(--teal);
     transform: translateX(-50%);
     opacity: .4;
+}
+.lineEffects-2::before {
+    content: url('../img/details/line-2.svg');
+    left: -40px;
+    top: 0;
+}
+.lineEffects-2::after {
+    content: '';
+    left: -30px;
+    top: 600px;
+    width: 5px;
+    height: 50px;
+    filter: blur(4px);
+    background-color: var(--teal);
+    transform: translateX(-50%);
+    opacity: .4;
+}
+.lineEffects-3::before {
+    content: url('../img/details/line-3.svg');
+    right: -40px;
+    top: 0;
 }
 header {
     position: fixed;
@@ -286,7 +315,6 @@ header nav li > .submenu li:last-of-type a {
     cursor: pointer;
     display: none;
     position: fixed;
-    background: var(--blue);
     color: #fff;
     align-items: center;
     justify-content: center;
@@ -351,10 +379,60 @@ header nav li > .submenu li:last-of-type a {
     gap: 43px;
 }
 .bannSection .info-block .item.infoBann .nameCompany {
+    position: relative;
     font-size: var(--fz64);
     text-transform: uppercase;
     font-weight: 500;
     line-height: 110%;
+}
+.textTitle {
+    font-size: var(--fz48);
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 110%;
+}
+.bannSection .info-block .item.infoBann .nameCompany::before,
+.bannSection .info-block .item.infoBann .nameCompany::after,
+.textTitle::before,
+.textTitle::after {
+    position: absolute;
+    text-transform: uppercase;
+    overflow: hidden;
+    -webkit-text-fill-color: transparent;
+    left: 0;
+}
+.bannSection .info-block .item.infoBann .nameCompany::before,
+.bannSection .info-block .item.infoBann .nameCompany::after {
+    content: 'Закрытая';
+}
+.descSection .textTitle::before,
+.descSection .textTitle::after {
+    content: 'Активный отдых';
+}
+.bannSection .info-block .item.infoBann .nameCompany::before {
+    -webkit-text-stroke: 2px var(--white);
+}
+.bannSection .info-block .item.infoBann .nameCompany::after {
+    -webkit-text-stroke: 1px var(--white);
+}
+.descSection .textTitle::before {
+    -webkit-text-stroke: 1px var(--teal);
+}
+.descSection .textTitle::after {
+    -webkit-text-stroke: 2px var(--teal);
+}
+.bannSection .info-block .item.infoBann .nameCompany::before,
+.descSection .textTitle::before {
+    top: -50px;
+    height: 41px;
+    opacity: .4;
+}
+.bannSection .info-block .item.infoBann .nameCompany::after,
+.descSection .textTitle::after {
+    top: -85px;
+    height: 30px;
+    opacity: .2;
 }
 .bannSection .info-block .item.infoBann .desc {
     font-size: var(--fz24);
@@ -377,4 +455,40 @@ header nav li > .submenu li:last-of-type a {
     width: 21px;
     height: 21px;
     object-fit: contain;
+}
+.descSection .info-block {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+}
+.descSection .info-block .item .img img {
+    width: 100%;
+}
+.descSection .info-block .item.noImage {
+    padding-left: 100px;
+}
+.descSection .textTitle {
+    margin-top: 60px;
+}
+.descSection .info-block .list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+    font-size: var(--fz24);
+}
+.descSection .info-block .list > span {
+    opacity: .4;
+}
+.descSection .info-block .list .num-text {
+    display: flex;
+    gap: 20px;
+}
+.c-teal {
+    color: var(--teal);
+}
+.c-blue {
+    color: var(--blue);
+}
+.c-pink {
+    color: var(--pink);
 }
