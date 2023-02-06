@@ -46,13 +46,16 @@ window.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-let swiper = new Swiper(".ratesSlider", {
+let swiper = new Swiper(".reviewsSlider", {
     slidesPerView: 1,
     spaceBetween: 20,
     slidesPerGroup: 1,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+    mousewheel: true,
+    navigation: false,
+    autoplay: {
+        delay: 15000,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false,
     },
     breakpoints: {
         1100: {

@@ -175,10 +175,12 @@ main {
     right: -7px;
 }
 
+form button.btn-teal:focus,
 .btn-teal {
     background: rgba(27, 211, 178, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
+form button.btn-pink:focus,
 .btn-pink {
     background: rgba(255, 114, 213, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -421,6 +423,10 @@ header nav li > .submenu li:last-of-type a {
 .bannSection .info-block .item {
     width: 50%;
 }
+.bannSection .info-block .item:last-of-type {
+    display: flex;
+    align-items: flex-end;
+}
 .bannSection .info-block .item .img img {
     width: 100%;
 }
@@ -468,29 +474,78 @@ header nav li > .submenu li:last-of-type a {
 .descSection .textTitle::after {
     content: 'Активный отдых';
 }
-.bannSection .info-block .item.infoBann .nameCompany::before {
-    -webkit-text-stroke: 2px var(--white);
+.lasertagSection .textTitle::before,
+.lasertagSection .textTitle::after {
+    content: 'Чем может';
 }
-.bannSection .info-block .item.infoBann .nameCompany::after {
-    -webkit-text-stroke: 1px var(--white);
+.questSection .textTitle::before,
+.questSection .textTitle::after {
+    content: 'Подробнее';
 }
-.descSection .textTitle::before {
-    -webkit-text-stroke: 1px var(--teal);
+.whyWeSection .textTitle::before,
+.whyWeSection .textTitle::after {
+    content: 'Почему';
 }
-.descSection .textTitle::after {
-    -webkit-text-stroke: 2px var(--teal);
+.reviewsSection .textTitle::before,
+.reviewsSection .textTitle::after {
+    content: 'Отзывы';
 }
 .bannSection .info-block .item.infoBann .nameCompany::before,
-.descSection .textTitle::before {
+.whyWeSection .textTitle::before {
+    -webkit-text-stroke: 2px var(--white);
+}
+.bannSection .info-block .item.infoBann .nameCompany::after,
+.whyWeSection .textTitle::after {
+    -webkit-text-stroke: 1px var(--white);
+}
+.descSection .textTitle::before,
+.questSection .textTitle::before,
+.reviewsSection .textTitle::before {
+    -webkit-text-stroke: 2px var(--teal);
+}
+.descSection .textTitle::after,
+.questSection .textTitle::after,
+.reviewsSection .textTitle::after {
+    -webkit-text-stroke: 1px var(--teal);
+}
+.lasertagSection .textTitle::before {
+    -webkit-text-stroke: 2px var(--pink);
+}
+.lasertagSection .textTitle::after {
+    -webkit-text-stroke: 1px var(--pink);
+}
+.bannSection .info-block .item.infoBann .nameCompany::before {
     top: -50px;
     height: 41px;
     opacity: .4;
 }
-.bannSection .info-block .item.infoBann .nameCompany::after,
-.descSection .textTitle::after {
+.bannSection .info-block .item.infoBann .nameCompany::after {
     top: -85px;
     height: 30px;
     opacity: .2;
+}
+.descSection .textTitle::before,
+.lasertagSection .textTitle::before,
+.questSection .textTitle::before,
+.whyWeSection .textTitle::before,
+.reviewsSection .textTitle::before {
+    height: 30px;
+    top: -40px;
+    opacity: .4;
+}
+.descSection .textTitle::after,
+.lasertagSection .textTitle::after,
+.questSection .textTitle::after,
+.whyWeSection .textTitle::after,
+.reviewsSection .textTitle::after {
+    height: 19px;
+    top: -65px;
+    opacity: .2;
+}
+.whyWeSection .textTitle::before,
+.whyWeSection .textTitle::after {
+    left: 50%;
+    transform: translateX(-50%);
 }
 .bannSection .info-block .item.infoBann .desc {
     font-size: var(--fz24);
@@ -595,13 +650,12 @@ header nav li > .submenu li:last-of-type a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
-    /* clip-path: polygon(0% 0%, 80% 0, 100% 20%, 100% 100%, 0% 100%); */
 }
 section:not(.bannSection):not(.descSection) {
-    padding: 90px 0;
+    padding: 80px 0;
 }
 .descSection {
-    padding-bottom: 90px;
+    padding-bottom: 80px;
 }
 .advantageousOfferSection {
     position: relative;
@@ -673,4 +727,293 @@ section:not(.bannSection):not(.descSection) {
 }
 .advantageousOfferBlock .item .block .btn-block {
     margin-top: 30px;
+}
+.lasertagSection .info-block,
+.questSection .info-block,
+.reviewsSection .info-block,
+.consultationSection .info-block {
+    display: grid;
+    grid-template-columns: auto 65%;
+    gap: 45px;
+}
+.lasertagSection {
+    background-image: url('../img/details/grid-pink.svg');
+    margin: 80px 0 160px;
+}
+.questSection {
+    background-image: url('../img/details/grid-teal.svg');
+}
+.lasertagSection,
+.questSection {
+    padding: 125px 0 70px!important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.lasertagSection .item .text,
+.questSection .item.textInfo {
+    font-size: var(--fz24);
+}
+.lasertagSection .info-block .item:first-of-type,
+.questSection .info-block .item:first-of-type,
+.reviewsSection .info-block .item:first-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+.questSection .info-block .item.textInfo .lookAt {
+    margin: 30px 0 40px;
+}
+.questSection .info-block .item.textInfo .lookAt .block {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 10px;
+    margin-top: 20px;
+}
+.questSection .info-block .item.textInfo .lookAt .block .item_l {
+    padding: 10px 20px;
+    border-radius: 1000px;
+    background-color: var(--white);
+    color: var(--black);
+    font-size: var(--fz16);
+    font-weight: 500;
+}
+.whyWeSection {
+    margin-top: 80px;
+}
+.whyWeSection .whyWeBlock-1 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    z-index: 50;
+}
+.whyWeSection .whyWeBlock-1 .block-text .item .textTitle {
+    width: 70%;
+    margin: 0 auto 30px;
+}
+.whyWeSection .whyWeBlock-1 .block-text .item .text {
+    font-size: var(--fz18);
+}
+.whyWeSection .whyWeBlock-1 .block-text .item .hlt {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 1000px;
+    background-color: var(--teal);
+    margin-top: 35px;
+    color: var(--black)
+}
+.whyWeSection .whyWeBlockMain-1 {
+    position: relative;
+    padding: 160px 0 80px;
+    background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/other/green-fluid-art-abstract-background.jpeg');
+}
+.whyWeSection .whyWeBlockMain-1::before,
+.whyWeSection .whyWeBlockMain-1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 110%;
+}
+.whyWeSection .whyWeBlockMain-1::before {
+    left: 0;
+    background-image: url('../img/other/hero-1.png');
+}
+.whyWeSection .whyWeBlockMain-1::after {
+    right: 0;
+    background-image: url('../img/other/hero-2.png');
+    background-position-x: right;
+}
+.whyWeSection .whyWeBlock-2 {
+    position: relative;
+    padding: 40px 0;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+.whyWeSection .whyWeBlock-2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('../img/details/grid-white.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .1;
+}
+.whyWeSection .whyWeBlock-2 .info-block {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+    gap: 25px;
+}
+.whyWeSection .whyWeBlock-2 .info-block .item {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    align-items: center;
+}
+.whyWeSection .whyWeBlock-2 .info-block .item > span {
+    padding: 0 10px;
+    font-size: var(--fz24);
+}
+.whyWeSection .whyWeBlock-2 .info-block .item .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    padding: 16px;
+    border-radius: 50%;
+    border: 2px solid var(--teal);
+}
+.whyWeSection .whyWeBlock-2 .info-block .item .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.reviewsSection .item:first-of-type .desc {
+    margin-top: 30px;
+    font-size: var(--fz18);
+    color: rgba(255, 255, 255, 0.4);
+    max-width: 205px;
+}
+.rating-mini {
+	display: flex;
+    gap: 3px;
+	font-size: 0;
+}
+.rating-mini span {
+	padding: 0;
+	font-size: 15px;
+	line-height: 1;
+	color: lightgrey;
+}
+.rating-mini > span:before {
+	content: '★';
+}
+.rating-mini > span.active {
+	color: var(--teal);
+}
+.reviewsSection .item.textInfo .reviewsSlider .text {
+    padding: 25px 25px 45px;
+}
+.reviewsSection .item.textInfo .reviewsSlider .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(27, 211, 177, 0.2);
+    background-image: url('../img/details/grid-white-min.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+.reviewsSection .item.textInfo .reviewsSlider .person {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    padding: 25px;
+    background: rgba(27, 211, 178, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+.reviewsSection .item.textInfo .reviewsSlider .img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--teal);
+    overflow: hidden;
+}
+.reviewsSection .item.textInfo .reviewsSlider .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.reviewsSection .item.textInfo .reviewsSlider .info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.reviewsSection .item.textInfo .reviewsSlider .info .name {
+    font-size: var(--fz18);
+}
+.reviewsSection .item.textInfo .reviewsSlider .info .date {
+    opacity: .4;
+    font-weight: 500;
+}
+.reviewsSection .textTitle-desc {
+    margin-top: 60px;
+}
+.consultationSection {
+    padding-top: 40px!important;
+}
+.consultationSection .consultationBlock {
+    padding: 40px 180px 40px 40px;
+}
+.consultationSection .info-block {
+    gap: 75px;
+    align-items: flex-end;
+}
+.consultationSection .item:first-of-type .textTitle-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    font-size: var(--fz18);
+    height: 100%;
+}
+.consultationSection .item:first-of-type .textTitle-desc .desc {
+    padding-left: 20px;
+}
+.consultationSection .item:first-of-type .textTitle-desc .desc > a {
+    color: var(--pink)
+}
+.consultationSection .consultationBlock {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/other/orange-fluid-art-abstract-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+.consultationSection .item.textInfo .text {
+    max-width: 330px;
+    opacity: .6;
+    font-size: var(--fz18);
+    margin-bottom: 28px;
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+form input {
+    width: calc(50% - 10px);
+    padding: 15px;
+    background-color: var(--white);
+    border: 0;
+    outline: none;
+}
+form input:focus {
+    border: 0;
+    outline: none;
+}
+form button {
+    width: calc(50% - 10px);
+}
+form button:focus {
+    outline: none;
+}
+form button.btn:hover {
+    transform: scale(1);
 }
