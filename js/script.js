@@ -114,3 +114,35 @@ function marginsMain() {
     });
     marginsMain()
 })(jQuery);
+
+ymaps.ready(init);
+
+function init () {
+    var myMap = new ymaps.Map("map", {
+            center: [53.5303, 49.3461],
+            zoom: 12,
+            controls: []
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+        myPlacemark = new ymaps.Placemark([53.5403, 49.3461], {
+            // Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
+            balloonContentHeader: "Балун метки",
+            balloonContentBody: "Содержимое <em>балуна</em> метки",
+            balloonContentFooter: "Подвал",
+            hintContent: "Хинт метки",
+        },{
+            preset: 'islands#yellowIcon'
+        });
+
+    myMap.geoObjects.add(myPlacemark);
+
+    myPlacemark.events.add('click', function(e) {
+        var coords = e.get('target').geometry.getCoordinates();
+        myMap.setCenter(coords, 17);
+    });
+
+    // myMap.behaviors.disable('scrollZoom');
+    
+    
+}

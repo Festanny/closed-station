@@ -542,10 +542,82 @@
                 </div>
             </div>
         </section>
+        <section class="mapSection">
+            <div class="mapBlock container">
+                <div class="info-block">
+                    <div class="item">
+                        <div class="textTitle">
+                            Контакты
+                        </div>
+                        <div class="info">
+                            <div class="phoneBlock">
+                                <span>Квесты</span>
+                                <a href="tel:+78482943306" class="c-teal">+7 (8482) 94-33-06</a>
+                            </div>
+                            <div class="phoneBlock">
+                                <span>Квесты</span>
+                                <a href="tel:+78482943306" class="c-pink">+7 (8482) 94-33-06</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="social">
+                            <a href="#">
+                                <div class="icon">
+                                    <img src="img/social/vk.svg" alt="">
+                                </div>
+                                <div class="name">closedstation163</div>
+                            </a>
+                            <a href="#">
+                                <div class="icon">
+                                    <img src="img/social/vk.svg" alt="">
+                                </div>
+                                <div class="name">lst163</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="map" style="height: 600px" data-coord='{{ all_yandex_map_points }}'></div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="footer container">
+            <div class="info-block">
+                <div class="logo">
+                    <div class="logo-img">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <nav>
+                    <div>
+                        <div class="name"></div>
+                        <div class="list">
+                            <ul></ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="name"></div>
+                        <div class="list">
+                            <ul></ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="name"></div>
+                        <div class="list">
+                            <ul></ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="social">
+                    <a href="#"><img src="img/social/vk.svg" alt=""></a>
+                    <a href="#"><img src="img/social/tg.svg" alt=""></a>
+                    <a href="#"><img src="img/social/wa.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-2 container">
             
         </div>
     </footer>
@@ -572,6 +644,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b9f86102-2842-4593-9f48-25f8d16d0de2&lang=ru_RU" type="text/javascript"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

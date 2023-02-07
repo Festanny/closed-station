@@ -490,6 +490,10 @@ header nav li > .submenu li:last-of-type a {
 .reviewsSection .textTitle::after {
     content: 'Отзывы';
 }
+.mapSection .textTitle::before,
+.mapSection .textTitle::after {
+    content: 'Контакты';
+}
 .bannSection .info-block .item.infoBann .nameCompany::before,
 .whyWeSection .textTitle::before {
     -webkit-text-stroke: 2px var(--white);
@@ -500,12 +504,14 @@ header nav li > .submenu li:last-of-type a {
 }
 .descSection .textTitle::before,
 .questSection .textTitle::before,
-.reviewsSection .textTitle::before {
+.reviewsSection .textTitle::before,
+.mapSection .textTitle::before {
     -webkit-text-stroke: 2px var(--teal);
 }
 .descSection .textTitle::after,
 .questSection .textTitle::after,
-.reviewsSection .textTitle::after {
+.reviewsSection .textTitle::after,
+.mapSection .textTitle::after {
     -webkit-text-stroke: 1px var(--teal);
 }
 .lasertagSection .textTitle::before {
@@ -528,7 +534,8 @@ header nav li > .submenu li:last-of-type a {
 .lasertagSection .textTitle::before,
 .questSection .textTitle::before,
 .whyWeSection .textTitle::before,
-.reviewsSection .textTitle::before {
+.reviewsSection .textTitle::before,
+.mapSection .textTitle::before {
     height: 30px;
     top: -40px;
     opacity: .4;
@@ -537,7 +544,8 @@ header nav li > .submenu li:last-of-type a {
 .lasertagSection .textTitle::after,
 .questSection .textTitle::after,
 .whyWeSection .textTitle::after,
-.reviewsSection .textTitle::after {
+.reviewsSection .textTitle::after,
+.mapSection .textTitle::after {
     height: 19px;
     top: -65px;
     opacity: .2;
@@ -1016,4 +1024,45 @@ form button:focus {
 }
 form button.btn:hover {
     transform: scale(1);
+}
+.mapSection .info-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+.mapSection .info-block .item:first-of-type {
+    display: flex;
+    column-gap: 100px;
+    row-gap: 20px;
+}
+.mapSection .info-block .item:first-of-type .info {
+    display: flex;
+    column-gap: 40px;
+    row-gap: 20px;
+}
+.mapSection .info-block .item:first-of-type .info .phoneBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.mapSection .info-block .item:first-of-type .info .phoneBlock span {
+    font-size: var(--fz18);
+    font-weight: 500;
+}
+.mapSection .info-block .item:last-of-type .social {
+    display: flex;
+    gap: 20px;
+}
+.mapSection .info-block .item:last-of-type .social a {
+    display: flex;
+    column-gap: 20px;
+    padding: 13px 10px;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.1)
+}
+section.mapSection {
+    padding-top: 140px!important;
 }
