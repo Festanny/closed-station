@@ -102,6 +102,12 @@ function marginsMain() {
     $('.bannSection .info-block .item.infoBann').css({
         'padding-left': ($('body').width()-$('.container').width())/2,
     })
+    if ($('.bannSection').hasClass('containerBanner')) {
+        $('.bannSection .info-block .item:not(.infoBann)').css({
+            'padding-right': ($('body').width()-$('.container').width())/2,
+            'display': 'block'
+        })
+    }
     $('.bannSection .bannBlock').css({'padding-top': $('header').height() + 40})
 }
 
