@@ -4,10 +4,12 @@
     --teal: #1BD3B2;
     --pink: #FF72D5;
     --blue: #6297BD;
+    --blue2: #0085FF;
     --bg: #000000;
 
     --fz64: 64px;
     --fz48: 48px;
+    --fz36: 36px;
     --fz24: 24px;
     --fz20: 20px;
     --fz18: 18px;
@@ -185,13 +187,22 @@ form button.btn-pink:focus,
     background: rgba(255, 114, 213, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.btn.btn-teal.type-2 {
-    background: var(--teal);
+.btn.btn-teal.type-2,
+.btn.btn-blue.type-2 {
     color: var(--black);
     padding: 14px 20px;
 }
+.btn.btn-teal.type-2 {
+    background: var(--teal);
+}
+.btn.btn-blue.type-2 {
+    background: var(--blue2);
+}
 .btn.btn-teal span {
     background-color: var(--teal);
+}
+.btn.btn-blue span {
+    background-color: var(--blue2);
 }
 .btn.btn-pink span {
     background-color: var(--pink);
@@ -246,7 +257,7 @@ form button.btn-pink:focus,
 }
 .lineEffects-3::before {
     content: url('../img/details/line-3.svg');
-    right: -40px;
+    right: -41px;
     top: 0;
 }
 header {
@@ -584,8 +595,16 @@ footer .footer .info-block .social a img {
     height: 21px;
     object-fit: contain;
 }
+.social.blue a img {
+    filter: invert(71%) sepia(92%) saturate(2172%) hue-rotate(193deg) brightness(101%) contrast(103%);
+}
+.social.pink a img {
+    filter: invert(36%) sepia(54%) saturate(3695%) hue-rotate(193deg) brightness(101%) contrast(106%);
+}
 .descSection .info-block,
-.advantageousOfferBlock .info-block {
+.advantageousOfferBlock .info-block,
+.newYearProgramBlock .info-block,
+.congrSantaClausBlock .info-block {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -666,6 +685,18 @@ footer .footer .info-block .social a img {
     background-size: cover;
     background-position: right;
 }
+.newYearProgramSection .newYearProgramBlock {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/other/top-view-blue-white-background-copy-space.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+.congrSantaClausSection .congrSantaClausBlock {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/other/beautiful-frost-pattern-window..png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
 section:not(.bannSection):not(.descSection) {
     padding: 80px 0;
 }
@@ -675,13 +706,17 @@ section:not(.bannSection):not(.descSection) {
 .advantageousOfferSection {
     position: relative;
 }
-.advantageousOfferBlock .item:first-of-type {
+.advantageousOfferBlock .item:first-of-type,
+.newYearProgramBlock .item:first-of-type,
+.congrSantaClausBlock .item:first-of-type {
     padding: 40px;
 }
 .advantageousOfferBlock .item {
     width: 100%;
 }
-.advantageousOfferBlock .item .img {
+.advantageousOfferBlock .item .img,
+.newYearProgramBlock .item .img,
+.congrSantaClausBlock .item .img {
     position: relative;
     display: flex;
     justify-content: center;
@@ -700,7 +735,9 @@ section:not(.bannSection):not(.descSection) {
     background-repeat: no-repeat;
     background-size: contain;
 }
-.advantageousOfferBlock .item .non-stop {
+.advantageousOfferBlock .item .non-stop,
+.newYearProgramBlock .item .non-stop,
+.congrSantaClausBlock .item .non-stop {
     padding: 10px 20px;
     background-color: var(--white);
     color: var(--black);
@@ -719,13 +756,16 @@ section:not(.bannSection):not(.descSection) {
 .advantageousOfferBlock .item .block .desc-2 {
     opacity: .4;
 }
-.advantageousOfferBlock .item .block .wholesale {
+.advantageousOfferBlock .item .block .wholesale,
+.congrSantaClausBlock .item .wholesale {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, auto));
     column-gap: 20px;
+    row-gap: 10px;
     margin-top: 40px;
 }
-.advantageousOfferBlock .item .block .wholesale .item_w {
+.advantageousOfferBlock .item .block .wholesale .item_w,
+.congrSantaClausBlock .item .wholesale .item_w {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -734,10 +774,12 @@ section:not(.bannSection):not(.descSection) {
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
 }
-.advantageousOfferBlock .item .block .wholesale .item_w .price {
+.advantageousOfferBlock .item .block .wholesale .item_w .price,
+.congrSantaClausBlock .item .wholesale .item_w .price {
     font-size: var(--fz24);
 }
-.advantageousOfferBlock .item .block .wholesale .item_w .desc {
+.advantageousOfferBlock .item .block .wholesale .item_w .desc,
+.advantageousOfferBlock .item .wholesale .item_w .desc {
     opacity: .6;
 }
 .advantageousOfferBlock .item .block .btn-block {
@@ -746,7 +788,8 @@ section:not(.bannSection):not(.descSection) {
 .lasertagSection .info-block,
 .questSection .info-block,
 .reviewsSection .info-block,
-.consultationSection .info-block {
+.consultationSection .info-block,
+.photoGallerySection .info-block {
     display: grid;
     grid-template-columns: auto 65%;
     gap: 45px;
@@ -1215,4 +1258,199 @@ footer .footer-2 .info-block .item {
     flex-wrap: wrap;
     column-gap: 30px;
     row-gap: 20px;
+}
+.bannSection .info-block-promo {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 30px;
+    padding: 35px 0;
+}
+.bannSection .info-block-promo::before {
+    content: '';
+    position: absolute;
+    width: calc(100% + 60px);
+    left: -30px;
+    height: 100%;
+    background: rgba(121, 192, 242, 0.05);
+    border: 2px solid rgba(121, 192, 242, 0.1);
+    backdrop-filter: blur(5px);
+}
+.bannSection .info-block-promo .btn-block {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.bannSection .info-block-promo .item .title__block_min,
+.photoGallerySection .title__block_min {
+    font-size: var(--fz36);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    position: relative;
+}
+.bannSection .info-block-promo .item .desc {
+    font-size: var(--fz24);
+    opacity: .4;
+}
+.bannSection.usuallyPB .bannBlock {
+    padding-bottom: 80px;
+}
+.newYearProgramSection {
+    padding-bottom: 40px!important;
+}
+.newYearProgramBlock .item .img img,
+.congrSantaClausBlock .item .img img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.newYearProgramBlock .item .block {
+    margin-top: 20px;
+}
+.newYearProgramBlock .item .block .desc-1,
+.newYearProgramBlock .item .block .btn-block {
+    padding-left: 20px;
+}
+.newYearProgramBlock .item .block .wholesale {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    column-gap: 20px;
+    row-gap: 10px;
+}
+.newYearProgramBlock .item .block .wholesale .item_w {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+.newYearProgramBlock .item .block .wholesale .item_w:first-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+.newYearProgramBlock .item .block .wholesale .item_w.program {
+    font-size: var(--fz18);
+}
+.newYearProgramBlock .item .block .wholesale .item_w ul {
+    padding-left: 16px;
+    margin-top: 10px;
+}
+.newYearProgramBlock .item .block .wholesale .item_w ul li:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+.newYearProgramBlock .item .block .wholesale .item_w .price span {
+    display: inline-block;
+    font-size: var(--fz20);
+    padding: 5px 10px;
+    background-color: var(--white);
+    color: var(--black);
+}
+.newYearProgramBlock .item .block .wholesale .item_w .desc {
+    font-size: var(--fz24);
+}
+.newYearProgramBlock .item .block .wholesale .item_w .address {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--black);
+    text-align: center;
+}
+.newYearProgramBlock .item .block .desc-1 {
+    max-width: 290px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+.newYearProgramBlock .item .block .btn-block {
+    margin-top: 35px;
+}
+.newYearProgramBlock .info-block {
+    align-items: flex-end
+}
+.newYearProgramBlock {
+    position: relative;
+    overflow: hidden;
+}
+.newYearProgramBlock::before {
+    content: '';
+    position: absolute;
+    width: 335px;
+    height: 446px;
+    top: 0;
+    right: 0;
+    background-image: url('../img/details/snowflakes.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+}
+.congrSantaClausSection {
+    padding-top: 40px!important;
+}
+.congrSantaClausBlock .info-block {
+    align-items: center;
+}
+.congrSantaClausBlock .item .desc-main {
+    padding-left: 20px;
+    margin-top: 20px;
+}
+.congrSantaClausBlock .item .wholesale {
+    margin-top: 20px;
+}
+.congrSantaClausBlock .item .desc-opacity {
+    opacity: .4;
+}
+.congrSantaClausBlock .item .info-phone {
+    text-transform: uppercase;
+    font-size: var(--fz20);
+    margin-top: 30px;
+}
+.photoGallerySection .item .photoGallerySlider .swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
+.photoGallerySection .swiper-wrapper {
+    height: 480px;
+}
+.photoGallerySection .swiper-wrapper .swiper-slide {
+    height: auto;
+}
+.photoGallerySection .swiper-wrapper .swiper-slide .settings {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+}
+.photoGallerySection .swiper-wrapper .swiper-slide:nth-child(2n) .settings {
+    align-items: flex-end;
+}
+.photoGallerySection .info-block .item:first-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+}
+.photoGallerySection .info-block .item .block .desc {
+    font-size: var(--fz18);
+    margin-top: 30px;
+}
+.photoGallerySection .info-block .item .block .info-phone {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: var(--fz20);
+    text-transform: uppercase;
+    padding: 20px;
+    background-color: var(--white);
+    color: var(--black);
+}
+.photoGallerySection .info-block .item .block .info-phone a,
+.photoGallerySection .info-block .item .block .info-phone a:hover {
+    color: var(--black)
+}
+.photoGallerySection {
+    background-image: url(../img/details/grid-white-big.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

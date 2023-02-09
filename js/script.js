@@ -65,8 +65,21 @@ let swiper = new Swiper(".reviewsSlider", {
             slidesPerView: 2,
             spaceBetween: 10,
         },
-      }
-  });
+    }
+});
+
+let swiper2 = new Swiper(".photoGallerySlider", {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    slidesPerGroup: 2,
+    mousewheel: true,
+    navigation: false,
+    autoplay: {
+        delay: 5000,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false,
+    },
+});
 
 $('.demoVideoSection .play').on('click', function() {
     $('#videoModal .modal-body video')[0].play()
