@@ -372,6 +372,12 @@ header nav li:hover > .submenu {
     visibility: visible;
     opacity: 1;
 }
+header nav li:hover a.c-pink-h {
+    color: var(--pink);
+}
+header nav li:hover a.c-blue-h {
+    color: var(--blue2);
+}
 .bannSection .info-block .item.infoBann .block:first-of-type {
     padding-top: 100px;
 }
