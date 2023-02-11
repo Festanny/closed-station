@@ -26,6 +26,9 @@ body {
     font-family: 'TT Firs Neue', sans-serif;
     font-size: 16px;
 }
+.contMain {
+    perspective: 1px;
+}
 a {
     color: var(--white);
     text-decoration: none;
