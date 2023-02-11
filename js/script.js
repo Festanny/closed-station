@@ -126,11 +126,15 @@ function marginsMain() {
 
 (function($) {
     $(window).scroll(function () {
-        $(window).scrollTop() > 0 ? $('header').addClass('fixed') : $('header').removeClass('fixed');
+        // blurHeader()
     })
+    // function blurHeader() {
+    //     $('html').scrollTop() > 0 ? $('header').addClass('fixed') : $('header').removeClass('fixed');
+    // }
     $( window ).resize(function() {
         marginsMain()
     });
+    // blurHeader()
     marginsMain()
 })(jQuery);
 

@@ -228,6 +228,7 @@ form button.btn-pink:focus,
     position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 10;
 }
 .lineEffects-1::before {
     content: url('../img/details/line-1.svg');
@@ -763,6 +764,7 @@ footer .footer .info-block .social a img {
     background-image: url('../img/other/bubblic.png');
     background-repeat: no-repeat;
     background-size: contain;
+    z-index: 20;
 }
 .advantageousOfferBlock .item .non-stop,
 .newYearProgramBlock .item .non-stop,
@@ -819,7 +821,9 @@ footer .footer .info-block .social a img {
 .reviewsSection .info-block,
 .consultationSection .info-block,
 .photoGallerySection .info-block,
-.infoQuestSection .info-block .item {
+.infoQuestSection .info-block .item,
+.moreQuestInfoSection .detailedInformation,
+.detailedInformationSection .info-block {
     display: grid;
     grid-template-columns: auto 65%;
     gap: 45px;
@@ -902,7 +906,8 @@ footer .footer .info-block .social a img {
 }
 .lasertagSection .item .text,
 .questSection .item.textInfo,
-.infoQuestSection .item .text {
+.infoQuestSection .item .text,
+.detailedInformationSection .item .text {
     font-size: var(--fz24);
 }
 .lasertagSection .info-block .item:first-of-type,
@@ -1633,8 +1638,12 @@ section {
 .questCatalogBlock .info-block .item .price {
     font-size: var(--fz24);
 }
-.infoQuestSection {
-    background-image: url(../img/details/grid-white-big.svg);
+.infoQuestSection,
+.detailedInformationSection {
+    background-image: url(../img/details/grid-teal-op.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     position: relative;
 }
 .infoQuestSection .info-block .item {
@@ -1734,10 +1743,12 @@ section {
 }
 .moreQuestInfoSection .info-block .item.video-photo .block.vk-video {
     grid-column: span 3;
+    border: 1px solid var(--teal);
+    height: 500px;
 }
 .moreQuestInfoSection .info-block .item.video-photo .block.vk-video iframe {
     width: 100%;
-    height: 500px;
+    height: 100%;
 }
 .moreQuestInfoSection .info-block .item.video-photo .block.gallery {
     display: grid;
@@ -1748,6 +1759,7 @@ section {
 .moreQuestInfoSection .info-block .item.video-photo .block.gallery .img {
     width: 100%;
     height: 140px;
+    border: 1px solid var(--teal);
 }
 .moreQuestInfoSection .info-block .item.video-photo .block.gallery .img img {
     width: 100%;
@@ -1801,4 +1813,115 @@ section {
 	background: url('../img/details/close.svg') no-repeat center center;
 	background-size: 20px 20px;
 	display: block;
+}
+.moreQuestInfoSection .info-block .item.information > .desc {
+    display: flex;
+    flex-direction: column;
+}
+.moreQuestInfoSection .info-block .item.information > .desc .text-1 {
+    font-size: var(--fz24);
+}
+.moreQuestInfoSection .info-block .item.information > .desc .text-2 {
+    font-size: var(--fz18);
+    color: var(--teal);
+    margin-top: 10px;
+}
+.moreQuestInfoSection .info-block .item.information > .desc .bg-white {
+    color: var(--black);
+    font-size: var(--fz20);
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: var(--white);
+    padding: 10px 20px;
+    border-radius: 1000px;
+    width: fit-content;
+    margin-top: 40px;
+}
+.moreQuestInfoSection .info-block .item.information > .desc .text-3 {
+    font-weight: 500;
+    font-size: var(--fz18);
+    margin-top: 20px;
+}
+.moreQuestInfoSection .info-block .item.information > .desc .text-4 {
+    font-size: var(--fz20);
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+.moreQuestInfoSection .info-block .item.information .price {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+}
+.moreQuestInfoSection .info-block .item.information .price .price-block {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+    column-gap: 20px;
+    row-gap: 10px;
+}
+.moreQuestInfoSection .info-block .item.information .price .desc {
+    font-size: var(--fz18);
+}
+.moreQuestInfoSection .info-block .item.information .price .price-block .item_p {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+.moreQuestInfoSection .info-block .item.information .price .price-block .item_p .count {
+    font-size: var(--fz24);
+    margin-bottom: 10px;
+}
+.moreQuestInfoSection .info-block .item.information .price .price-block .item_p span {
+    opacity: .6;
+    font-weight: 500;
+}
+.moreQuestInfoSection .info-block .item.information .price .desc.bg-blur {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    width: fit-content;
+}
+.moreQuestInfoSection .info-block .item.information .desc.landmark {
+    font-size: 18px;
+    margin-top: 20px;
+}
+.moreQuestInfoSection .info-block .item.information .more-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+.moreQuestInfoSection .info-block .item.information .more-info span {
+    font-size: var(--fz20);
+    text-transform: uppercase;
+}
+.moreQuestInfoSection .info-block .item.information .more-info a.phone {
+    font-size: var(--fz20);
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    width: fit-content;
+}
+.moreQuestInfoSection {
+    padding-bottom: 100px!important;
+}
+.detailedInformationSection {
+    padding-top: 60px;
+}
+.detailedInformationSection .info-block {
+    column-gap: 90px;
+    row-gap: 45px;
+}
+.detailedInformationSection .info-block .item:first-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+.detailedInformationSection .info-block .item:first-of-type .phone a {
+    width: fit-content;
+    font-size: var(--fz20);
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
 }
