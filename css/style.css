@@ -473,6 +473,8 @@ header nav li:hover a.c-blue-h {
 .bannSection .info-block .item:last-of-type {
     display: flex;
     align-items: flex-end;
+    position: relative;
+    z-index: 20;
 }
 .bannSection .info-block .item .img img {
     width: 100%;
@@ -746,6 +748,7 @@ footer .footer .info-block .social a img {
 }
 .advantageousOfferBlock .item {
     width: 100%;
+    z-index: 20;
 }
 .advantageousOfferBlock .item .img,
 .newYearProgramBlock .item .img,

@@ -1,15 +1,7 @@
-// href
-$("body").on('click', '[href*="#"]', function (e) {
-    let mobile = 0
-    if ($('body').width() <= 580) {
-        mobile = 30
-    }
-	let fixed_offset = $('header nav').height() + mobile;
-	$('html,body').stop().animate({
-		scrollTop: $(this.hash).offset().top - fixed_offset
-	}, 1000);
-	e.preventDefault();
-});
+(function($) {
+    marginsMain()
+    checkScroll()
+})(jQuery);
 
 // mask for phone input
 window.addEventListener("DOMContentLoaded", function() {
@@ -93,8 +85,8 @@ $('.modal').on("click", function() {
     }, 500)
 });
 
-$(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
+function upButton() {
+    if ($('.contMain').offset().top < -200) {
         if ($('#upbutton').is(':hidden')) {
             $('#upbutton').css({
                 opacity: 1
@@ -103,12 +95,10 @@ $(window).scroll(function () {
     } else {
         $('#upbutton').stop(true, false).fadeOut('fast');
     }
-});
-$('#upbutton').click(function () {
-    $('html, body').stop().animate({
-        scrollTop: 0
-    }, 500);
-});
+};
+// $('#upbutton').click(function () {
+//     $('.contMain').offset().top = 0
+// });
 
 function marginsMain() {
     $('.bannSection .info-block .item.infoBann').css({
@@ -123,20 +113,6 @@ function marginsMain() {
     $('.bannSection .bannBlock').css({'padding-top': $('header').height() + 40})
     $('.ptBlock').css({'padding-top': $('header').height() + 40})
 }
-
-(function($) {
-    $(window).scroll(function () {
-        // blurHeader()
-    })
-    // function blurHeader() {
-    //     $('html').scrollTop() > 0 ? $('header').addClass('fixed') : $('header').removeClass('fixed');
-    // }
-    $( window ).resize(function() {
-        marginsMain()
-    });
-    // blurHeader()
-    marginsMain()
-})(jQuery);
 
 if ($('#map').length != 0) {
     ymaps.ready(init);
@@ -184,3 +160,69 @@ $(function () {
         });
     });
 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+        const pageContainer = document.querySelector(".contMain");
+
+        const scroller = new LocomotiveScroll({
+        el: pageContainer,
+        smooth: true
+        });
+
+        scroller.on("scroll", ScrollTrigger.update);
+        scroller.on("scroll", function() {
+            checkScroll()
+        });
+
+        ScrollTrigger.scrollerProxy(pageContainer, {
+        scrollTop(value) {
+            return arguments.length
+            ? scroller.scrollTo(value, 0, 0)
+            : scroller.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+            return {
+            left: 0,
+            top: 0,
+            width: window.innerWidth,
+            height: window.innerHeight
+            };
+        },
+        pinType: pageContainer.style.transform ? "transform" : "fixed"
+        });
+
+        ////////////////////////////////////
+        ////////////////////////////////////
+        window.addEventListener("load", function () {
+        let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+        let pinWrap = document.querySelector(".pin-wrap");
+        let pinWrapWidth = pinWrap.offsetWidth;
+        let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+
+        // Pinning and horizontal scrolling
+
+        gsap.to(".pin-wrap", {
+            scrollTrigger: {
+            scroller: pageContainer, //locomotive-scroll
+            scrub: true,
+            trigger: "#sectionPin",
+            pin: true,
+            // anticipatePin: 1,
+            start: "top top",
+            end: pinWrapWidth
+            },
+            x: -horizontalScrollLength,
+            ease: "none"
+        });
+
+        ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+        ScrollTrigger.refresh();
+        });
+
+function checkScroll() {
+    marginsMain()
+    upButton()
+    $('.contMain').offset().top < 0 ? $('header').addClass('fixed') : $('header').removeClass('fixed');
+}
