@@ -10,6 +10,7 @@
     --fz64: 64px;
     --fz48: 48px;
     --fz36: 36px;
+    --fz32: 32px;
     --fz24: 24px;
     --fz20: 20px;
     --fz18: 18px;
@@ -455,6 +456,9 @@ header nav li:hover a.c-blue-h {
 .bannSection.new-year-bg {
     background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('../img/other/ice-surface-texture-macro-shot-blue-wallpaper.jpeg');
 }
+.bannSection.hideSeekBg {
+    background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('../img/other/purple-alcohol-ink-abstract-background.jpeg') center;
+}
 .bannSection.new-year-bg .nameCompany {
     width: 80%;
 }
@@ -522,6 +526,10 @@ header nav li:hover a.c-blue-h {
 .bannSection.new-year-bg .info-block .item.infoBann .nameCompany::before,
 .bannSection.new-year-bg .info-block .item.infoBann .nameCompany::after {
     content: 'Такой новый';
+}
+.bannSection.hideSeekBg .info-block .item.infoBann .nameCompany::before,
+.bannSection.hideSeekBg .info-block .item.infoBann .nameCompany::after {
+    content: 'Прятки в';
 }
 .descSection .textTitle::before,
 .descSection .textTitle::after {
@@ -1012,24 +1020,28 @@ footer .footer .info-block .social a img {
     background-size: cover;
     opacity: .1;
 }
-.whyWeSection .whyWeBlock-2 .info-block {
+.whyWeSection .whyWeBlock-2 .info-block,
+.specialSolutionsSection .forWhatBlock .info-block {
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, auto));
     gap: 25px;
 }
-.whyWeSection .whyWeBlock-2 .info-block .item {
+.whyWeSection .whyWeBlock-2 .info-block .item,
+.specialSolutionsSection .forWhatBlock .info-block .item {
     display: flex;
     flex-direction: column;
     gap: 30px;
     text-align: center;
     align-items: center;
 }
-.whyWeSection .whyWeBlock-2 .info-block .item > span {
+.whyWeSection .whyWeBlock-2 .info-block .item > span,
+.specialSolutionsSection .forWhatBlock .info-block .item > span {
     padding: 0 10px;
     font-size: var(--fz24);
 }
-.whyWeSection .whyWeBlock-2 .info-block .item .icon {
+.whyWeSection .whyWeBlock-2 .info-block .item .icon,
+.specialSolutionsSection .forWhatBlock .info-block .item .icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1039,7 +1051,8 @@ footer .footer .info-block .social a img {
     border-radius: 50%;
     border: 2px solid var(--teal);
 }
-.whyWeSection .whyWeBlock-2 .info-block .item .icon img {
+.whyWeSection .whyWeBlock-2 .info-block .item .icon img,
+.specialSolutionsSection .forWhatBlock .info-block .item .icon img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -1579,16 +1592,20 @@ section {
 .pt10 {
     padding-top: 10px!important;
 }
-.questCatalogBlock .info-block {
+.questCatalogBlock .info-block,
+.infoQuestPageBlock .info-block {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, auto));
     column-gap: 20px;
     row-gap: 40px;
     margin-top: 40px;
 }
-.questCatalogBlock .info-block .item {
+.questCatalogBlock .info-block .item,
+.infoQuestPageBlock .info-block .item {
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
 }
 .questCatalogBlock .info-block .item .more {
     position: absolute;
@@ -1615,17 +1632,20 @@ section {
     background-color: var(--teal);
     color: var(--black);
 }
-.questCatalogBlock .info-block .item .img {
+.questCatalogBlock .info-block .item .img,
+.infoQuestPageBlock .info-block .item .img {
     width: 100%;
     height: 260px;
 }
-.questCatalogBlock .info-block .item .img img {
+.questCatalogBlock .info-block .item .img img,
+.infoQuestPageBlock .info-block .item .img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
-.questCatalogBlock .info-block .item .info {
+.questCatalogBlock .info-block .item .info,
+.infoQuestPageBlock .info-block .item .info {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -1633,19 +1653,25 @@ section {
     background: rgba(27, 211, 178, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    height: 100%;
+    flex: 1;
 }
-.questCatalogBlock .info-block .item .info .title {
+.questCatalogBlock .info-block .item .info .title,
+.infoQuestPageBlock .info-block .item .info .title {
     font-size: var(--fz20);
     text-transform: uppercase;
 }
-.questCatalogBlock .info-block .item .info .category {
+.questCatalogBlock .info-block .item .info .category,
+.infoQuestPageBlock .info-block .item .info .category {
     opacity: .6;
 }
 .questCatalogBlock .info-block .item .price {
     font-size: var(--fz24);
 }
 .infoQuestSection,
-.detailedInformationSection {
+.detailedInformationSection,
+.infoQuestPageSection,
+.specialSolutionsSection .forWhatBlock {
     background-image: url(../img/details/grid-teal-op.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1930,4 +1956,199 @@ section {
     font-size: var(--fz20);
     padding: 10px 20px;
     background: rgba(255, 255, 255, 0.1);
+}
+.bannSection.hideSeekBg {
+    padding-bottom: 0!important;
+}
+.infoQuestPageSection .title-age {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-end;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+.infoQuestPageSection .title-age .age {
+    text-align: right;
+}
+.bannSection.hideSeekBg .bannBlock {
+    padding-bottom: 0;
+}
+.infoQuestPageSection .title-age .age span {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--teal);
+    font-size: var(--fz20);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: var(--black);
+}
+.infoQuestPageSection .text {
+    margin-top: 40px;
+}
+.infoQuestPageSection .text span {
+    font-size: var(--fz32);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.infoQuestPageSection .text .desc {
+    font-size: var(--fz18);
+    opacity: .6;
+    margin-top: 10px;
+}
+.specialSolutionsSection {
+    border-top: 1px solid var(--teal); 
+    border-bottom: 1px solid var(--teal); 
+}
+.specialSolutionsSection .text {
+    text-align: center;
+}
+.specialSolutionsSection .text .textTitle,
+.specialSolutionsSection .text .desc {
+    width: 80%;
+    margin: 0 auto;
+}
+.specialSolutionsSection .text .desc {
+    opacity: .6;
+    font-size: var(--fz18);
+    margin-top: 20px;
+}
+.specialSolutionsSection .forWhatBlock {
+    margin-top: 40px;
+    padding: 60px;
+}
+.specialSolutionsSection {
+    padding-bottom: 0!important;
+}
+.priceServiceSection .info-block {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.priceServiceSection .info-block .item {
+    display: flex;
+    flex-direction: column;
+}
+.priceServiceSection .info-block .item .info-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 20px;
+    row-gap: 10px;
+    padding: 20px;
+    background-color: var(--teal);
+}
+.priceServiceSection .info-block .item .info-header .name {
+    font-size: var(--fz32);
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--black);
+}
+.priceServiceSection .info-block .item .info-header .age-count {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.priceServiceSection .info-block .item .info-header .age-count span:not(.ic) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 31px;
+    height: 31px;
+    border-radius: 1000px;
+    background-color: var(--white);
+    color: var(--black);
+}
+.priceServiceSection .info-block .item .info-header .age-count span.ic {
+    padding: 5px 10px;
+    border-radius: 1000px;
+    background-color: var(--white);
+    color: var(--black);
+}
+.priceServiceSection .info-block .item .info-body {
+    padding: 20px;
+    background-color: var(--white);
+    color: var(--black);
+}
+.priceServiceSection .info-block .item .info-body .desc,
+.priceServiceSection .info-block .item .info-body .list .day {
+    font-size: var(--fz20);
+    text-transform: uppercase;
+}
+.priceServiceSection .info-block .item .info-body .list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 10px;
+}
+.priceServiceSection .info-block .item .info-body .list .item_l {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+.priceServiceSection .info-block .item .info-body .additionally {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: var(--fz18);
+    color: var(--white);
+    background-color: var(--black);
+}
+.ratesSection .info-block {
+    display: grid;
+    grid-template-columns: 325px 1fr;
+    gap: 35px;
+}
+.ratesSection .info-block .item .ratesSlider .swiper-wrapper {
+    width: 10px;
+}
+.ratesSection .info-block .item .swiper-slide .name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 70px;
+    text-transform: uppercase;
+    color: var(--teal);
+    font-size: var(--fz24);
+    background: rgba(27, 211, 178, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+.ratesSection .info-block .item .swiper-slide .detailed {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px 30px;
+}
+.ratesSection .info-block .item .swiper-slide .detailed ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.ratesSection .info-block .item .swiper-slide {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+.ratesSection .info-block ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+}
+.ratesSection .info-block ul li {
+    display: flex;
+    flex-direction: column;
+}
+.ratesSection .info-block .swiper-slide ul li {
+    align-items: center;
+    text-align: center;
+    gap: 5px;
 }
