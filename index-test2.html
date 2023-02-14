@@ -1,400 +1,497 @@
 <!doctype html>
-<html class="is-smooth-scroll-compatible is-loading" lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Locomotive Scroll | Detection of elements in viewport & smooth scrolling with parallax effects.</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <meta name="theme-color" content="#ffffff">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="apple-touch-icon" sizes="152x152" href="dist/images/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="dist/images/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="dist/images/favicons/favicon-16x16.png">
-        <link rel="mask-icon" href="dist/images/favicons/safari-pinned-tab.svg" color="#000000">
-
-        <link rel="stylesheet" href="css/locomotive-scroll.css">
-
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144274538-1"></script>
-        <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag(){dataLayer.push(arguments);}
-         gtag('js', new Date());
-
-         gtag('config', 'UA-144274538-1');
-        </script>
-    </head>
-    <body>
-
-        <div class="o-scroll" id="js-scroll" data-scroll-container>
-            <div data-scroll-section>
-                <div class="o-container">
-                    <header class="c-header" id="header">
-                        <div class="c-header_heading" data-scroll data-scroll-speed="-8" data-scroll-position="top" data-scroll-target="#header" data-scroll-repeat>
-                            <div class="o-layout">
-                                <div class="o-layout_item u-1/2" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-2" data-scroll-position="top" data-scroll-target="#header">
-                                    <span class="u-label c-header_heading_label">
-                                        <a href="https://locomotive.ca" target="_blank" rel="noopener noreferrer">
-                                            Locomotive.ca
-                                        </a>
-                                    </span>
-                                </div>
-                                <div class="o-layout_item u-1/2" data-scroll data-scroll-direction="horizontal" data-scroll-speed="2" data-scroll-position="top" data-scroll-target="#header">
-                                    <div class="u-text-right">
-                                        <p class="u-label c-header_heading_label">
-                                            v4.x – Edition
-                                        </p>
-                                    </div>
-                                </div>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Активный отдых в Тольятти | Закрытая станция</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css">
+</head>
+<body>
+    
+    <div class="contMain" data-scroll-container>
+        <header>
+            <div class="header container">
+                <div class="logo">
+                    <a href="/"><img src="img/other/logo.png" alt="logo"></a>
+                </div>
+                <nav>
+                    <ul class="topmenu">
+                        <li><a href="quest.html" class="c-teal-h">Квесты</a></li>
+                        <li><a href="#" class="openSub c-pink-h">Лазертаг</a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="#"><span>Мероприятие для детей</span></a></li>
+                                    <li><a href="#"><span>Мероприятие для взрослых</span></a></li>
+                                    <li><a href="#"><span>Мероприятие для подростков</span></a></li>
+                                    <li><a href="#"><span>Секция лазертаг</span></a></li>
+                                    <li><a href="#"><span>Арсенал</span></a></li>
+                                  </ul>
                             </div>
+                        </li>
+                        <li><a href="#">Прятки</a></li>
+                        <li><a href="new-year.html" class="c-blue-h">Новый год</a></li>
+                        <li><a href="#">Игра в Кальмара</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="phone">
+                    <a href="tel:+78482943306">+7 (8482) 94-33-06</a>
+                </div>
+                <div>
+                    <a href="#" class="btn btn-teal">
+                        <div class="original">
+                            <div><span></span><span></span></div>
+                            <div><span></span><span></span></div>
+                            <div><span></span><span></span></div>
+                            <div><span></span><span></span></div>
                         </div>
-                        <h1 class="c-header_title o-h1" data-scroll>
-                            <span class="c-header_title_line">
-                                <span data-scroll data-scroll-speed="3" data-scroll-position="top">Locomotive</span>
-                            </span>
-                            <span class="c-header_title_line">
-                                <span data-scroll data-scroll-speed="2" data-scroll-position="top">Scroll</span>
-                            </span>
-                            <span class="c-header_title_line -version u-white">
-                                <span class="o-h1" data-scroll data-scroll-speed="3" data-scroll-position="top" data-scroll-delay="0.05">v</span><span class="o-h1" data-scroll data-scroll-speed="5" data-scroll-position="top" data-scroll-delay="0.05">4</span><span class="o-h1" data-scroll data-scroll-speed="2" data-scroll-position="top" data-scroll-delay="0.05">.</span><span class="o-h1" data-scroll data-scroll-speed="4" data-scroll-position="top" data-scroll-delay="0.05">X</span>
-                            </span>
-                        </h1>
-                        <hr class="c-header_line" data-scroll data-scroll-offset="100" />
-                        <a class="c-header_logo" href="https://locomotive.ca" target="_blank">
-                            <svg role="img"><use xlink:href="dist/images/sprite.svg#logo"></use></svg>
-                        </a>
-                    </header>
+                        <div class="effects">
+                            <div><span></span><span></span></div>
+                            <div><span></span><span></span></div>
+                            <div><span></span><span></span></div>
+                            <div><span></span><span></span></div>
+                        </div>
+                        ХОЧУ СЫГРАТЬ
+                    </a>
                 </div>
             </div>
+        </header>
 
-            <section data-scroll-section>
-                <div class="o-container">
-                    <div class="c-summary" data-scroll>
-                        <div class="o-layout -gutter">
-                            <div class="o-layout_item u-2/5@from-medium">
-                                <p class="c-summary_text">
-                                    A simple scroll library used by developers at Locomotive. Built as a layer on top of <em>ayamflow's</em> <a href="https://github.com/ayamflow/virtual-scroll" target="_blank">virtual-scroll</a>, it provides smooth scrolling with support for parallax effects, toggling classes, and triggering event listeners when elements are in the viewport.
-                                </p>
+        <div class="lineEffects-1"></div>
+        <div class="lineEffects-2 container"></div>
+        <div class="lineEffects-3 container"></div>
+    <main>
+        <section class="bannSection" id="intro" data-scroll-section>
+            <div class="bannBlock big">
+                <div class="is-inview" data-scroll="" data-scroll-repeat="" data-scroll-call="toggleBackToTop"></div>
+                <div class="info-block">
+                    <div class="item infoBann">
+                        <div class="block" data-scroll data-scroll-speed="3">
+                            <div class="nameCompany">Закрытая<br>станция</div>
+                            <div class="desc">Центр активного отдыха для детей и взрослых</div>
+                        </div>
+                        <div class="block">
+                            <div class="connection">
+                                <div class="social teal">
+                                    <a href="#"><img src="img/social/vk.svg" alt=""></a>
+                                    <a href="#"><img src="img/social/tg.svg" alt=""></a>
+                                    <a href="#"><img src="img/social/wa.svg" alt=""></a>
+                                </div>
+                                <div class="phone">
+                                    <a href="tel:+7 (8482) 94-33-06">+7 (8482) 94-33-06</a>
+                                </div>
                             </div>
-                            <div class="o-layout_item u-3/5@from-medium">
-                                <ul class="c-summary_list">
-                                    <li class="c-summary_list_item u-label" data-scroll>
-                                        <a href="#speed-control" data-scroll-to>
-                                            01. Speed Control
-                                            <span class="c-summary_list_icon u-icon">
-                                                ↓
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="c-summary_list_item u-label" data-scroll>
-                                        <a href="#scroll-direction" data-scroll-to>
-                                            02. Scroll direction
-                                            <span class="c-summary_list_icon u-icon">
-                                                ↓
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="c-summary_list_item u-label" data-scroll>
-                                        <a href="#lerp-effect" data-scroll-to>
-                                            03. Lerp effect
-                                            <span class="c-summary_list_icon u-icon">
-                                                ↓
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="c-summary_list_item u-label" data-scroll>
-                                        <a href="#fixed-elements" data-scroll-to>
-                                            04. Fixed Elements
-                                            <span class="c-summary_list_icon u-icon">
-                                                ↓
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
+                        </div>
+                    </div>
+                    <div class="item" data-scroll data-scroll-speed="2">
+                        <div class="img">
+                            <img src="img/other/img1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="descSection" data-scroll-section>
+            <div class="descBlock container">
+                <div class="info-block">
+                    <div class="item" data-scroll data-scroll-speed="3">
+                        <div class="img">
+                            <img src="img/other/img2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="item noImage" data-scroll data-scroll-speed="0.5">
+                        <div class="textTitle">
+                            Активный отдых в&nbsp;Тольятти по выгодной цене
+                        </div>
+                        <div class="list">
+                            <div class="num-text">
+                                <div class="num c-teal">01</div>
+                                <span>Отдых в Тольятти в любое время года может стать просто незабываемым для любителей квестов и лазертага.</span>
+                            </div>
+                            <div class="num-text">
+                                <div class="num c-blue">02</div>
+                                <span>Можно собраться вместе с друзьями, разделиться на несколько команд и наконец-то выяснить кто же лучше.</span>
+                            </div>
+                            <div class="num-text">
+                                <div class="num c-pink">03</div>
+                                <span>Предложено максимальное погружение в сюжет и атмосферу.</span>
+                            </div>
+                        </div>
+                        <div class="btn-block">
+                            <a href="#" class="btn btn-teal">
+                                <div class="original">
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                </div>
+                                <div class="effects">
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                </div>
+                                Квесты
+                            </a>
+                            <a href="#" class="btn btn-pink">
+                                <div class="original">
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                </div>
+                                <div class="effects">
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                </div>
+                                Лазертаг
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="advantageousOfferSection" data-scroll-section>
+            <div class="advantageousOfferBlock container">
+                <div class="info-block">
+                    <div class="item" data-scroll data-scroll-speed="2">
+                        <div class="textTitle">
+                            Выгодное предложение
+                        </div>
+                        <div class="non-stop">Квесты НОН-СТОП</div>
+                        <div class="block">
+                            <div class="desc-1">Сертификат на прохождение нескольких квестов НОН-СТОПом</div>
+                            <div class="desc-2">*Действуют на любые квесты кроме – экшн игр</div>
+                            <div class="wholesale">
+                                <div class="item_w">
+                                    <div class="price">6 000₽</div>
+                                    <div class="desc">прохождение 2-х квестов</div>
+                                </div>
+                                <div class="item_w">
+                                    <div class="price">8 000₽</div>
+                                    <div class="desc">прохождение 3-х квестов</div>
+                                </div>
+                                <div class="item_w">
+                                    <div class="price">10 000₽</div>
+                                    <div class="desc">прохождение 4-х квестов</div>
+                                </div>
+                            </div>
+                            <div class="btn-block">
+                                <a href="#" class="btn type-2 btn-teal">
+                                    <div class="original">
+                                        <div><span></span><span></span></div>
+                                        <div><span></span><span></span></div>
+                                        <div><span></span><span></span></div>
+                                        <div><span></span><span></span></div>
+                                    </div>
+                                    <div class="effects">
+                                        <div><span></span><span></span></div>
+                                        <div><span></span><span></span></div>
+                                        <div><span></span><span></span></div>
+                                        <div><span></span><span></span></div>
+                                    </div>
+                                    ХОЧУ СЫГРАТЬ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img" data-scroll data-scroll-speed="3">
+                            <div>
+                                <img src="img/other/img3.png" alt="" data-scroll data-scroll-speed="2">
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <section class="c-section" data-scroll-section>
-                <div class="o-container" id="speed-control">
-                    <div class="o-layout -gutter">
-                        <div class="o-layout_item u-2/5@from-medium">
-                            <div class="c-section_infos -padding" data-scroll data-scroll-speed="-2" data-scroll-call="test">
-                                <div class="c-section_infos_inner" data-scroll data-scroll-offset="200">
-                                    <h3>
-                                        01. <br>
-                                        Speed control
-                                    </h3>
-                                    <div class="c-sections_infos_text u-text">
-                                        <p>
-                                            Each element can be animated at a different speed. You get to choo-choo-choose!
-                                        </p>
-                                    </div>
+            </div>
+        </section>
+        <section class="lasertagSection" data-scroll-section>
+            <div class="lasertagBlock container">
+                <div class="info-block">
+                    <div class="item" data-scroll data-scroll-speed="1">
+                        <div class="textTitle">
+                            Чем может понравиться лазертаг?
+                        </div>
+                        <div class="btn-block">
+                            <a href="#" class="btn btn-pink">
+                                <div class="original">
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
                                 </div>
+                                <div class="effects">
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                </div>
+                                Узнать цены
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <p>Это динамичная и очень интересная игра, которая развивает командный дух, дает возможность двигаться и стремиться к победе просто используя для этого бластер. Есть даже несколько уровней сложности игры для настоящих профи и новичков. Можно начинать с тренировочных миссий или переходить сразу к выполнению реальных сюжетных задач.</p>
+                            <p>Лазерные квесты нравятся многим, ведь они не приносят никакой боли, увечий. Можно получить бесценный опыт, незабываемые эмоции, помечтать о том, как вы боретесь с кем-то световыми мечами. Лазерные лучи не вредят зрению или здоровью в целом, так что опасаться нечего.</p>
+                            <p><strong class="c-pink">Цены на отдых Тольятти</strong> вы можете найти прямо на сайте центра или узнать у одного из менеджеров.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="questSection" data-scroll-section>
+            <div class="questBlock container">
+                <div class="info-block">
+                    <div class="item" data-scroll data-scroll-speed="1">
+                        <div class="textTitle">
+                            Подробнее о&nbsp;квестах
+                        </div>
+                        <div class="btn-block">
+                            <a href="#" class="btn btn-teal">
+                                <div class="original">
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                </div>
+                                <div class="effects">
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                </div>
+                                Каталог квестов
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item textInfo">
+                        <div class="text">
+                            <div>Рассматривая активный отдых в Тольятти не забывайте, что различные квесты также относятся к этой категории. Можно подобрать вариант с любым возрастным рейтингом, жанром. Уровнем сложности.</div>
+                        </div>
+                        <div class="lookAt">
+                            <span>При выборе квеста стоит смотреть на:</span>
+                            <div class="block">
+                                <div class="item_l">возрастное ограничение</div>
+                                <div class="item_l">уровень сложности</div>
+                                <div class="item_l">количество человек</div>
+                                <div class="item_l">сюжет</div>
                             </div>
                         </div>
-                        <div class="o-layout_item u-3/5@from-medium">
-                            <div class="c-speed-block" data-scroll data-scroll-speed="2">
-                                <div class="o-image_wrapper" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat>
-                                    <div class="o-image" data-scroll>
-                                        <img class="c-speed-block_image" src="dist/images/locomotive01.jpg" alt="Locomotive image from unsplash">
-                                    </div>
+                        <div class="text">
+                            <div>Такой активный отдых в Тольятти зимой или летом понравится каждому. Квест – это весело, плюс получится развить логику, ощущения, эмоциональность. К примеру, вы можете стать участником всем известного фильма ужасов «Пила» и прочувствовать атмосферу на себе или представить, что вам нужно сбежать из тюрьмы, попробовать себя в роли юного волшебника из «Гарри Поттера», играть в страшные прятки в темноте с большой командой до 30 человек. Вариантов очень много.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="whyWeSection" data-scroll-section>
+            <div class="whyWeBlockMain-1">
+                <div class="container">
+                    <div class="whyWeBlock-1" data-scroll data-scroll-speed="1">
+                        <div class="block-text">
+                            <div class="item">
+                                <div class="textTitle">
+                                    Почему именно&nbsp;мы?
                                 </div>
-                                <p class="c-speed-block_title" data-scroll>
-                                    Speed x2
-                                </p>
-                                <span class="c-speed-block_bubble" data-scroll data-scroll-speed="4" data-scroll-call="dynamicColor" data-scroll-repeat>
-                                    4x
-                                </span>
+                                <div class="text">
+                                    <p>Наш центр активного отдыха готов помочь каждому, кто в Тольятти хочет разнообразить досуг, весело провести время и попробовать что-то новое. Вы можете выбрать интересный квест или записаться на лазертаг вместе с друзьями. Все детали лучше всего уточнять у менеджера, но на сайте есть актуальные цены на наши услуги, что упрощает ваш выбор.</p>
+                                    <p>Гарантируем полное соблюдение норм безопасности и сделаем все для того, чтобы вы действительно провели время с драйвом. Наши услуги подходят для активного отдыха с друзьями, проведения дня рождения и даже корпоратива. Все организационные моменты возьмем на себя.</p>
+                                </div>
+                                <div class="hlt">Скидки клиентам — не роскошь, а способ сотрудничества</div>
                             </div>
                         </div>
                     </div>
-                    <div class="o-layout -gutter -bottom">
-                        <div class="o-layout_item u-2/5@from-medium">
-                            <div class="c-speed-block" data-scroll data-scroll-speed="4">
-                                <div class="o-image_wrapper" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat>
-                                    <div class="o-image" data-scroll data-scroll-speed="-1.5">
-                                        <img class="c-speed-block_image" src="dist/images/locomotive02.jpg" alt="Locomotive image from unsplash">
-                                    </div>
-                                </div>
-                                <p class="c-speed-block_title" data-scroll>
-                                    Speed x4
-                                </p>
-                                <span class="c-speed-block_bubble -right" data-scroll data-scroll-speed="1" data-scroll-call="dynamicColor" data-scroll-repeat>
-                                    1x
-                                </span>
-                                <span class="c-speed-block_bubble -left -bottom" data-scroll data-scroll-speed="3" data-scroll-call="dynamicColor" data-scroll-repeat>
-                                    3x
-                                </span>
+                </div>
+            </div>
+            <div class="whyWeBlock-2">
+                <div class="container">
+                    <div class="info-block">
+                        <div class="item">
+                            <div class="icon">
+                                <img src="img/details/star-06.svg" alt="">
                             </div>
+                            <span>День рождения</span>
                         </div>
-                        <div class="o-layout_item u-3/5@from-medium">
-                            <div class="o-layout u-text-right">
-                                <div class="o-layout_item u-1/2@from-medium">
-                                    <div class="c-speed-block -margin" data-scroll data-scroll-speed="6">
-                                        <div class="o-image_wrapper" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat>
-                                            <div class="o-image" data-scroll data-scroll-speed="-2">
-                                                <img class="c-speed-block_image" src="dist/images/locomotive03.jpg" alt="Locomotive image from unsplash">
+                        <div class="item">
+                            <div class="icon">
+                                <img src="img/details/users-03.svg" alt="">
+                            </div>
+                            <span>Веселый корпоратив</span>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <img src="img/details/users-check.svg" alt="">
+                            </div>
+                            <span>Семейный активный отдых</span>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <img src="img/details/flag-02.svg" alt="">
+                            </div>
+                            <span>Спортивная секция</span>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <img src="img/details/car.svg" alt="">
+                            </div>
+                            <span>Выездной квест</span>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <img src="img/details/gift-02.svg" alt="">
+                            </div>
+                            <span>Подарочный сертификат</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviewsSection" data-scroll-section> 
+            <div class="reviewsBlock container">
+                <div class="info-block">
+                    <div class="item" data-scroll data-scroll-speed="1">
+                        <div class="textTitle-desc">
+                            <div class="textTitle">
+                                Отзывы
+                            </div>
+                            <div class="desc">Более 2 тыс. отзывов от наших посетителей</div>
+                        </div>
+                        <div class="btn-block">
+                            <a href="#" class="btn btn-teal">
+                                <div class="original">
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                </div>
+                                <div class="effects">
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                </div>
+                                Оставить отзыв
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item textInfo" data-scroll data-scroll-speed="2">
+                        <div class="block">
+                            <div class="swiper reviewsSlider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="text">Второй раз отмечаем День
+                                            рождения. Великолепно!
+                                            Особенно для мальчишек.
+                                            Активный отдых. Аниматоры.
+                                            Вежливый персонал. Комната,
+                                            вода, посуда - всё
+                                            предоставляется. Остались
+                                            довольны. Будем планировать
+                                            будущие посещения!</div>
+                                        <div class="person">
+                                            <div class="img">
+                                                <img src="img/reviews/541ddf8cd675bbdafb20a7b1ec137f79.png" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <div class="name">Margarita P.</div>
+                                                <div class="date">14.11.2021</div>
+                                                <div class="rating-mini">
+                                                    <span class="active"></span>	
+                                                    <span class="active"></span>    
+                                                    <span class="active"></span>  
+                                                    <span></span>    
+                                                    <span></span>
+                                                </div>
                                             </div>
                                         </div>
-                                        <p class="c-speed-block_title" data-scroll>
-                                            Speed x6
-                                        </p>
-                                        <span class="c-speed-block_bubble -left -top" data-scroll data-scroll-speed="2" data-scroll-call="dynamicColor" data-scroll-repeat>
-                                            2x
-                                        </span>
-                                        <span class="c-speed-block_bubble -right" data-scroll data-scroll-speed="6" data-scroll-call="dynamicColor" data-scroll-repeat>
-                                            6x
-                                        </span>
-                                        <span class="c-speed-block_bubble -left -bottom" data-scroll data-scroll-speed="9" data-scroll-call="dynamicColor" data-scroll-repeat>
-                                            9x
-                                        </span>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="c-section" data-scroll-section>
-                <div class="o-container" id="scroll-direction">
-                    <div class="c-direction-block_wrapper">
-                        <div class="c-section_infos -padding" data-scroll data-scroll-sticky data-scroll-target="#scroll-direction">
-                            <div class="c-section_infos_inner" data-scroll>
-                                <h3>
-                                    02. <br>
-                                    Scroll direction
-                                </h3>
-                                <div class="c-sections_infos_text u-text">
-                                    <p>
-                                        And if that wasn't enough, make 'em go backwards. Or upwards. Or downwards!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="c-direction-block" id="direction">
-                            <div class="c-direction-block_item -one">
-                                <span class="c-direction-block_item_inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="6" data-scroll-target="#direction">
-                                    I'm moving in this direction
-                                </span>
-                            </div>
-                            <div class="c-direction-block_item -two">
-                                <span class="c-direction-block_item_inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-8" data-scroll-target="#direction">
-                                    And in this direction
-                                </span>
-                            </div>
-                            <div class="c-direction-block_item -three">
-                                <span class="c-direction-block_item_inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="9" data-scroll-target="#direction" data-scroll-delay="0.05">
-                                    Sooo customizable. Right?
-                                </span>
-                            </div>
-                            <div class="c-direction-block_item -four">
-                                <span class="c-direction-block_item_inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="15" data-scroll-target="#direction">
-                                    I can also go in this direction
-                                </span>
-                            </div>
-                            <div class="c-direction-block_item -five">
-                                <span class="c-direction-block_item_inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-20" data-scroll-target="#direction" data-scroll-delay="0.05">
-                                    Ok, enough!!!!
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="c-section" data-scroll-section>
-                <div class="o-container" id="lerp-effect">
-                    <div class="o-layout">
-                        <div class="o-layout_item u-2/5@from-medium">
-                            <div class="c-section_infos" data-scroll>
-                                <div class="c-section_infos_inner" data-scroll data-scroll-offset="200">
-                                    <h3>
-                                        03. <br>
-                                        Lerp elements
-                                    </h3>
-                                    <div class="c-sections_infos_text u-text">
-                                        <p>
-                                            Stagger those smooth animations using delays to create a rushing or dragging effect.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-layout_item u-3/5@from-medium">
-                            <div class="c-lerp-block">
-                                <span class="c-lerp-block_index" data-scroll data-scroll-delay="0.2" data-scroll-speed="6" data-scroll-call="dynamicColor" data-scroll-repeat>
-                                    01
-                                </span>
-                                <span class="c-lerp-block_title" data-scroll data-scroll-delay="0.6" data-scroll-speed="6">
-                                    <span>
-                                        I have a lerp
-                                    </span>
-                                </span>
-                            </div>
-                            <div class="c-lerp-block">
-                                <span class="c-lerp-block_index" data-scroll data-scroll-delay="0.06" data-scroll-speed="6" data-scroll-call="dynamicColor" data-scroll-repeat>
-                                    02
-                                </span>
-                                <span class="c-lerp-block_title" data-scroll data-scroll-delay="0.1" data-scroll-speed="6">
-                                    <span>
-                                        Me too! <br>
-                                        And even more
-                                    </span>
-                                </span>
-                            </div>
-                            <div class="c-lerp-block">
-                                <span class="c-lerp-block_index" data-scroll data-scroll-delay="0.06" data-scroll-speed="6" data-scroll-call="dynamicColor" data-scroll-repeat>
-                                    03
-                                </span>
-                                <span class="c-lerp-block_title" data-scroll>
-                                    <span data-scroll data-scroll-delay="0.13" data-scroll-speed="6">B</span>
-                                    <span data-scroll data-scroll-delay="0.12" data-scroll-speed="6">y</span>
-                                    <span data-scroll data-scroll-delay="0.11" data-scroll-speed="6"> </span>
-                                    <span data-scroll data-scroll-delay="0.1" data-scroll-speed="6">L</span>
-                                    <span data-scroll data-scroll-delay="0.09" data-scroll-speed="6">e</span>
-                                    <span data-scroll data-scroll-delay="0.08" data-scroll-speed="6">t</span>
-                                    <span data-scroll data-scroll-delay="0.07" data-scroll-speed="6">t</span>
-                                    <span data-scroll data-scroll-delay="0.06" data-scroll-speed="6">e</span>
-                                    <span data-scroll data-scroll-delay="0.05" data-scroll-speed="6">r</span>
-                                </span>
-                            </div>
-                            <div class="c-lerp-block">
-                                <span class="c-lerp-block_index" data-scroll data-scroll-delay="0.03" data-scroll-speed="6" data-scroll-call="dynamicColor" data-scroll-repeat>
-                                    04
-                                </span>
-                                <span class="c-lerp-block_title" data-scroll data-scroll-delay="0.04" data-scroll-speed="6">
-                                    <span>
-                                        Soooo smooooth
-                                    </span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="c-section -fixed" data-scroll-section data-persistent>
-                <div class="o-container" id="fixed-elements">
-                    <div class="o-layout">
-                        <div class="o-layout_item u-2/5@from-medium">
-                            <div class="c-section_infos -padding" data-scroll data-scroll-sticky data-scroll-target="#fixed-elements">
-                                <div class="c-section_infos_inner" data-scroll data-scroll-offset="200">
-                                    <h3>
-                                        04. <br>
-                                        Fixed elements
-                                    </h3>
-                                    <div class="c-sections_infos_text u-text">
-                                        <p>
-                                            Create slides that stick and untick to the viewport while scrolling through.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-layout_item u-3/5@from-medium">
-                            <div class="c-fixed_wrapper" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat>
-                                <div class="c-fixed_target" id="fixed-target"></div>
-                                <div class="c-fixed" data-scroll data-scroll-sticky data-scroll-target="#fixed-target" style="background-image:url('dist/images/locomotive04.jpg')"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="c-section" data-scroll-section>
-                <div class="o-container">
-                    <div class="c-cta">
-                        <h1 class="o-title" data-scroll>
-                            <span class="o-title_line">
-                                <span>If you</span>
-                            </span>
-                            <span class="o-title_line">
-                                <span>Enjoyed</span>
-                            </span>
-                            <span class="o-title_line u-white">
-                                <span>Scrolling</span>
-                            </span>
-                        </h1>
-                        <hr class="c-cta_line" data-scroll data-scroll-offset="100"/>
-                        <div class="c-cta_content">
-                            <div class="o-layout -gutter">
-                                <div class="o-layout_item u-2/5@from-medium">
-                                    <p class="u-label">
-                                        Github
-                                    </p>
-                                </div>
-                                <div class="o-layout_item u-3/5@from-medium">
-                                    <div class="c-cta_section">
-                                        <div class="c-cta_content_text" data-scroll data-scroll-offset="100">
-                                            <h3>Check out Locomotive Scroll</h3>
-                                            <p>
-                                                This library has evolved considerably over the years. The architecture and conventions shift according to our projects.
-                                            </p>
-                                            <p>
-                                                Visit the GitHub repository page for a complete introduction and list of available options. Search the GitHub issue tracker carefully to check if your issue/feature has already been reported/requested before opening a new issue or submitting a pull request.
-                                            </p>
+                                    <div class="swiper-slide">
+                                        <div class="text">Второй раз отмечаем День
+                                            рождения. Великолепно!
+                                            Особенно для мальчишек.
+                                            Активный отдых. Аниматоры.
+                                            Вежливый персонал. Комната,
+                                            вода, посуда - всё
+                                            предоставляется. Остались
+                                            довольны. Будем планировать
+                                            будущие посещения!</div>
+                                        <div class="person">
+                                            <div class="img">
+                                                <img src="img/reviews/b35358d2d05de627f2c5a9c764da32d1.png" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <div class="name">Margarita P.</div>
+                                                <div class="date">14.11.2021</div>
+                                                <div class="rating-mini">
+                                                    <span class="active"></span>	
+                                                    <span class="active"></span>    
+                                                    <span class="active"></span>  
+                                                    <span></span>    
+                                                    <span></span>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <a class="c-cta_button o-button" href="https://github.com/locomotivemtl/locomotive-scroll" target="_blank" data-scroll data-scroll-offset="100">
-                                            <span class="o-button_icon">
-                                                <svg role="img"><use xlink:href="dist/images/sprite.svg#github"></use></svg>
-                                            </span>
-                                            Check on Github
-                                            <span class="o-button_arrow u-icon">
-                                                →
-                                            </span>
-                                        </a>
                                     </div>
-                                    <hr class="c-cta_line -margin" data-scroll data-scroll-offset="100"/>
-                                    <div class="c-cta_section">
-                                        <div class="c-cta_content_text" data-scroll data-scroll-offset="100">
-                                            <h4>Neue Montreal <br>Pangram Pangram® Foundry</h4>
-                                            <p>
-                                                You like the font used on this page? Well this is your lucky day. You can get it on <a class="o-link -underline" href="https://pangrampangram.com/" target="_blank">pangrampangram.com</a>! Thanks to our good friend Mathieu Desjardins ❤️
-                                            </p>
+                                    <div class="swiper-slide">
+                                        <div class="text">Отличное место для
+                                            проведения торжеств ,
+                                            обслуживание персонала на
+                                            высшем уровне . Большой
+                                            выбор оружия , как для детей
+                                            так и для взрослых . Классные
+                                            ,яркие локации и интересные
+                                            раунды игры . А так же у вас
+                                            останутся классные фотографии с вашей игры</div>
+                                        <div class="person">
+                                            <div class="img">
+                                                <img src="img/reviews/73da31a1423a9d43b7ab28aeb183f1f8.png" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <div class="name">Margarita P.</div>
+                                                <div class="date">14.11.2021</div>
+                                                <div class="rating-mini">
+                                                    <span class="active"></span>	
+                                                    <span class="active"></span>    
+                                                    <span class="active"></span>  
+                                                    <span></span>    
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="text">Второй раз отмечаем День
+                                            рождения. Великолепно!
+                                            Особенно для мальчишек.
+                                            Активный отдых. Аниматоры.
+                                            Вежливый персонал. Комната,
+                                            вода, посуда - всё
+                                            предоставляется. Остались
+                                            довольны. Будем планировать
+                                            будущие посещения!</div>
+                                        <div class="person">
+                                            <div class="img">
+                                                <img src="img/reviews/541ddf8cd675bbdafb20a7b1ec137f79.png" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <div class="name">Margarita P.</div>
+                                                <div class="date">14.11.2021</div>
+                                                <div class="rating-mini">
+                                                    <span class="active"></span>	
+                                                    <span class="active"></span>    
+                                                    <span class="active"></span>  
+                                                    <span></span>    
+                                                    <span></span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -402,57 +499,191 @@
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <section data-scroll-section>
-                <div class="c-choochoo">
-                    <div class="c-choochoo_item u-text-center" data-scroll data-scroll-direction="horizontal" data-scroll-speed="10">
-                        <span>
-                            🚂
-                        </span>
+            </div>
+        </section>
+        <section class="consultationSection" data-scroll-section>
+            <div class="consultationBlock container" data-scroll data-scroll-speed="1">
+                <div class="info-block">
+                    <div class="item">
+                        <div class="textTitle-desc">
+                            <div class="textTitle">
+                                Бесплатная консультация специалиста
+                            </div>
+                            <div class="desc">
+                                Нужна помощь в выборе развлечения?<br>Звоните по телефону: <a href="tel:+7 (8482) 94-33-06">+7 (8482) 94-33-06.</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="c-choochoo_item u-text-center -reverse" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-10">
-                        <span>
-                            🚂
-                        </span>
-                    </div>
-                </div>
-            </section>
-
-            <section data-scroll-section>
-                <div class="o-container">
-                    <div class="c-damn">
-                        <h1 class="o-title" data-scroll>
-                            <span class="o-title_line">
-                                <span>
-                                    Damn
-                                </span>
-                            </span>
-                            <span class="o-title_line">
-                                <span>
-                                    You really
-                                </span>
-                            </span>
-                            <span class="o-title_line">
-                                <span>
-                                    like to
-                                </span>
-                            </span>
-                            <span class="o-title_line u-white">
-                                <span>
-                                    scroll
-                                </span>
-                            </span>
-                        </h1>
+                    <div class="item textInfo">
+                        <div class="text">
+                            <div>Или отправьте вопрос с сайта и наш специалист сам свяжется с Вами.</div>
+                        </div>
+                        <form action="">
+                            <input type="text" placeholder="Имя и Фамилия">
+                            <input type="phone" placeholder="Номер телефона" id="phone">
+                            <input type="text" placeholder="Комментарий">
+                            <button class="btn btn-pink">
+                                <div class="original">
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                </div>
+                                <div class="effects">
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span><span></span></div>
+                                </div>
+                                Получить консультацию
+                            </button>
+                        </form>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
+        <section class="mapSection" data-scroll-section>
+            <div class="mapBlock container">
+                <div class="info-block">
+                    <div class="item">
+                        <div class="textTitle">
+                            Контакты
+                        </div>
+                        <div class="info">
+                            <div class="phoneBlock">
+                                <span>Квесты</span>
+                                <a href="tel:+7 (8482) 94-33-06" class="c-teal">+7 (8482) 94-33-06</a>
+                            </div>
+                            <div class="phoneBlock">
+                                <span>Квесты</span>
+                                <a href="tel:+7 (8482) 94-33-06" class="c-pink">+7 (8482) 94-33-06</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="social">
+                            <a href="#">
+                                <div class="icon">
+                                    <img src="img/social/vk.svg" alt="">
+                                </div>
+                                <div class="name">closedstation163</div>
+                            </a>
+                            <a href="#">
+                                <div class="icon">
+                                    <img src="img/social/vk.svg" alt="">
+                                </div>
+                                <div class="name">lst163</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="map" style="height: 600px" data-coord='{{ all_yandex_map_points }}'></div>
+            </div>
+        </section>
+        <a href="#intro" id="upbutton" data-scroll-to>
+            <div class="btn btn-teal">
+                <div class="original">
+                    <div><span></span><span></span></div>
+                    <div><span></span><span></span></div>
+                    <div><span></span><span></span></div>
+                    <div><span></span><span></span></div>
+                </div>
+                <div class="effects">
+                    <div><span></span><span></span></div>
+                    <div><span></span><span></span></div>
+                    <div><span></span><span></span></div>
+                    <div><span></span><span></span></div>
+                </div>
+                <img src="img/details/upButton.svg">
+            </div>
+        </a>
+    </main>
 
+    <footer data-scroll-section>
+        <div class="footer container">
+            <div class="info-block">
+                <div class="logo">
+                    <div class="logo-img">
+                        <img src="img/other/logo.png" alt="">
+                    </div>
+                    <div class="copyright">© 2022, Все права защищены</div>
+                    <div class="phone">
+                        <a href="tel:+7 (8482) 94-33-06">+7 (8482) 94-33-06</a>
+                    </div>
+                </div>
+                <nav>
+                    <div class="name-list">
+                        <div class="name c-teal">Квесты</div>
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">Страшные квесты</a></li>
+                                <li><a href="#">Перформанс-квесты</a></li>
+                                <li><a href="#">Экшн-квесты</a></li>
+                                <li><a href="#">Детские квесты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="name-list">
+                        <div class="name c-pink">Лазертаг</div>
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">Для детей</a></li>
+                                <li><a href="#">Для взрослых</a></li>
+                                <li><a href="#">Для подростков</a></li>
+                                <li><a href="#">Арсенал</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="name-list">
+                        <div class="name">Другое</div>
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">Секция Лазертаг</a></li>
+                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#">Блог</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="social">
+                    <a href="#"><img src="img/social/vk.svg" alt=""></a>
+                    <a href="#"><img src="img/social/tg.svg" alt=""></a>
+                    <a href="#"><img src="img/social/wa.svg" alt=""></a>
+                </div>
+            </div>
         </div>
+        <div class="footer-2 container">
+            <div class="info-block">
+                <div class="item">
+                    <a href="#">Политика обработки персональных данных</a>
+                    <a href="#">Пользовательское соглашение</a>
+                </div>
+                <div class="item">
+                    <a href="#">Карта сайта</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- <a class="back-to-top fixed bottom-24 right-4 text-red-500 hover:text-red-600 focus:text-red-600 transition opacity-0 invisible" href="#intro" role="button" aria-label="Back to top" data-scroll-to>  
+        <svg aria-hidden="true" xmlns="https://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+          <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 7.58l5.995 5.988-1.416 1.414-4.579-4.574-4.59 4.574-1.416-1.414 6.006-5.988z" />
+        </svg>
+    </a> -->
 
-        <script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js" crossorigin="anonymous"></script>
-        <script nomodule src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll" crossorigin="anonymous"></script>
+    
+    </div>
 
-        <script src="https://locomotivemtl.github.io/locomotive-scroll/dist/scripts/main.js"></script>
-    </body>
+    <!-- Scripts -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b9f86102-2842-4593-9f48-25f8d16d0de2&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <!-- <script src="js/locomotive-scroll.min.js"></script> -->
+    <script src="js/script.js"></script>
+
+</body>
 </html>

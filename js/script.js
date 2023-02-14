@@ -1,7 +1,14 @@
 (function($) {
     marginsMain()
     checkScroll()
+    heightRates()
 })(jQuery);
+
+$(window).resize(function () {
+    marginsMain()
+    checkScroll()
+    heightRates()
+});
 
 // mask for phone input
 window.addEventListener("DOMContentLoaded", function() {
@@ -105,7 +112,7 @@ $('.modal').on("click", function() {
 });
 
 function upButton() {
-    if ($('main').offset().top < -200) {
+    if ($('main').offset().top < 0) {
         if ($('#upbutton').is(':hidden')) {
             $('#upbutton').css({
                 opacity: 1
@@ -180,19 +187,33 @@ $(function () {
     });
 });
 
-gsap.registerPlugin(ScrollTrigger);
 
-        const pageContainer = document.querySelector(".contMain");
 
-        const scroller = new LocomotiveScroll({
-            el: pageContainer,
-            smooth: true
-        });
 
-        // scroller.on("scroll", ScrollTrigger.update);
-        scroller.on("scroll", function() {
-            checkScroll()
-        });
+
+
+
+// gsap.registerPlugin(ScrollTrigger);
+
+//         const pageContainer = document.querySelector(".contMain");
+
+//         const scroller = new LocomotiveScroll({
+//             el: pageContainer,
+//             smooth: true
+//         });
+
+//         // scroller.on("scroll", ScrollTrigger.update);
+//         scroller.on("scroll", function() {
+//             checkScroll()
+//         });
+
+
+
+
+
+
+
+
 
         // ScrollTrigger.scrollerProxy(pageContainer, {
         // scrollTop(value) {
@@ -245,3 +266,45 @@ function checkScroll() {
     upButton()
     $('main').offset().top < 0 ? $('header').addClass('fixed') : $('header').removeClass('fixed');
 }
+
+function heightRates() {
+    let countLi = $('.ratesSection .info-block .item.title-desc .desc ul li'),
+        countSlide = $('.ratesSection .info-block .item .swiper-slide')
+    for (let i=0;i<countLi.length;i++) {
+        heightLiSlide(countLi[i].offsetHeight, i)
+    }
+    function heightLiSlide(hpx, num) {
+        for (let j=0; j<countSlide.length; j++) {
+            $($('.ratesSection .info-block .swiper-slide')[j]).find('.detailed ul li').eq(num).height(hpx)
+        }
+    }
+}
+
+
+
+
+const body = document.body;
+const backToTop = document.querySelector(".back-to-top");
+const opacityClass = "opacity-0";
+const visibilityClass = "invisible";
+const scroll = new LocomotiveScroll({
+  el: document.querySelector("[data-scroll-container]"),
+  smooth: true,
+  tablet: { smooth: true },
+  smartphone: { smooth: true }
+});
+scroll.on("call", (value, way, obj) => {
+    if (value === "toggleBackToTop") {
+        if (way === "enter") {
+            $('#upbutton').stop(true, false).fadeOut('fast');
+            $('header').removeClass('fixed')
+        } else {
+            if ($('#upbutton').is(':hidden')) {
+                $('#upbutton').css({
+                    opacity: 1
+                }).fadeIn('slow').css('display', 'flex');
+            }
+            $('header').addClass('fixed')
+        }
+    }
+});

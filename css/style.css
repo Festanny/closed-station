@@ -27,9 +27,9 @@ body {
     font-family: 'TT Firs Neue', sans-serif;
     font-size: 16px;
 }
-.contMain {
+/* .contMain {
     perspective: 1px;
-}
+} */
 a {
     color: var(--white);
     text-decoration: none;
@@ -44,6 +44,11 @@ main {
 section:not(.bannSection):not(.descSection):not(.breadcrumbsSection) {
     padding: 80px 0;
 }
+section {
+    position: relative;
+    perspective: 1px;
+    z-index: 300;
+}
 strong {
     font-weight: 400;
 }
@@ -56,6 +61,7 @@ strong {
     font-size: var(--fz18);
     font-weight: 500;
     backdrop-filter: blur(5px);
+    text-align: center;
     transition: all .3s ease-in-out;
 }
 .btn:hover {
@@ -253,12 +259,12 @@ form button.btn-pink:focus,
 }
 .lineEffects-2::before {
     content: url('../img/details/line-2.svg');
-    left: -40px;
+    left: -50px;
     top: 0;
 }
 .lineEffects-2::after {
     content: '';
-    left: -30px;
+    left: -40px;
     top: 600px;
     width: 5px;
     height: 50px;
@@ -269,7 +275,7 @@ form button.btn-pink:focus,
 }
 .lineEffects-3::before {
     content: url('../img/details/line-3.svg');
-    right: -41px;
+    right: -52px;
     top: 0;
 }
 header {
@@ -452,6 +458,7 @@ header nav li:hover a.c-blue-h {
 }
 .bannSection {
     background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('../img/other/green-fluid-art-abstract-background.jpeg');
+    z-index: 1;
 }
 .bannSection.new-year-bg {
     background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('../img/other/ice-surface-texture-macro-shot-blue-wallpaper.jpeg');
@@ -837,7 +844,8 @@ footer .footer .info-block .social a img {
 .photoGallerySection .info-block,
 .infoQuestSection .info-block .item,
 .moreQuestInfoSection .detailedInformation,
-.detailedInformationSection .info-block {
+.detailedInformationSection .info-block,
+.descriptionSection .info-block {
     display: grid;
     grid-template-columns: auto 65%;
     gap: 45px;
@@ -921,7 +929,8 @@ footer .footer .info-block .social a img {
 .lasertagSection .item .text,
 .questSection .item.textInfo,
 .infoQuestSection .item .text,
-.detailedInformationSection .item .text {
+.detailedInformationSection .item .text,
+.descriptionSection .item .text {
     font-size: var(--fz24);
 }
 .lasertagSection .info-block .item:first-of-type,
@@ -1525,9 +1534,6 @@ main.bg-img-green::before {
     background-repeat: no-repeat;
     background-size: cover;
 }
-section {
-    position: relative;
-}
 .nonPT {
     padding-top: 0!important;
 }
@@ -1671,7 +1677,8 @@ section {
 .infoQuestSection,
 .detailedInformationSection,
 .infoQuestPageSection,
-.specialSolutionsSection .forWhatBlock {
+.specialSolutionsSection .forWhatBlock,
+.descriptionSection {
     background-image: url(../img/details/grid-teal-op.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1698,7 +1705,7 @@ section {
 .infoQuestSection .info-block .item:last-of-type {
     padding-bottom: 0;
 }
-.infoQuestSection .item .block .text.c-teal-strong strong {
+.text.c-teal-strong strong {
     color: var(--teal)
 }
 .infoQuestSection .item .block .text ul {
@@ -2125,6 +2132,7 @@ section {
     display: flex;
     flex-direction: column;
     padding: 40px 20px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .ratesSection .info-block .item .swiper-slide .detailed ul {
     margin: 0;
@@ -2141,14 +2149,111 @@ section {
     flex-direction: column;
     padding: 0;
     margin: 0;
-    gap: 30px;
+    gap: 20px;
 }
 .ratesSection .info-block ul li {
     display: flex;
     flex-direction: column;
+    min-height: 24px;
+    justify-content: center;
 }
 .ratesSection .info-block .swiper-slide ul li {
     align-items: center;
     text-align: center;
     gap: 5px;
+}
+.ratesSection .info-block .swiper-slide ul li .mob {
+    display: none;
+}
+.ratesSection .info-block .item.title-desc .title__block_min {
+    position: relative;
+    height: 70px;
+}
+.ratesSection .info-block .item.title-desc .title__block_min::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 50px);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.2)
+}
+.ratesSection .info-block .item.title-desc {
+    display: flex;
+    flex-direction: column;
+}
+.ratesSection .info-block .item.title-desc .desc {
+    padding: 40px 0 30px;
+}
+.ratesSection .info-block .item.title-desc .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(27, 211, 178, 0.05);
+    border: 1px solid rgba(27, 211, 178, 0.2);
+    backdrop-filter: blur(5px);
+    height: 100%;
+}
+.ratesSection .info-block .item.title-desc .contact .phone {
+    display: flex;
+    flex-direction: column;
+}
+.ratesSection .info-block .item.title-desc .contact .phone,
+.ratesSection .info-block .item.title-desc .contact .phone a {
+    color: var(--teal);
+    font-size: var(--fz24);
+}
+.ratesSection .info-block .item.title-desc .contact .address .addressInfo {
+    margin-top: 10px;
+    opacity: .6;
+}
+.ratesSection .info-block .item .swiper-slide .info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.ratesSection .info-block .item .swiper-slide .info .addPeople {
+    display: flex;
+    flex-direction: column;
+}
+.ratesSection .info-block .item .swiper-slide .info .addPeople span:last-of-type {
+    opacity: .6;
+}
+.ratesSection .info-block .item .swiper-slide .info .priceBlockRates {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.ratesSection .info-block .item .swiper-slide .info .priceBlockRates > div span {
+    color: var(--teal);
+    font-size: var(--fz20);
+}
+.ratesSection .info-block .item .swiper-slide .info .btn-block,
+.ratesSection .info-block .item .swiper-slide .info .btn-block .btn {
+    width: 100%;
+}
+.ratesSection .info-block .item .swiper-slide .info .btn-block .btn:hover {
+    transform: scale(0.95);
+}
+.ratesSection .swiper-button-next,
+.ratesSection  .swiper-button-prev {
+    color: var(--teal);
+}
+.descriptionSection .info-block .item:first-of-type .img {
+    width: 100%;
+    border: 1px solid var(--teal);
+    margin-top: 30px;
+}
+.descriptionSection .info-block .item:first-of-type .img img {
+    width: 100%;
+}
+.descriptionSection .info-block {
+    column-gap: 120px;
+    row-gap: 30px;
+    grid-template-columns: auto 60%;
+}
+.descriptionSection .info-block .item .text {
+    font-weight: 400;
 }
