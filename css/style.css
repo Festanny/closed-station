@@ -5,6 +5,7 @@
     --pink: #FF72D5;
     --blue: #6297BD;
     --blue2: #0085FF;
+    --red: #A22932;
     --bg: #000000;
 
     --fz64: 64px;
@@ -246,6 +247,11 @@ form button.btn-pink:focus,
     top: 100px;
     transform: translateX(-50%);
 }
+.lineEffects-1.c-red::after,
+.lineEffects-2.c-red::after,
+.lineEffects-3.c-red::after {
+    background-color: var(--red);
+}
 .lineEffects-1::after {
     content: '';
     left: 50%;
@@ -415,6 +421,10 @@ header nav li a.c-blue-h.active,
 header nav li:hover a.c-blue-h {
     color: var(--blue2);
 }
+header nav li a.c-red-h.active,
+header nav li:hover a.c-red-h {
+    color: var(--red);
+}
 .bannSection .info-block .item.infoBann .block:first-of-type {
     padding-top: 100px;
 }
@@ -465,6 +475,9 @@ header nav li:hover a.c-blue-h {
 }
 .bannSection.hideSeekBg {
     background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('../img/other/purple-alcohol-ink-abstract-background.jpeg') center;
+}
+.bannSection.squidGame {
+    background: url('../img/other/red-background.jpg') center;
 }
 .bannSection.new-year-bg .nameCompany {
     width: 80%;
@@ -537,6 +550,10 @@ header nav li:hover a.c-blue-h {
 .bannSection.hideSeekBg .info-block .item.infoBann .nameCompany::before,
 .bannSection.hideSeekBg .info-block .item.infoBann .nameCompany::after {
     content: 'Прятки в';
+}
+.bannSection.squidGame .info-block .item.infoBann .nameCompany::before,
+.bannSection.squidGame .info-block .item.infoBann .nameCompany::after {
+    content: 'Экшн-игра';
 }
 .descSection .textTitle::before,
 .descSection .textTitle::after {
@@ -654,6 +671,9 @@ footer .footer .info-block .social a img {
 .social.pink a img {
     filter: invert(36%) sepia(54%) saturate(3695%) hue-rotate(193deg) brightness(101%) contrast(106%);
 }
+.social.red a img {
+    filter: invert(60%) sepia(46%) saturate(2420%) hue-rotate(352deg) brightness(67%) contrast(85%);
+}
 .descSection .info-block,
 .advantageousOfferBlock .info-block,
 .newYearProgramBlock .info-block,
@@ -698,6 +718,9 @@ footer .footer .info-block .social a img {
 }
 .c-pink {
     color: var(--pink);
+}
+.bannSection.squidGame .info-block .item.infoBann .nameCompany {
+    width: 90%;
 }
 .descSection .info-block .list .num {
     position: relative;
@@ -1198,8 +1221,9 @@ form button {
 form button:focus {
     outline: none;
 }
-form button.btn:hover {
-    transform: scale(1);
+form button.btn:hover,
+.ratesSection .info-block .item .swiper-slide .info .btn-block .btn:hover {
+    transform: scale(0.95);
 }
 .mapSection .info-block {
     display: flex;
@@ -1513,6 +1537,7 @@ footer .footer-2 .info-block .item {
     padding: 20px;
     background-color: var(--white);
     color: var(--black);
+    width: max-content;
 }
 .photoGallerySection .info-block .item .block .info-phone a,
 .photoGallerySection .info-block .item .block .info-phone a:hover {
@@ -1607,7 +1632,8 @@ main.bg-img-green::before {
     margin-top: 40px;
 }
 .questCatalogBlock .info-block .item,
-.infoQuestPageBlock .info-block .item {
+.infoQuestPageBlock .info-block .item,
+.featuresGameBlock .info-block .item {
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
@@ -1644,14 +1670,16 @@ main.bg-img-green::before {
     height: 260px;
 }
 .questCatalogBlock .info-block .item .img img,
-.infoQuestPageBlock .info-block .item .img img {
+.infoQuestPageBlock .info-block .item .img img,
+.featuresGameBlock .info-block .item .img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
 .questCatalogBlock .info-block .item .info,
-.infoQuestPageBlock .info-block .item .info {
+.infoQuestPageBlock .info-block .item .info,
+.featuresGameBlock .info-block .item .info {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -1678,12 +1706,16 @@ main.bg-img-green::before {
 .detailedInformationSection,
 .infoQuestPageSection,
 .specialSolutionsSection .forWhatBlock,
-.descriptionSection {
+.descriptionSection,
+.featuresGameSection {
     background-image: url(../img/details/grid-teal-op.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
+}
+.featuresGameSection {
+    background-image: url(../img/details/grid-red.svg);
 }
 .infoQuestSection .info-block .item {
     position: relative;
@@ -1707,6 +1739,9 @@ main.bg-img-green::before {
 }
 .text.c-teal-strong strong {
     color: var(--teal)
+}
+.text.c-red-strong strong {
+    color: var(--red)
 }
 .infoQuestSection .item .block .text ul {
     display: flex;
@@ -1873,7 +1908,7 @@ main.bg-img-green::before {
     background-color: var(--white);
     padding: 10px 20px;
     border-radius: 1000px;
-    width: fit-content;
+    width: max-content;
     margin-top: 40px;
 }
 .moreQuestInfoSection .info-block .item.information > .desc .text-3 {
@@ -1920,7 +1955,7 @@ main.bg-img-green::before {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
-    width: fit-content;
+    width: max-content;
 }
 .moreQuestInfoSection .info-block .item.information .desc.landmark {
     font-size: 18px;
@@ -1940,7 +1975,7 @@ main.bg-img-green::before {
     font-size: var(--fz20);
     padding: 10px 20px;
     background: rgba(255, 255, 255, 0.1);
-    width: fit-content;
+    width: max-content;
 }
 .moreQuestInfoSection {
     padding-bottom: 100px!important;
@@ -1959,12 +1994,12 @@ main.bg-img-green::before {
     gap: 20px;
 }
 .detailedInformationSection .info-block .item:first-of-type .phone a {
-    width: fit-content;
+    width: max-content;
     font-size: var(--fz20);
     padding: 10px 20px;
     background: rgba(255, 255, 255, 0.1);
 }
-.bannSection.hideSeekBg {
+.bannSection.pb0 {
     padding-bottom: 0!important;
 }
 .infoQuestPageSection .title-age {
@@ -1977,7 +2012,7 @@ main.bg-img-green::before {
 .infoQuestPageSection .title-age .age {
     text-align: right;
 }
-.bannSection.hideSeekBg .bannBlock {
+.bannSection.pb0 .bannBlock {
     padding-bottom: 0;
 }
 .infoQuestPageSection .title-age .age span {
@@ -2234,9 +2269,6 @@ main.bg-img-green::before {
 .ratesSection .info-block .item .swiper-slide .info .btn-block .btn {
     width: 100%;
 }
-.ratesSection .info-block .item .swiper-slide .info .btn-block .btn:hover {
-    transform: scale(0.95);
-}
 .ratesSection .swiper-button-next,
 .ratesSection  .swiper-button-prev {
     color: var(--teal);
@@ -2256,4 +2288,36 @@ main.bg-img-green::before {
 }
 .descriptionSection .info-block .item .text {
     font-weight: 400;
+}
+.featuresGameSection .title-desc .desc {
+    margin-top: 20px;
+    font-size: var(--fz18);
+    opacity: .6;
+}
+.featuresGameSection .info-block {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+    column-gap: 20px;
+    row-gap: 40px;
+}
+.featuresGameBlock .info-block .item .info {
+    background: rgba(162, 41, 50, 0.1);
+    font-size: var(--fz20);
+    text-transform: uppercase;
+    text-align: center;
+}
+.featuresGameBlock .info-block .item .img {
+    width: 100%;
+    height: 165px;
+}
+.featuresGameSection .featuresGameBlock .text {
+    margin-top: 40px;
+}
+.featuresGameSection .featuresGameBlock .text .desc {
+    opacity: .6;
+    font-size: var(--fz18);
+}
+.infoQuestSection.bg-red {
+    background-image: url(../img/details/grid-red-big.svg);
 }

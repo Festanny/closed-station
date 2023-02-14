@@ -111,21 +111,6 @@ $('.modal').on("click", function() {
     }, 500)
 });
 
-function upButton() {
-    if ($('main').offset().top < 0) {
-        if ($('#upbutton').is(':hidden')) {
-            $('#upbutton').css({
-                opacity: 1
-            }).fadeIn('slow').css('display', 'flex');
-        }
-    } else {
-        $('#upbutton').stop(true, false).fadeOut('fast');
-    }
-};
-// $('#upbutton').click(function () {
-//     $('.contMain').offset().top = 0
-// });
-
 function marginsMain() {
     $('.bannSection .info-block .item.infoBann').css({
         'padding-left': ($('body').width()-$('.container').width())/2,
@@ -261,11 +246,7 @@ $(function () {
         // ScrollTrigger.refresh();
         // });
 
-function checkScroll() {
-    marginsMain()
-    upButton()
-    $('main').offset().top < 0 ? $('header').addClass('fixed') : $('header').removeClass('fixed');
-}
+
 
 function heightRates() {
     let countLi = $('.ratesSection .info-block .item.title-desc .desc ul li'),
@@ -281,17 +262,14 @@ function heightRates() {
 }
 
 
-
-
-const body = document.body;
-const backToTop = document.querySelector(".back-to-top");
-const opacityClass = "opacity-0";
-const visibilityClass = "invisible";
 const scroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
   tablet: { smooth: true },
   smartphone: { smooth: true }
+});
+scroll.on("scroll", function() {
+    checkScroll()
 });
 scroll.on("call", (value, way, obj) => {
     if (value === "toggleBackToTop") {
@@ -308,3 +286,6 @@ scroll.on("call", (value, way, obj) => {
         }
     }
 });
+function checkScroll() {
+    marginsMain()
+}

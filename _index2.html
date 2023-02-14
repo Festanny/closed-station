@@ -8,67 +8,64 @@
     <title>Активный отдых в Тольятти | Закрытая станция</title>
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css">
 </head>
 <body>
-    
-    <div class="contMain" data-scroll-container>
-        <header>
-            <div class="header container">
-                <div class="logo">
-                    <a href="/"><img src="img/other/logo.png" alt="logo"></a>
-                </div>
-                <nav>
-                    <ul class="topmenu">
-                        <li><a href="quest.html" class="c-teal-h">Квесты</a></li>
-                        <li><a href="#" class="openSub c-pink-h">Лазертаг</a>
-                            <div class="submenu">
-                                <ul>
-                                    <li><a href="#"><span>Мероприятие для детей</span></a></li>
-                                    <li><a href="#"><span>Мероприятие для взрослых</span></a></li>
-                                    <li><a href="#"><span>Мероприятие для подростков</span></a></li>
-                                    <li><a href="#"><span>Секция лазертаг</span></a></li>
-                                    <li><a href="#"><span>Арсенал</span></a></li>
-                                  </ul>
-                            </div>
-                        </li>
-                        <li><a href="#">Прятки</a></li>
-                        <li><a href="new-year.html" class="c-blue-h">Новый год</a></li>
-                        <li><a href="#">Игра в Кальмара</a></li>
-                        <li><a href="#">Блог</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                </nav>
-                <div class="phone">
-                    <a href="tel:+78482943306">+7 (8482) 94-33-06</a>
-                </div>
-                <div>
-                    <a href="#" class="btn btn-teal">
-                        <div class="original">
-                            <div><span></span><span></span></div>
-                            <div><span></span><span></span></div>
-                            <div><span></span><span></span></div>
-                            <div><span></span><span></span></div>
-                        </div>
-                        <div class="effects">
-                            <div><span></span><span></span></div>
-                            <div><span></span><span></span></div>
-                            <div><span></span><span></span></div>
-                            <div><span></span><span></span></div>
-                        </div>
-                        ХОЧУ СЫГРАТЬ
-                    </a>
-                </div>
+    <header>
+        <div class="header container">
+            <div class="logo">
+                <a href="/"><img src="img/other/logo.png" alt="logo"></a>
             </div>
-        </header>
-
-        <div class="lineEffects-1"></div>
-        <div class="lineEffects-2 container"></div>
-        <div class="lineEffects-3 container"></div>
+            <nav>
+                <ul class="topmenu">
+                    <li><a href="quest.html" class="c-teal-h">Квесты</a></li>
+                    <li><a href="#" class="openSub c-pink-h">Лазертаг</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#"><span>Мероприятие для детей</span></a></li>
+                                <li><a href="#"><span>Мероприятие для взрослых</span></a></li>
+                                <li><a href="#"><span>Мероприятие для подростков</span></a></li>
+                                <li><a href="#"><span>Секция лазертаг</span></a></li>
+                                <li><a href="#"><span>Арсенал</span></a></li>
+                              </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Прятки</a></li>
+                    <li><a href="new-year.html" class="c-blue-h">Новый год</a></li>
+                    <li><a href="#">Игра в Кальмара</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="phone">
+                <a href="tel:+78482943306">+7 (8482) 94-33-06</a>
+            </div>
+            <div>
+                <a href="#" class="btn btn-teal">
+                    <div class="original">
+                        <div><span></span><span></span></div>
+                        <div><span></span><span></span></div>
+                        <div><span></span><span></span></div>
+                        <div><span></span><span></span></div>
+                    </div>
+                    <div class="effects">
+                        <div><span></span><span></span></div>
+                        <div><span></span><span></span></div>
+                        <div><span></span><span></span></div>
+                        <div><span></span><span></span></div>
+                    </div>
+                    ХОЧУ СЫГРАТЬ
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="contMain">
     <main>
-        <section class="bannSection" id="intro" data-scroll-section>
+        <section class="bannSection" data-scroll-section>
+            <div class="lineEffects-1"></div>
+            <div class="lineEffects-2 container"></div>
+            <div class="lineEffects-3 container"></div>
             <div class="bannBlock big">
-                <div class="is-inview" data-scroll="" data-scroll-repeat="" data-scroll-call="toggleBackToTop"></div>
                 <div class="info-block">
                     <div class="item infoBann">
                         <div class="block" data-scroll data-scroll-speed="3">
@@ -580,7 +577,7 @@
                 <div id="map" style="height: 600px" data-coord='{{ all_yandex_map_points }}'></div>
             </div>
         </section>
-        <a href="#intro" id="upbutton" data-scroll-to>
+        <div id="upbutton" data-scroll-to>
             <div class="btn btn-teal">
                 <div class="original">
                     <div><span></span><span></span></div>
@@ -596,7 +593,7 @@
                 </div>
                 <img src="img/details/upButton.svg">
             </div>
-        </a>
+        </div>
     </main>
 
     <footer data-scroll-section>
@@ -664,11 +661,6 @@
             </div>
         </div>
     </footer>
-    <!-- <a class="back-to-top fixed bottom-24 right-4 text-red-500 hover:text-red-600 focus:text-red-600 transition opacity-0 invisible" href="#intro" role="button" aria-label="Back to top" data-scroll-to>  
-        <svg aria-hidden="true" xmlns="https://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
-          <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 7.58l5.995 5.988-1.416 1.414-4.579-4.574-4.59 4.574-1.416-1.414 6.006-5.988z" />
-        </svg>
-    </a> -->
 
     
     </div>
