@@ -258,6 +258,11 @@ form button.btn-pink:focus,
 .lineEffects-3.c-red::after {
     background-color: var(--red);
 }
+.lineEffects-1.c-pink::after,
+.lineEffects-2.c-pink::after,
+.lineEffects-3.c-pink::after {
+    background-color: var(--pink);
+}
 .lineEffects-1::after {
     content: '';
     left: 50%;
@@ -493,6 +498,9 @@ header nav li:hover a.c-red-h {
 .bannSection.squidGame {
     background: url('../img/other/red-background.jpg') center;
 }
+.bannSection.lasertagSectionPage {
+    background: url('../img/other/purple-background.jpg') center;
+}
 .bannSection.new-year-bg .nameCompany {
     width: 80%;
 }
@@ -568,6 +576,10 @@ header nav li:hover a.c-red-h {
 .bannSection.squidGame .info-block .item.infoBann .nameCompany::before,
 .bannSection.squidGame .info-block .item.infoBann .nameCompany::after {
     content: 'Экшн-игра';
+}
+.bannSection.lasertagSectionPage .info-block .item.infoBann .nameCompany::before,
+.bannSection.lasertagSectionPage .info-block .item.infoBann .nameCompany::after {
+    content: 'Секция';
 }
 .descSection .textTitle::before,
 .descSection .textTitle::after {
