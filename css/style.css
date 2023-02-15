@@ -205,8 +205,7 @@ form button.btn-pink:focus,
     background: rgba(255, 114, 213, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.btn.btn-teal.type-2,
-.btn.btn-blue.type-2 {
+.btn.type-2 {
     color: var(--black);
     padding: 14px 20px;
 }
@@ -216,6 +215,10 @@ form button.btn-pink:focus,
 .btn.btn-blue.type-2 {
     background: var(--blue2);
 }
+.btn.btn-red.type-2 {
+    background: var(--red);
+    color: var(--white);
+}
 .btn.btn-teal span {
     background-color: var(--teal);
 }
@@ -224,6 +227,9 @@ form button.btn-pink:focus,
 }
 .btn.btn-pink span {
     background-color: var(--pink);
+}
+.btn.btn-red span {
+    background-color: var(--red);
 }
 .lineEffects-1,
 .lineEffects-2,
@@ -302,7 +308,11 @@ header::after,
 .bannSection .info-block::before,
 .bannSection .info-block::after,
 .infoQuestSection .info-block .item:not(:last-of-type)::before,
-.infoQuestSection .info-block .item:not(:last-of-type)::after {
+.infoQuestSection .info-block .item:not(:last-of-type)::after,
+.featuresGameSection::before,
+.featuresGameSection::after,
+.ageLimitSection::before,
+.ageLimitSection::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -310,13 +320,17 @@ header::after,
 }
 header::before,
 .bannSection .info-block::before,
-.infoQuestSection .info-block .item:not(:last-of-type)::before {
+.infoQuestSection .info-block .item:not(:last-of-type)::before,
+.featuresGameSection::before,
+.ageLimitSection::before {
     bottom: 0;
     background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 75%, rgba(255,255,255,0) 100%);
 }
 header::after,
 .bannSection .info-block::after,
-.infoQuestSection .info-block .item:not(:last-of-type)::after {
+.infoQuestSection .info-block .item:not(:last-of-type)::after,
+.featuresGameSection::after,
+.ageLimitSection::after {
     bottom: -1px;
     background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255) 50%, rgba(255,255,255,0) 100%);
     filter: blur(5px);
@@ -677,7 +691,8 @@ footer .footer .info-block .social a img {
 .descSection .info-block,
 .advantageousOfferBlock .info-block,
 .newYearProgramBlock .info-block,
-.congrSantaClausBlock .info-block {
+.congrSantaClausBlock .info-block,
+.ageLimitBlock .info-block {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -757,18 +772,21 @@ footer .footer .info-block .social a img {
 }
 .advantageousOfferSection .advantageousOfferBlock {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/other/purple-alcohol-ink-abstract-background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
 }
 .newYearProgramSection .newYearProgramBlock {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/other/top-view-blue-white-background-copy-space.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
 }
 .congrSantaClausSection .congrSantaClausBlock {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/other/beautiful-frost-pattern-window..png');
+}
+.ageLimitSection .ageLimitBlock {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/other/purple-alcohol-ink-abstract-background-2.png');
+    overflow: hidden;
+}
+.advantageousOfferSection .advantageousOfferBlock,
+.newYearProgramSection .newYearProgramBlock,
+.congrSantaClausSection .congrSantaClausBlock,
+.ageLimitSection .ageLimitBlock {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
@@ -781,7 +799,8 @@ footer .footer .info-block .social a img {
 }
 .advantageousOfferBlock .item:first-of-type,
 .newYearProgramBlock .item:first-of-type,
-.congrSantaClausBlock .item:first-of-type {
+.congrSantaClausBlock .item:first-of-type,
+.ageLimitBlock .item:first-of-type {
     padding: 40px;
 }
 .advantageousOfferBlock .item {
@@ -790,7 +809,8 @@ footer .footer .info-block .social a img {
 }
 .advantageousOfferBlock .item .img,
 .newYearProgramBlock .item .img,
-.congrSantaClausBlock .item .img {
+.congrSantaClausBlock .item .img,
+.ageLimitBlock .item .img {
     position: relative;
     display: flex;
     justify-content: center;
@@ -812,7 +832,8 @@ footer .footer .info-block .social a img {
 }
 .advantageousOfferBlock .item .non-stop,
 .newYearProgramBlock .item .non-stop,
-.congrSantaClausBlock .item .non-stop {
+.congrSantaClausBlock .item .non-stop,
+.ageLimitBlock .item .non-stop {
     padding: 10px 20px;
     background-color: var(--white);
     color: var(--black);
@@ -832,7 +853,8 @@ footer .footer .info-block .social a img {
     opacity: .4;
 }
 .advantageousOfferBlock .item .block .wholesale,
-.congrSantaClausBlock .item .wholesale {
+.congrSantaClausBlock .item .wholesale,
+.ageLimitBlock .item .wholesale {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, auto));
     column-gap: 20px;
@@ -840,7 +862,8 @@ footer .footer .info-block .social a img {
     margin-top: 40px;
 }
 .advantageousOfferBlock .item .block .wholesale .item_w,
-.congrSantaClausBlock .item .wholesale .item_w {
+.congrSantaClausBlock .item .wholesale .item_w,
+.ageLimitBlock .item .wholesale .item_w {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -850,11 +873,13 @@ footer .footer .info-block .social a img {
     backdrop-filter: blur(5px);
 }
 .advantageousOfferBlock .item .block .wholesale .item_w .price,
-.congrSantaClausBlock .item .wholesale .item_w .price {
+.congrSantaClausBlock .item .wholesale .item_w .price,
+.ageLimitBlock .item .wholesale .item_w .price {
     font-size: var(--fz24);
 }
 .advantageousOfferBlock .item .block .wholesale .item_w .desc,
-.advantageousOfferBlock .item .wholesale .item_w .desc {
+.advantageousOfferBlock .item .wholesale .item_w .desc,
+.ageLimitBlock .item .wholesale .item_w .desc {
     opacity: .6;
 }
 .advantageousOfferBlock .item .block .btn-block {
@@ -1395,7 +1420,8 @@ footer .footer-2 .info-block .item {
     padding-bottom: 40px!important;
 }
 .newYearProgramBlock .item .img img,
-.congrSantaClausBlock .item .img img {
+.congrSantaClausBlock .item .img img,
+.ageLimitBlock .item .img img {
     max-width: 100%;
     height: 100%;
     object-fit: contain;
@@ -1404,7 +1430,8 @@ footer .footer-2 .info-block .item {
     margin-top: 20px;
 }
 .newYearProgramBlock .item .block .desc-1,
-.newYearProgramBlock .item .block .btn-block {
+.newYearProgramBlock .item .block .btn-block,
+.ageLimitBlock .item .btn-block {
     padding-left: 20px;
 }
 .newYearProgramBlock .item .block .wholesale {
@@ -1456,10 +1483,12 @@ footer .footer-2 .info-block .item {
     margin-top: 20px;
     font-weight: 500;
 }
-.newYearProgramBlock .item .block .btn-block {
+.newYearProgramBlock .item .block .btn-block,
+.ageLimitBlock .item .btn-block {
     margin-top: 35px;
 }
-.newYearProgramBlock .info-block {
+.newYearProgramBlock .info-block,
+.ageLimitBlock .info-block {
     align-items: flex-end
 }
 .newYearProgramBlock {
@@ -1484,7 +1513,8 @@ footer .footer-2 .info-block .item {
 .congrSantaClausBlock .info-block {
     align-items: center;
 }
-.congrSantaClausBlock .item .desc-main {
+.congrSantaClausBlock .item .desc-main,
+.ageLimitBlock .item .desc-main {
     padding-left: 20px;
     margin-top: 20px;
 }
@@ -1762,7 +1792,7 @@ main.bg-img-green::before {
 .infoQuestSection .item .block .text .contact {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 60px;
+    column-gap: 40px;
     row-gap: 10px;
 }
 .infoQuestSection .item .block .text .contact .item_c {
@@ -2320,4 +2350,20 @@ main.bg-img-green::before {
 }
 .infoQuestSection.bg-red {
     background-image: url(../img/details/grid-red-big.svg);
+}
+.featuresGameBlock .info-block .item .info {
+    justify-content: center ;
+}
+.ageLimitBlock .item .img {
+    justify-content: flex-end;
+}
+.ageLimitBlock .item .wholesale {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+.featuresGameSection {
+    position: relative;
+}
+.ageLimitBlock .item .desc-main {
+    font-size: var(--fz18);
 }
