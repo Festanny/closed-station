@@ -215,6 +215,10 @@ form button.btn-pink:focus,
 .btn.btn-blue.type-2 {
     background: var(--blue2);
 }
+.btn.btn-pink.type-2 {
+    background: var(--pink);
+    color: var(--white);
+}
 .btn.btn-red.type-2 {
     background: var(--red);
     color: var(--white);
@@ -317,7 +321,13 @@ header::after,
 .featuresGameSection::before,
 .featuresGameSection::after,
 .ageLimitSection::before,
-.ageLimitSection::after {
+.ageLimitSection::after,
+.areaSection::before,
+.areaSection::after,
+.advantageousOfferSection.lasertagSectionClass::before,
+.advantageousOfferSection.lasertagSectionClass::after,
+.descriptionSection.lasertagSectionClass::before,
+.descriptionSection.lasertagSectionClass::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -327,7 +337,10 @@ header::before,
 .bannSection .info-block::before,
 .infoQuestSection .info-block .item:not(:last-of-type)::before,
 .featuresGameSection::before,
-.ageLimitSection::before {
+.ageLimitSection::before,
+.areaSection::before,
+.advantageousOfferSection.lasertagSectionClass::before,
+.descriptionSection.lasertagSectionClass::before {
     bottom: 0;
     background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 75%, rgba(255,255,255,0) 100%);
 }
@@ -335,7 +348,10 @@ header::after,
 .bannSection .info-block::after,
 .infoQuestSection .info-block .item:not(:last-of-type)::after,
 .featuresGameSection::after,
-.ageLimitSection::after {
+.ageLimitSection::after,
+.areaSection::after,
+.advantageousOfferSection.lasertagSectionClass::after,
+.descriptionSection.lasertagSectionClass::after {
     bottom: -1px;
     background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255) 50%, rgba(255,255,255,0) 100%);
     filter: blur(5px);
@@ -905,6 +921,8 @@ footer .footer .info-block .social a img {
 .infoQuestSection .info-block .item,
 .moreQuestInfoSection .detailedInformation,
 .detailedInformationSection .info-block,
+.descriptionSection .info-block,
+.descriptionLasertagSection .info-block,
 .descriptionSection .info-block {
     display: grid;
     grid-template-columns: auto 65%;
@@ -1579,7 +1597,7 @@ footer .footer-2 .info-block .item {
     padding: 20px;
     background-color: var(--white);
     color: var(--black);
-    width: max-content;
+    width: fit-content;
 }
 .photoGallerySection .info-block .item .block .info-phone a,
 .photoGallerySection .info-block .item .block .info-phone a:hover {
@@ -1785,6 +1803,9 @@ main.bg-img-green::before {
 .text.c-red-strong strong {
     color: var(--red)
 }
+.text.c-pink-strong strong {
+    color: var(--pink)
+}
 .infoQuestSection .item .block .text ul {
     display: flex;
     flex-wrap: wrap;
@@ -1950,7 +1971,7 @@ main.bg-img-green::before {
     background-color: var(--white);
     padding: 10px 20px;
     border-radius: 1000px;
-    width: max-content;
+    width: fit-content;
     margin-top: 40px;
 }
 .moreQuestInfoSection .info-block .item.information > .desc .text-3 {
@@ -1997,7 +2018,7 @@ main.bg-img-green::before {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
-    width: max-content;
+    width: fit-content;
 }
 .moreQuestInfoSection .info-block .item.information .desc.landmark {
     font-size: 18px;
@@ -2017,7 +2038,7 @@ main.bg-img-green::before {
     font-size: var(--fz20);
     padding: 10px 20px;
     background: rgba(255, 255, 255, 0.1);
-    width: max-content;
+    width: fit-content;
 }
 .moreQuestInfoSection {
     padding-bottom: 100px!important;
@@ -2036,7 +2057,7 @@ main.bg-img-green::before {
     gap: 20px;
 }
 .detailedInformationSection .info-block .item:first-of-type .phone a {
-    width: max-content;
+    width: fit-content;
     font-size: var(--fz20);
     padding: 10px 20px;
     background: rgba(255, 255, 255, 0.1);
@@ -2378,4 +2399,108 @@ main.bg-img-green::before {
 }
 .ageLimitBlock .item .desc-main {
     font-size: var(--fz18);
+}
+.descriptionSection.bg-pink {
+    background-image: url(../img/details/grid-red.svg);
+}
+.descriptionSection.lasertagSectionClass .item:first-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: space-between;
+}
+.descriptionSection.lasertagSectionClass .price-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+.descriptionSection.lasertagSectionClass .info-block {
+    gap: 90px;
+}
+.descriptionSection.lasertagSectionClass .price-btn .price .sum > span {
+    font-size: var(--fz20);
+    color: var(--pink);
+}
+.descriptionSection.lasertagSectionClass .price-btn .price .frequency {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    width: fit-content;
+    font-size: var(--fz18);
+}
+.advantageousOfferSection.lasertagSectionClass .item .block .essence-game {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.advantageousOfferSection.lasertagSectionClass .item .block .essence-game .desc {
+    font-size: var(--fz18);
+    font-weight: 500;
+}
+.advantageousOfferSection.lasertagSectionClass .item .block .essence-game .text {
+    padding: 20px;
+    max-width: 380px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+.advantageousOfferSection.lasertagSectionClass .advantageousOfferBlock .item .img::before {
+    display: none!important;
+}
+.advantageousOfferSection.lasertagSectionClass .advantageousOfferBlock .item .img img {
+    transform: none;
+}
+.advantageousOfferSection.lasertagSectionClass .advantageousOfferBlock .info-block {
+    align-items: flex-end
+}
+.advantageousOfferSection.lasertagSectionClass .item .block .essence-game .text > span {
+    text-transform: uppercase;
+}
+.advantageousOfferSection.lasertagSectionClass .item .block .essence-game .text .phone {
+    font-size: var(--fz24);
+    font-weight: 500;
+    margin-top: 20px;
+}
+.areaBlock .info-block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 226px;
+    gap: 20px;
+    margin-top: 40px;
+}
+.areaBlock .info-block .item {
+    border: 1px solid #FF72D5;
+}
+.areaBlock .info-block .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.areaBlock .info-block .item:first-of-type,
+.areaBlock .info-block .item:nth-of-type(10n + 11) {
+    grid-column: 1/ span 2;
+    grid-row: span 2;
+}
+.areaBlock .info-block .item:nth-of-type(10n + 8) {
+    grid-column: 3 / span 2;
+    grid-row: span 2;
+}
+.mapSection.lasertagSectionClass .info-block {
+    align-items: flex-start;
+}
+.mapSection.lasertagSectionClass .info-block .item:first-of-type {
+    flex-direction: column;
+    row-gap: 10px;
+}
+.mapSection.lasertagSectionClass .info-block .item .textTitleMin {
+    font-size: var(--fz32);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.mapSection.lasertagSectionClass .info-block .item:first-of-type .desc {
+    opacity: .6;
+}
+section.mapSection.lasertagSectionClass {
+    padding-top: 80px!important;
 }
