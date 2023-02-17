@@ -400,6 +400,12 @@ header nav li {
     position: relative;
     cursor: pointer;
 }
+header nav ul li a {
+    position: relative
+}
+header nav ul li a.openSub i {
+    margin-left: 5px;
+}
 header .submenu {
     position: absolute;
     padding-top: 10px;
@@ -443,6 +449,13 @@ header .submenu a:hover {
 header nav li:hover > .submenu {
     visibility: visible;
     opacity: 1;
+}
+header nav li a.active,
+header nav li:hover a {
+    color: var(--teal);
+}
+header nav li:hover .submenu li a {
+    color: var(--white);
 }
 header nav li a.c-teal-h.active,
 header nav li:hover a.c-teal-h {
@@ -546,6 +559,7 @@ header nav li:hover a.c-red-h {
     flex-direction: column;
     justify-content: space-between;
     padding: 40px 0;
+    gap: 50px;
 }
 .bannSection .info-block .item.infoBann .block .connection {
     display: flex;
@@ -596,6 +610,10 @@ header nav li:hover a.c-red-h {
 .bannSection.lasertagSectionPage .info-block .item.infoBann .nameCompany::before,
 .bannSection.lasertagSectionPage .info-block .item.infoBann .nameCompany::after {
     content: 'Секция';
+}
+.bannSection.birthdayCorporatePage .info-block .item.infoBann .nameCompany::before,
+.bannSection.birthdayCorporatePage .info-block .item.infoBann .nameCompany::after {
+    content: 'Лучший день';
 }
 .descSection .textTitle::before,
 .descSection .textTitle::after {
@@ -1739,7 +1757,8 @@ main.bg-img-green::before {
 }
 .questCatalogBlock .info-block .item .info,
 .infoQuestPageBlock .info-block .item .info,
-.featuresGameBlock .info-block .item .info {
+.featuresGameBlock .info-block .item .info,
+.questCatalogSection.blogPage .info-block .item .info {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -1751,7 +1770,8 @@ main.bg-img-green::before {
     flex: 1;
 }
 .questCatalogBlock .info-block .item .info .title,
-.infoQuestPageBlock .info-block .item .info .title {
+.infoQuestPageBlock .info-block .item .info .title,
+.questCatalogSection.blogPage .info-block .item .info .title {
     font-size: var(--fz20);
     text-transform: uppercase;
 }
@@ -2503,4 +2523,132 @@ main.bg-img-green::before {
 }
 section.mapSection.lasertagSectionClass {
     padding-top: 80px!important;
+}
+.questCatalogSection.blogPage .info-block .item .info .date {
+    opacity: .6;
+    font-size: var(--fz20);
+    font-weight: 500;
+}
+.ptBlockBlog {
+    position: relative;
+    padding-top: 50px;
+    min-height: 100vh;
+}
+.ptBlockBlog::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/details/grid-teal-op.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.blogItemSection .info-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    margin-top: 40px;
+}
+.blogItemSection .info-block .item:first-of-type .img {
+    width: 100%;
+}
+.blogItemSection .info-block .item:first-of-type .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.mapSection.contactPage {
+    padding-top: 80px!important;
+}
+.ptBlockBlog .lineEffects-left_right-1,
+.ptBlockBlog .lineEffects-left_right-2 {
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.ptBlockBlog .lineEffects-left_right-1 {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.ptBlockBlog .lineEffects-left_right-2 {
+    right: 50%;
+    transform: translateX(50%);
+}
+.ptBlockBlog .lineEffects-left_right-1::before,
+.ptBlockBlog .lineEffects-left_right-2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    filter: blur(1px);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 25%, rgba(255,255,255,.3) 75%, rgba(255,255,255,0) 100%);
+}
+.ptBlockBlog .lineEffects-left_right-1::before {
+    left: -40px;
+}
+.ptBlockBlog .lineEffects-left_right-2::before {
+    right: -40px;
+}
+.footer::before {
+    background: linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 25%, rgba(255,255,255,.3) 75%, rgba(255,255,255,0) 100%);
+}
+.textErrorSection .textErrorBlock {
+    text-align: center;
+}
+.textErrorSection .textErrorBlock .item {
+    width: 70%;
+    margin: 0 auto;
+    padding: 100px;
+    background-image: url('../img/details/grid-teal-op.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.textErrorSection .textErrorBlock .item .textMain {
+    font-size: 96px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.textErrorSection .textErrorBlock .item .textMain > span {
+    color: var(--teal);
+}
+.textErrorSection .textErrorBlock .item .desc {
+    margin: 30px auto 0;
+    opacity: .6;
+    font-size: var(--fz18);
+    max-width: 60%;
+}
+.textErrorSection .textErrorBlock .item .btn-block {
+    margin-top: 55px;
+}
+.textErrorSection .textErrorBlock .item .btn-block > a {
+    min-width: 290px;
+}
+.bannSection.lasertagSectionPage .info-block .item.infoBann .desc {
+    padding: 10px 85px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    width: fit-content;
+}
+.bannSection.lasertagSectionPage .info-block .item .img {
+    position: relative;
+}
+.bannSection.lasertagSectionPage .info-block .item .img::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 313px;
+    height: 313px;
+    border-radius: 50%;
+    background-color: var(--pink);
+    transform: translateX(-50%);
+    opacity: 0.3;
+    filter: blur(150px);
+    z-index: -1;
 }

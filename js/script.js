@@ -123,6 +123,7 @@ function marginsMain() {
     }
     $('.bannSection .bannBlock').css({'padding-top': $('header').height() + 40})
     $('.ptBlock').css({'padding-top': $('header').height() + 40})
+    $('.ptBlockBlog').css({'margin-top': $('header').height()})
 }
 
 if ($('#map').length != 0) {
