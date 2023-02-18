@@ -322,9 +322,9 @@ $('.newFormatSlider .swiper-button-prev').on('click', function() {
 })
 function prevNextBtnSlide() {
     $('.newFormatSlider .swiper-button-prev.btn').css({
-        'left': `${ (($('body').width()-$('.container').width())/2)-40 }px`
+        'left': `${ (($('body').width()-$('.container').width())/2)-100 }px`
     })
     $('.newFormatSlider .swiper-button-next.btn').css({
-        'right': `${ (($('body').width()-$('.container').width())/2)-40 }px`
+        'right': `${ (($('body').width()-$('.container').width())/2)-100 }px`
     })
 }
