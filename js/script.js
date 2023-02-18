@@ -2,12 +2,14 @@
     marginsMain()
     checkScroll()
     heightRates()
+    prevNextBtnSlide()
 })(jQuery);
 
 $(window).resize(function () {
     marginsMain()
     checkScroll()
     heightRates()
+    prevNextBtnSlide()
 });
 
 // mask for phone input
@@ -124,6 +126,9 @@ function marginsMain() {
     $('.bannSection .bannBlock').css({'padding-top': $('header').height() + 40})
     $('.ptBlock').css({'padding-top': $('header').height() + 40})
     $('.ptBlockBlog').css({'margin-top': $('header').height()})
+    $('.newFormatSlider .swiper-wrapper').css({
+        'transform': `translate3d(${ ($('body').width()-$('.container').width())/2 }px,0,0)`
+    })
 }
 
 if ($('#map').length != 0) {
@@ -269,9 +274,9 @@ const scroll = new LocomotiveScroll({
   tablet: { smooth: true },
   smartphone: { smooth: true }
 });
-scroll.on("scroll", function() {
-    checkScroll()
-});
+// scroll.on("scroll", function() {
+//     checkScroll()
+// });
 scroll.on("call", (value, way, obj) => {
     if (value === "toggleBackToTop") {
         if (way === "enter") {
@@ -288,5 +293,38 @@ scroll.on("call", (value, way, obj) => {
     }
 });
 function checkScroll() {
-    marginsMain()
+    marginsMain();
+}
+
+new Swiper(".newFormatSlider", {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    watchSlidesProgress: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+setTimeout(function () {
+    translateXSlide()
+    prevNextBtnSlide()
+}, 100)
+function translateXSlide() {
+    $('.newFormatSlider .swiper-wrapper').css({
+        'transform': `translate3d(${ ($('body').width()-$('.container').width())/2 }px,0,0)`
+    })
+}
+$('.newFormatSlider .swiper-button-prev').on('click', function() {
+    if ($('.newFormatSlider .swiper-slide:first-of-type').hasClass('swiper-slide-active')) {
+        translateXSlide()
+    }
+})
+function prevNextBtnSlide() {
+    $('.newFormatSlider .swiper-button-prev.btn').css({
+        'left': `${ (($('body').width()-$('.container').width())/2)-40 }px`
+    })
+    $('.newFormatSlider .swiper-button-next.btn').css({
+        'right': `${ (($('body').width()-$('.container').width())/2)-40 }px`
+    })
 }

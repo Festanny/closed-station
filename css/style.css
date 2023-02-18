@@ -494,7 +494,9 @@ header nav li:hover a.c-red-h {
     height: 100%;
     object-fit: contain;
 }
-#upbutton .btn {
+#upbutton .btn,
+.swiper-button-prev.btn,
+.swiper-button-next.btn {
     width: 61px;
     height: 61px;
     padding: 19px;
@@ -728,7 +730,8 @@ footer .footer .info-block .social a img {
 .social.blue a img {
     filter: invert(71%) sepia(92%) saturate(2172%) hue-rotate(193deg) brightness(101%) contrast(103%);
 }
-.social.pink a img {
+.social.pink a img,
+.btn.btn-pink img {
     filter: invert(36%) sepia(54%) saturate(3695%) hue-rotate(193deg) brightness(101%) contrast(106%);
 }
 .social.red a img {
@@ -1711,7 +1714,8 @@ main.bg-img-green::before {
 }
 .questCatalogBlock .info-block .item,
 .infoQuestPageBlock .info-block .item,
-.featuresGameBlock .info-block .item {
+.featuresGameBlock .info-block .item,
+.newFormatSection.birthdayCorporatePage .info-block .swiper-slide {
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
@@ -1743,13 +1747,15 @@ main.bg-img-green::before {
     color: var(--black);
 }
 .questCatalogBlock .info-block .item .img,
-.infoQuestPageBlock .info-block .item .img {
+.infoQuestPageBlock .info-block .item .img,
+.newFormatSection.birthdayCorporatePage .info-block .swiper-slide .img {
     width: 100%;
     height: 260px;
 }
 .questCatalogBlock .info-block .item .img img,
 .infoQuestPageBlock .info-block .item .img img,
-.featuresGameBlock .info-block .item .img img {
+.featuresGameBlock .info-block .item .img img,
+.newFormatSection.birthdayCorporatePage .info-block .swiper-slide .img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1758,7 +1764,8 @@ main.bg-img-green::before {
 .questCatalogBlock .info-block .item .info,
 .infoQuestPageBlock .info-block .item .info,
 .featuresGameBlock .info-block .item .info,
-.questCatalogSection.blogPage .info-block .item .info {
+.questCatalogSection.blogPage .info-block .item .info,
+.newFormatSection.birthdayCorporatePage .info-block .swiper-slide .info {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -1771,12 +1778,14 @@ main.bg-img-green::before {
 }
 .questCatalogBlock .info-block .item .info .title,
 .infoQuestPageBlock .info-block .item .info .title,
-.questCatalogSection.blogPage .info-block .item .info .title {
+.questCatalogSection.blogPage .info-block .item .info .title,
+.newFormatSection.birthdayCorporatePage .info-block .swiper-slide .info .title {
     font-size: var(--fz20);
     text-transform: uppercase;
 }
 .questCatalogBlock .info-block .item .info .category,
-.infoQuestPageBlock .info-block .item .info .category {
+.infoQuestPageBlock .info-block .item .info .category,
+.newFormatSection.birthdayCorporatePage .info-block .swiper-slide .info .category {
     opacity: .6;
 }
 .questCatalogBlock .info-block .item .price {
@@ -2085,20 +2094,23 @@ main.bg-img-green::before {
 .bannSection.pb0 {
     padding-bottom: 0!important;
 }
-.infoQuestPageSection .title-age {
+.infoQuestPageSection .title-age,
+.newFormatSection.birthdayCorporatePage .title-age {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: flex-end;
     gap: 50px;
     margin-bottom: 40px;
 }
-.infoQuestPageSection .title-age .age {
+.infoQuestPageSection .title-age .age,
+.newFormatSection.birthdayCorporatePage .title-age .age {
     text-align: right;
 }
 .bannSection.pb0 .bannBlock {
     padding-bottom: 0;
 }
-.infoQuestPageSection .title-age .age span {
+.infoQuestPageSection .title-age .age span,
+.newFormatSection.birthdayCorporatePage .title-age .age span {
     display: inline-block;
     padding: 10px 20px;
     background-color: var(--teal);
@@ -2106,6 +2118,9 @@ main.bg-img-green::before {
     text-transform: uppercase;
     margin-bottom: 5px;
     color: var(--black);
+}
+.newFormatSection.birthdayCorporatePage .title-age .age span.bg-pink {
+    background-color: var(--pink);
 }
 .infoQuestPageSection .text {
     margin-top: 40px;
@@ -2651,4 +2666,34 @@ section.mapSection.lasertagSectionClass {
     opacity: 0.3;
     filter: blur(150px);
     z-index: -1;
+}
+.newFormatSection.birthdayCorporatePage {
+    background-image: url(../img/details/grid-red.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.newFormatSection.birthdayCorporatePage .info-block .swiper-slide .info {
+    background: rgba(255, 114, 213, 0.1);
+}
+.newFormatSlider .swiper-button-next:after,
+.newFormatSlider .swiper-button-prev:after {
+    content: none;
+}
+.swiper-button-prev.btn,
+.swiper-button-next.btn {
+    position: absolute;
+}
+.swiper-button-prev.btn {
+    transform: rotate(-90deg);
+}
+.swiper-button-next.btn {
+    transform: rotate(90deg);
+}
+.swiper-button-prev:not(.swiper-button-disabled):hover {
+    transform: scale(1.2) rotate(-90deg);
+}
+.swiper-button-next:not(.swiper-button-disabled):hover {
+    transform: scale(1.2) rotate(90deg);
 }
