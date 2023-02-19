@@ -305,9 +305,19 @@ new Swiper(".newFormatSlider", {
         prevEl: ".swiper-button-prev",
     },
 });
+new Swiper(".newFormatSlider2", {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    watchSlidesProgress: true,
+    navigation: {
+        nextEl: ".swiper-button-next.scripted",
+        prevEl: ".swiper-button-prev.scripted",
+    },
+});
 
 setTimeout(function () {
     translateXSlide()
+    translateXSlide2()
     prevNextBtnSlide()
 }, 100)
 function translateXSlide() {
@@ -320,11 +330,27 @@ $('.newFormatSlider .swiper-button-prev').on('click', function() {
         translateXSlide()
     }
 })
+function translateXSlide2() {
+    $('.newFormatSlider2 .swiper-wrapper').css({
+        'transform': `translate3d(${ ($('body').width()-$('.container').width())/2 }px,0,0)`
+    })
+}
+$('.newFormatSlider2 .swiper-button-prev').on('click', function() {
+    if ($('.newFormatSlider2 .swiper-slide:first-of-type').hasClass('swiper-slide-active')) {
+        translateXSlide2()
+    }
+})
 function prevNextBtnSlide() {
     $('.newFormatSlider .swiper-button-prev.btn').css({
         'left': `${ (($('body').width()-$('.container').width())/2)-100 }px`
     })
     $('.newFormatSlider .swiper-button-next.btn').css({
+        'right': `${ (($('body').width()-$('.container').width())/2)-100 }px`
+    })
+    $('.newFormatSlider2 .swiper-button-prev.btn').css({
+        'left': `${ (($('body').width()-$('.container').width())/2)-100 }px`
+    })
+    $('.newFormatSlider2 .swiper-button-next.btn').css({
         'right': `${ (($('body').width()-$('.container').width())/2)-100 }px`
     })
 }

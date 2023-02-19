@@ -1706,7 +1706,8 @@ main.bg-img-green::before {
     flex-direction: column;
     height: auto;
 }
-.questCatalogBlock .info-block .item .more {
+.questCatalogBlock .info-block .item .more,
+.newFormatSection .info-block .swiper-slide .more {
     position: absolute;
     display: flex;
     gap: 10px;
@@ -1714,14 +1715,16 @@ main.bg-img-green::before {
     left: 20px;
     width: calc(100% - 40px);
 }
-.questCatalogBlock .info-block .item .more span.new {
+.questCatalogBlock .info-block .item .more span.new,
+.newFormatSection .info-block .swiper-slide .more span.new {
     padding: 5px 10px;
     border-radius: 1000px;
     background-color: var(--white);
     color: var(--black);
     text-transform: uppercase;
 }
-.questCatalogBlock .info-block .item .more span:not(.new) {
+.questCatalogBlock .info-block .item .more span:not(.new),
+.newFormatSection .info-block .swiper-slide .more span:not(.new) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2223,6 +2226,9 @@ main.bg-img-green::before {
     grid-template-columns: 325px 1fr;
     gap: 35px;
 }
+.ratesSection .info-block .item .ratesSlider {
+    height: 100%;
+}
 .ratesSection .info-block .item .ratesSlider .swiper-wrapper {
     width: 10px;
 }
@@ -2341,13 +2347,20 @@ main.bg-img-green::before {
     color: var(--teal);
     font-size: var(--fz20);
 }
+.ratesSection.bg-pink .info-block .item .swiper-slide .info .priceBlockRates > div span {
+    color: var(--pink);
+}
 .ratesSection .info-block .item .swiper-slide .info .btn-block,
 .ratesSection .info-block .item .swiper-slide .info .btn-block .btn {
     width: 100%;
 }
 .ratesSection .swiper-button-next,
-.ratesSection  .swiper-button-prev {
+.ratesSection .swiper-button-prev {
     color: var(--teal);
+}
+.ratesSection.bg-pink .swiper-button-next,
+.ratesSection.bg-pink .swiper-button-prev {
+    color: var(--pink);
 }
 .descriptionSection .info-block .item:first-of-type .img {
     width: 100%;
@@ -2634,8 +2647,8 @@ section.mapSection.lasertagSectionClass {
 .newFormatSection.birthdayCorporatePage .info-block .swiper-slide .info {
     background: rgba(255, 114, 213, 0.1);
 }
-.newFormatSlider .swiper-button-next:after,
-.newFormatSlider .swiper-button-prev:after {
+.swiper-button-next.mainNone:after,
+.swiper-button-prev.mainNone:after {
     content: none;
 }
 .swiper-button-prev.btn,
@@ -2648,10 +2661,10 @@ section.mapSection.lasertagSectionClass {
 .swiper-button-next.btn {
     transform: rotate(90deg);
 }
-.swiper-button-prev:not(.swiper-button-disabled):hover {
+.swiper-button-prev:not(.swiper-button-disabled):not(.btn-noneStyle):hover {
     transform: scale(1.2) rotate(-90deg);
 }
-.swiper-button-next:not(.swiper-button-disabled):hover {
+.swiper-button-next:not(.swiper-button-disabled):not(.btn-noneStyle):hover {
     transform: scale(1.2) rotate(90deg);
 }
 .specialSolutionsSection.bg-pink {
@@ -2678,7 +2691,7 @@ section.mapSection.lasertagSectionClass {
     var(--teal15), transparent 1px
     );
     background-size: 60px 60px!important;
-    background-position: center center!important;
+    background-position: top center!important;
 }
 .backGrid.backGridPink {
     background:
@@ -2913,4 +2926,75 @@ section.mapSection.lasertagSectionClass {
     margin-top: -10px   ;
     font-size: var(--fz24);
     padding: 10px 20px;
+}
+.ratesSection.birthdayCorporatePage .info-block .contact .desc-main p {
+    margin-bottom: 10px;
+    opacity: .6;
+}
+.ratesSection.birthdayCorporatePage .info-block .contact .desc-main p:last-of-type {
+    margin-bottom: 0;
+}
+.ratesSection.birthdayCorporatePage .info-block .contact .price > span {
+    font-size: var(--fz24);
+    color: var(--pink)
+}
+.ratesSection.bg-pink .info-block .item.title-desc .contact {
+    background: rgba(255, 114, 213, 0.05);
+    border: 1px solid rgba(255, 114, 213, 0.2);
+}
+.ratesSection.bg-pink .info-block .item.title-desc .contact .phone,
+.ratesSection.bg-pink .info-block .item .swiper-slide .name {
+    color: var(--pink);
+}
+.ratesSection.bg-pink .info-block .item .swiper-slide .name {
+    background: rgba(255, 114, 213, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+.videoReviewSection .info-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.videoReviewSection .info-block .item {
+    border: 1px solid var(--pink);
+    height: 430px;
+}
+.videoReviewSection .info-block .item iframe {
+    width: 100%;
+    height: 100%;
+}
+.videoReviewSection .additionally {
+    margin-top: 60px;
+}
+.videoReviewSection .additionally .text {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.videoReviewSection .additionally .text .title {
+    font-size: var(--fz32);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.videoReviewSection .additionally .text .desc {
+    opacity: .6;
+}
+.videoReviewSection .additionally .text .price {
+    font-size: var(--fz24);
+    font-weight: 500;
+    color: var(--pink)
+}
+.newFormatSection.scriptedActionGames .title-age {
+    align-items: center;
+}
+.newFormatSection.scriptedActionGames .title-age .desc {
+    width: 70%;
+    opacity: .6;
+}
+.newFormatSection.bg-pink .info-block .swiper-slide .more span:not(.new),
+.newFormatSection.bg-pink .info-block .swiper-slide .more span {
+    background-color: var(--pink);
 }
