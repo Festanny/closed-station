@@ -314,10 +314,30 @@ new Swiper(".newFormatSlider2", {
         prevEl: ".swiper-button-prev.scripted",
     },
 });
+new Swiper(".newFormatSlider3", {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    watchSlidesProgress: true,
+    navigation: {
+        nextEl: ".newFormatSlider3 .swiper-button-next",
+        prevEl: ".newFormatSlider3 .swiper-button-prev",
+    },
+});
+new Swiper(".newFormatSlider4", {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    watchSlidesProgress: true,
+    navigation: {
+        nextEl: ".newFormatSlider4 .swiper-button-next",
+        prevEl: ".newFormatSlider4 .swiper-button-prev",
+    },
+});
 
 setTimeout(function () {
     translateXSlide()
     translateXSlide2()
+    translateXSlide3()
+    translateXSlide4()
     prevNextBtnSlide()
 }, 100)
 function translateXSlide() {
@@ -340,6 +360,26 @@ $('.newFormatSlider2 .swiper-button-prev').on('click', function() {
         translateXSlide2()
     }
 })
+function translateXSlide3() {
+    $('.newFormatSlider3 .swiper-wrapper').css({
+        'transform': `translate3d(${ ($('body').width()-$('.container').width())/2 }px,0,0)`
+    })
+}
+$('.newFormatSlider3 .swiper-button-prev').on('click', function() {
+    if ($('.newFormatSlider3 .swiper-slide:first-of-type').hasClass('swiper-slide-active')) {
+        translateXSlide3()
+    }
+})
+function translateXSlide4() {
+    $('.newFormatSlider4 .swiper-wrapper').css({
+        'transform': `translate3d(${ ($('body').width()-$('.container').width())/2 }px,0,0)`
+    })
+}
+$('.newFormatSlider4 .swiper-button-prev').on('click', function() {
+    if ($('.newFormatSlider4 .swiper-slide:first-of-type').hasClass('swiper-slide-active')) {
+        translateXSlide4()
+    }
+})
 function prevNextBtnSlide() {
     $('.newFormatSlider .swiper-button-prev.btn').css({
         'left': `${ (($('body').width()-$('.container').width())/2)-100 }px`
@@ -351,6 +391,18 @@ function prevNextBtnSlide() {
         'left': `${ (($('body').width()-$('.container').width())/2)-100 }px`
     })
     $('.newFormatSlider2 .swiper-button-next.btn').css({
+        'right': `${ (($('body').width()-$('.container').width())/2)-100 }px`
+    })
+    $('.newFormatSlider3 .swiper-button-prev.btn').css({
+        'left': `${ (($('body').width()-$('.container').width())/2)-100 }px`
+    })
+    $('.newFormatSlider3 .swiper-button-next.btn').css({
+        'right': `${ (($('body').width()-$('.container').width())/2)-100 }px`
+    })
+    $('.newFormatSlider4 .swiper-button-prev.btn').css({
+        'left': `${ (($('body').width()-$('.container').width())/2)-100 }px`
+    })
+    $('.newFormatSlider4 .swiper-button-next.btn').css({
         'right': `${ (($('body').width()-$('.container').width())/2)-100 }px`
     })
 }

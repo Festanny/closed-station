@@ -3040,3 +3040,40 @@ section.mapSection.lasertagSectionClass {
 .showProgramsSection .info-block .item .block .price .cost > span {
     color: var(--pink);
 }
+.newFormatSection.animatorsGame .info-block .swiper-slide .info .title {
+    text-align: center;
+}
+.newFormatSection.safeSites .info-block .swiper-slide .img {
+    height: 230px;
+}
+.newFormatSection.safeSites .info-block .swiper-slide {
+    border: 1px solid var(--pink)
+}
+.newFormatSection.birthdayCorporatePage.safeSites .title-age,
+.loungeAreaSection .title-age {
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+.newFormatSection.birthdayCorporatePage.safeSites .title-age .desc,
+.loungeAreaSection .title-age .desc {
+    width: 70%;
+}
+.loungeAreaSection .title-age .desc {
+    opacity: .6;
+    margin-top: 10px;
+}
+.loungeAreaSection .info-block {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    gap: 20px;
+    margin-top: 40px;
+}
+.loungeAreaSection .info-block .item .img {
+    width: 100%;
+    height: 345px;
+}
+.loungeAreaSection .info-block .item .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
