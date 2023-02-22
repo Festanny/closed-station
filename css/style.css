@@ -981,7 +981,7 @@ footer .footer .info-block .social a img {
     width: 1px;
     height: 330%;
     filter: blur(1px);
-    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 25%, rgba(255,255,255,.3) 75%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 25%, rgba(255,255,255,.3) 75%, rgba(255,255,255,0) 100%);
 }
 .consultationBlock::before,
 .footer::before,
@@ -1614,11 +1614,14 @@ footer .footer-2 .info-block .item {
 .photoGallerySection .info-block .item .block .info-phone a:hover {
     color: var(--black)
 }
-main.bg-img-green::before {
+.bg-img-main {
+    position: relative;
+}
+.bg-img-main.bg-img-green::before {
     content: '';
     position: absolute;
     width: 100%;
-    height: 1080px;
+    height: 100vh;
     background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/other/green-fluid-art-abstract-background.jpeg');
     background-position: top;
     background-repeat: no-repeat;
@@ -1799,13 +1802,13 @@ main.bg-img-green::before {
 .infoQuestSection .info-block .item:last-of-type {
     padding-bottom: 0;
 }
-.text.c-teal-strong strong {
+.c-teal-strong strong {
     color: var(--teal)
 }
-.text.c-red-strong strong {
+.c-red-strong strong {
     color: var(--red)
 }
-.text.c-pink-strong strong {
+.c-pink-strong strong {
     color: var(--pink)
 }
 .infoQuestSection .item .block .text ul {
@@ -3099,4 +3102,25 @@ section.mapSection.lasertagSectionClass {
 }
 .breadcrumbs-blogItem {
     background: url(../img/other/purple-background.jpg) center;
+}
+.questCatalogSection.arsenalPage .title-filter .btn-block {
+    text-align: right;
+}
+.questCatalogSection.arsenalPage .title-filter .btn-block .btn {
+    text-transform: uppercase;
+}
+main.bg-img-pink::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1080px;
+    background: url('../img/other/purple-background.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.questCatalogSection.arsenalPage .questCatalogBlock .info-block .item .info {
+    background: rgba(255, 114, 213, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
 }
