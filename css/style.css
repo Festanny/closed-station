@@ -51,7 +51,7 @@ a:hover {
 }
 main {
     overflow-x: hidden;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 section:not(.bannSection):not(.descSection):not(.breadcrumbsSection) {
     padding: 80px 0;
@@ -278,6 +278,11 @@ form button.btn-pink:focus,
 .lineEffects-3.c-pink::after {
     background-color: var(--pink);
 }
+.lineEffects-1.c-white::after,
+.lineEffects-2.c-white::after,
+.lineEffects-3.c-white::after {
+    background-color: var(--white);
+}
 .lineEffects-1::after {
     content: '';
     left: 50%;
@@ -338,7 +343,21 @@ header::after,
 .advantageousOfferSection.lasertagSectionClass::before,
 .advantageousOfferSection.lasertagSectionClass::after,
 .descriptionSection.lasertagSectionClass::before,
-.descriptionSection.lasertagSectionClass::after {
+.descriptionSection.lasertagSectionClass::after,
+.moreQuestInfoSection::before,
+.moreQuestInfoSection::after,
+.priceServiceSection::before,
+.priceServiceSection::after,
+.blogItemSection::before,
+.blogItemSection::after,
+.newFormatSection:not(.animatorsGame):not(.safeSites)::before,
+.newFormatSection:not(.animatorsGame):not(.safeSites)::after,
+.ratesSection::before,
+.ratesSection::after,
+.videoReviewSection::before,
+.videoReviewSection::after,
+.showProgramsSection::before,
+.showProgramsSection::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -351,7 +370,14 @@ header::before,
 .ageLimitSection::before,
 .areaSection::before,
 .advantageousOfferSection.lasertagSectionClass::before,
-.descriptionSection.lasertagSectionClass::before {
+.descriptionSection.lasertagSectionClass::before,
+.moreQuestInfoSection::before,
+.priceServiceSection::before,
+.blogItemSection::before,
+.newFormatSection:not(.animatorsGame):not(.safeSites)::before,
+.ratesSection::before,
+.videoReviewSection::before,
+.showProgramsSection::before {
     bottom: 0;
     background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 75%, rgba(255,255,255,0) 100%);
 }
@@ -362,7 +388,14 @@ header::after,
 .ageLimitSection::after,
 .areaSection::after,
 .advantageousOfferSection.lasertagSectionClass::after,
-.descriptionSection.lasertagSectionClass::after {
+.descriptionSection.lasertagSectionClass::after,
+.moreQuestInfoSection::after,
+.priceServiceSection::after,
+.blogItemSection::after,
+.newFormatSection:not(.animatorsGame):not(.safeSites)::after,
+.ratesSection::after,
+.videoReviewSection::after,
+.showProgramsSection::after {
     bottom: -1px;
     background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255) 50%, rgba(255,255,255,0) 100%);
     filter: blur(5px);
@@ -1259,7 +1292,7 @@ footer .footer .info-block .social a img {
     color: var(--pink)
 }
 .consultationSection .consultationBlock {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/other/orange-fluid-art-abstract-background.png');
+    background: url('../img/other/orange-fluid-art-abstract-background.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
@@ -1424,8 +1457,8 @@ footer .footer-2 .info-block .item {
 .bannSection .info-block-promo::before {
     content: '';
     position: absolute;
-    width: calc(100% + 60px);
-    left: -30px;
+    width: calc(100% + 80px);
+    left: -40px;
     height: 100%;
     background: rgba(121, 192, 242, 0.05);
     border: 2px solid rgba(121, 192, 242, 0.1);
@@ -1624,6 +1657,16 @@ footer .footer-2 .info-block .item {
     height: 100vh;
     background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/other/green-fluid-art-abstract-background.jpeg');
     background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg-img-main.bg-img-pink::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    background: url(../img/other/purple-background.jpg);
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -2535,7 +2578,7 @@ section.mapSection.lasertagSectionClass {
 .ptBlockBlog {
     position: relative;
     padding-top: 50px;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 .blogItemSection .info-block {
     display: grid;
@@ -3100,16 +3143,16 @@ section.mapSection.lasertagSectionClass {
     font-weight: 500;
     text-align: center;
 }
-.breadcrumbs-blogItem {
+/* .breadcrumbs-blogItem {
     background: url(../img/other/purple-background.jpg) center;
-}
+} */
 .questCatalogSection.arsenalPage .title-filter .btn-block {
     text-align: right;
 }
 .questCatalogSection.arsenalPage .title-filter .btn-block .btn {
     text-transform: uppercase;
 }
-main.bg-img-pink::before {
+/* main.bg-img-pink::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -3118,7 +3161,7 @@ main.bg-img-pink::before {
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 .questCatalogSection.arsenalPage .questCatalogBlock .info-block .item .info {
     background: rgba(255, 114, 213, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.1);

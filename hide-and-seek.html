@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header class="fixed">
+    <div class="contMain" data-scroll-container>
+    <header>
         <div class="header container">
             <div class="logo">
                 <a href="/"><img src="img/other/logo.png" alt="logo"></a>
@@ -18,22 +19,22 @@
             <nav>
                 <ul class="topmenu">
                     <li><a href="quest.html" class="c-teal-h">Квесты</a></li>
-                    <li><a href="#" class="openSub c-pink-h">Лазертаг</a>
+                    <li><a href="#" class="openSub c-pink-h">Лазертаг <i class="fa-solid fa-chevron-down"></i></a>
                         <div class="submenu">
                             <ul>
-                                <li><a href="#"><span>Мероприятие для детей</span></a></li>
-                                <li><a href="#"><span>Мероприятие для взрослых</span></a></li>
+                                <li><a href="event-for-children.html"><span>Мероприятие для детей</span></a></li>
+                                <li><a href="birthday-corporate.html"><span>Мероприятие для взрослых</span></a></li>
                                 <li><a href="#"><span>Мероприятие для подростков</span></a></li>
-                                <li><a href="#"><span>Секция лазертаг</span></a></li>
-                                <li><a href="#"><span>Арсенал</span></a></li>
-                              </ul>
+                                <li><a href="lasertag-section.html"><span>Секция лазертаг</span></a></li>
+                                <li><a href="arsenal.html"><span>Арсенал</span></a></li>
+                                </ul>
                         </div>
                     </li>
-                    <li><a href="hide-and-seek.html" class="c-teal-h active">Прятки</a></li>
+                    <li><a href="hide-and-seek.html" class="c-teal-h">Прятки</a></li>
                     <li><a href="new-year.html" class="c-blue-h">Новый год</a></li>
                     <li><a href="squid-game.html" class="c-red-h">Игра в Кальмара</a></li>
-                    <li><a href="#">Блог</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="blog.html" class="c-teal-h">Блог</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
                 </ul>
             </nav>
             <div class="phone">
@@ -58,14 +59,14 @@
             </div>
         </div>
     </header>
-    
-    <div class="contMain" data-scroll-container>
+
+    <div class="lineEffects-1"></div>
+    <div class="lineEffects-2 container"></div>
+    <div class="lineEffects-3 container"></div>
     <main>
-        <section class="bannSection hideSeekBg pb0">
-            <div class="lineEffects-1"></div>
-            <div class="lineEffects-2 container"></div>
-            <div class="lineEffects-3 container"></div>
+        <section class="bannSection hideSeekBg pb0" id="intro" data-scroll-section>
             <div class="bannBlock big">
+                <div class="is-inview" data-scroll="" data-scroll-repeat="" data-scroll-call="toggleBackToTop"></div>
                 <div class="info-block">
                     <div class="item infoBann">
                         <div class="block" data-scroll data-scroll-speed="3">
@@ -92,7 +93,7 @@
                 </div>
             </div>
         </section>
-        <section class="infoQuestPageSection">
+        <section class="infoQuestPageSection backGrid" data-scroll-section>
             <div class="infoQuestPageBlock container">
                 <div class="title-age">
                     <div class="textTitle">
@@ -146,7 +147,7 @@
                 </div>
             </div>
         </section>
-        <section class="specialSolutionsSection">
+        <section class="specialSolutionsSection" data-scroll-section>
             <div class="specialSolutionsBlock">
                 <div class="text container">
                     <div class="textTitle">
@@ -154,7 +155,7 @@
                     </div>
                     <div class="desc">Игра для людей, которым надоело пылиться в офисах, университетах и школах.</div>
                 </div>
-                <div class="forWhatBlock">
+                <div class="forWhatBlock backGrid">
                     <div class="info-block container">
                         <div class="item">
                             <div class="icon">
@@ -184,7 +185,7 @@
                 </div>
             </div>
         </section>
-        <section class="priceServiceSection">
+        <section class="priceServiceSection" data-scroll-section>
             <div class="priceServiceBlock container">
                 <div class="textTitle">
                     Стоимость
@@ -235,7 +236,7 @@
                 </div>
             </div>
         </section>
-        <section class="ratesSection">
+        <section class="ratesSection" data-scroll-section>
             <div class="ratesBlock container">
                 <div class="info-block">
                     <div class="item title-desc">
@@ -576,7 +577,7 @@
                 </div>
             </div>
         </section>
-        <section class="descriptionSection">
+        <section class="descriptionSection backGrid" data-scroll-section>
             <div class="descriprionBlock container">
                 <div class="info-block">
                     <div class="item">
@@ -606,9 +607,26 @@
                 </div>
             </div>
         </section>
+        <a href="#intro" id="upbutton" data-scroll-to>
+            <div class="btn btn-teal">
+                <div class="original">
+                    <div><span></span><span></span></div>
+                    <div><span></span><span></span></div>
+                    <div><span></span><span></span></div>
+                    <div><span></span><span></span></div>
+                </div>
+                <div class="effects">
+                    <div><span></span><span></span></div>
+                    <div><span></span><span></span></div>
+                    <div><span></span><span></span></div>
+                    <div><span></span><span></span></div>
+                </div>
+                <img src="img/details/upButton.svg">
+            </div>
+        </a>
     </main>
 
-    <footer>
+    <footer class="backGrid backGridWhite1" data-scroll-section>
         <div class="footer container">
             <div class="info-block">
                 <div class="logo">
@@ -636,10 +654,10 @@
                         <div class="name c-pink">Лазертаг</div>
                         <div class="list">
                             <ul>
-                                <li><a href="#">Для детей</a></li>
-                                <li><a href="#">Для взрослых</a></li>
+                                <li><a href="event-for-children.html">Для детей</a></li>
+                                <li><a href="birthday-corporate.html">Для взрослых</a></li>
                                 <li><a href="#">Для подростков</a></li>
-                                <li><a href="#">Арсенал</a></li>
+                                <li><a href="arsenal.html">Арсенал</a></li>
                             </ul>
                         </div>
                     </div>
@@ -647,9 +665,9 @@
                         <div class="name">Другое</div>
                         <div class="list">
                             <ul>
-                                <li><a href="#">Секция Лазертаг</a></li>
-                                <li><a href="#">Контакты</a></li>
-                                <li><a href="#">Блог</a></li>
+                                <li><a href="lasertag-section.html">Секция Лазертаг</a></li>
+                                <li><a href="contact.html">Контакты</a></li>
+                                <li><a href="blog.html">Блог</a></li>
                             </ul>
                         </div>
                     </div>
@@ -673,24 +691,6 @@
             </div>
         </div>
     </footer>
-
-    <div id="upbutton">
-        <div class="btn btn-teal">
-            <div class="original">
-                <div><span></span><span></span></div>
-                <div><span></span><span></span></div>
-                <div><span></span><span></span></div>
-                <div><span></span><span></span></div>
-            </div>
-            <div class="effects">
-                <div><span></span><span></span></div>
-                <div><span></span><span></span></div>
-                <div><span></span><span></span></div>
-                <div><span></span><span></span></div>
-            </div>
-            <img src="img/details/upButton.svg">
-        </div>
-    </div>
     </div>
 
     <!-- Scripts -->
@@ -703,5 +703,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="js/script.js"></script>
+
 </body>
 </html>

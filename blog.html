@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <div class="contMain" data-scroll-container>
     <header>
         <div class="header container">
             <div class="logo">
@@ -18,22 +19,22 @@
             <nav>
                 <ul class="topmenu">
                     <li><a href="quest.html" class="c-teal-h">Квесты</a></li>
-                    <li><a href="#" class="openSub c-pink-h">Лазертаг</a>
+                    <li><a href="#" class="openSub c-pink-h">Лазертаг <i class="fa-solid fa-chevron-down"></i></a>
                         <div class="submenu">
                             <ul>
-                                <li><a href="#"><span>Мероприятие для детей</span></a></li>
-                                <li><a href="#"><span>Мероприятие для взрослых</span></a></li>
+                                <li><a href="event-for-children.html"><span>Мероприятие для детей</span></a></li>
+                                <li><a href="birthday-corporate.html"><span>Мероприятие для взрослых</span></a></li>
                                 <li><a href="#"><span>Мероприятие для подростков</span></a></li>
-                                <li><a href="#"><span>Секция лазертаг</span></a></li>
-                                <li><a href="#"><span>Арсенал</span></a></li>
-                              </ul>
+                                <li><a href="lasertag-section.html"><span>Секция лазертаг</span></a></li>
+                                <li><a href="arsenal.html"><span>Арсенал</span></a></li>
+                                </ul>
                         </div>
                     </li>
                     <li><a href="hide-and-seek.html" class="c-teal-h">Прятки</a></li>
                     <li><a href="new-year.html" class="c-blue-h">Новый год</a></li>
                     <li><a href="squid-game.html" class="c-red-h">Игра в Кальмара</a></li>
-                    <li><a href="blog.html" class="c-teal-h active">Блог</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="blog.html" class="c-teal-h">Блог</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
                 </ul>
             </nav>
             <div class="phone">
@@ -59,8 +60,12 @@
         </div>
     </header>
 
-    <main>
-        <div class="ptBlockBlog backGrid">
+    <div class="lineEffects-left_right-1 container"></div>
+    <div class="lineEffects-left_right-2 container"></div>
+
+    <main id="intro">
+        <div class="ptBlockBlog backGrid" data-scroll-section>
+            <div class="is-inview" data-scroll="" data-scroll-repeat="" data-scroll-call="toggleBackToTop"></div>
             <section class="breadcrumbsSection">
                 <div class="breadCrumbsBlock container">
                     <ul>
@@ -151,9 +156,26 @@
                 </div>
             </section>
         </div>
+        <a href="#intro" id="upbutton" data-scroll-to>
+            <div class="btn btn-teal">
+                <div class="original">
+                    <div><span></span><span></span></div>
+                    <div><span></span><span></span></div>
+                    <div><span></span><span></span></div>
+                    <div><span></span><span></span></div>
+                </div>
+                <div class="effects">
+                    <div><span></span><span></span></div>
+                    <div><span></span><span></span></div>
+                    <div><span></span><span></span></div>
+                    <div><span></span><span></span></div>
+                </div>
+                <img src="img/details/upButton.svg">
+            </div>
+        </a>
     </main>
 
-    <footer>
+    <footer class="backGrid backGridWhite1" data-scroll-section>
         <div class="footer container">
             <div class="info-block">
                 <div class="logo">
@@ -181,10 +203,10 @@
                         <div class="name c-pink">Лазертаг</div>
                         <div class="list">
                             <ul>
-                                <li><a href="#">Для детей</a></li>
-                                <li><a href="#">Для взрослых</a></li>
+                                <li><a href="event-for-children.html">Для детей</a></li>
+                                <li><a href="birthday-corporate.html">Для взрослых</a></li>
                                 <li><a href="#">Для подростков</a></li>
-                                <li><a href="#">Арсенал</a></li>
+                                <li><a href="arsenal.html">Арсенал</a></li>
                             </ul>
                         </div>
                     </div>
@@ -192,14 +214,14 @@
                         <div class="name">Другое</div>
                         <div class="list">
                             <ul>
-                                <li><a href="#">Секция Лазертаг</a></li>
-                                <li><a href="#">Контакты</a></li>
-                                <li><a href="#">Блог</a></li>
+                                <li><a href="lasertag-section.html">Секция Лазертаг</a></li>
+                                <li><a href="contact.html">Контакты</a></li>
+                                <li><a href="blog.html">Блог</a></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
-                <div class="social teal">
+                <div class="social">
                     <a href="#"><img src="img/social/vk.svg" alt=""></a>
                     <a href="#"><img src="img/social/tg.svg" alt=""></a>
                     <a href="#"><img src="img/social/wa.svg" alt=""></a>
@@ -218,30 +240,18 @@
             </div>
         </div>
     </footer>
-
-    <div id="upbutton">
-        <div class="btn btn-teal">
-            <div class="original">
-                <div><span></span><span></span></div>
-                <div><span></span><span></span></div>
-                <div><span></span><span></span></div>
-                <div><span></span><span></span></div>
-            </div>
-            <div class="effects">
-                <div><span></span><span></span></div>
-                <div><span></span><span></span></div>
-                <div><span></span><span></span></div>
-                <div><span></span><span></span></div>
-            </div>
-            <img src="img/details/upButton.svg">
-        </div>
     </div>
 
     <!-- Scripts -->
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=b9f86102-2842-4593-9f48-25f8d16d0de2&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="js/script.js"></script>
+
 </body>
 </html>
