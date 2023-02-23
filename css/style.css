@@ -639,52 +639,30 @@ header nav li:hover a.c-red-h {
     left: 0;
 }
 .bannSection .info-block .item.infoBann .nameCompany::before,
-.bannSection .info-block .item.infoBann .nameCompany::after {
-    content: 'Закрытая';
-}
-.bannSection.new-year-bg .info-block .item.infoBann .nameCompany::before,
-.bannSection.new-year-bg .info-block .item.infoBann .nameCompany::after {
-    content: 'Такой новый';
-}
+.bannSection .info-block .item.infoBann .nameCompany::after,
+.descSection .textTitle::before,
+.descSection .textTitle::after,
+.lasertagSection .textTitle::before,
+.lasertagSection .textTitle::after,
+.questSection .textTitle::before,
+.questSection .textTitle::after,
+.whyWeSection .textTitle::before,
+.whyWeSection .textTitle::after,
+.reviewsSection .textTitle::before,
+.reviewsSection .textTitle::after,
+.mapSection .textTitle::before,
+.mapSection .textTitle::after,
+.bannSection.lasertagSectionPage .info-block .item.infoBann .nameCompany::before,
+.bannSection.lasertagSectionPage .info-block .item.infoBann .nameCompany::after,
+.bannSection.birthdayCorporatePage.lasertagSectionPage .info-block .item.infoBann .nameCompany::before,
+.bannSection.birthdayCorporatePage.lasertagSectionPage .info-block .item.infoBann .nameCompany::after,
 .bannSection.hideSeekBg .info-block .item.infoBann .nameCompany::before,
-.bannSection.hideSeekBg .info-block .item.infoBann .nameCompany::after {
-    content: 'Прятки в';
-}
+.bannSection.hideSeekBg .info-block .item.infoBann .nameCompany::after,
+.bannSection.new-year-bg .info-block .item.infoBann .nameCompany::before,
+.bannSection.new-year-bg .info-block .item.infoBann .nameCompany::after,
 .bannSection.squidGame .info-block .item.infoBann .nameCompany::before,
 .bannSection.squidGame .info-block .item.infoBann .nameCompany::after {
-    content: 'Экшн-игра';
-}
-.bannSection.lasertagSectionPage .info-block .item.infoBann .nameCompany::before,
-.bannSection.lasertagSectionPage .info-block .item.infoBann .nameCompany::after {
-    content: 'Секция';
-}
-.bannSection.birthdayCorporatePage .info-block .item.infoBann .nameCompany::before,
-.bannSection.birthdayCorporatePage .info-block .item.infoBann .nameCompany::after {
-    content: 'Лучший день';
-}
-.descSection .textTitle::before,
-.descSection .textTitle::after {
-    content: 'Активный отдых';
-}
-.lasertagSection .textTitle::before,
-.lasertagSection .textTitle::after {
-    content: 'Чем может';
-}
-.questSection .textTitle::before,
-.questSection .textTitle::after {
-    content: 'Подробнее';
-}
-.whyWeSection .textTitle::before,
-.whyWeSection .textTitle::after {
-    content: 'Почему';
-}
-.reviewsSection .textTitle::before,
-.reviewsSection .textTitle::after {
-    content: 'Отзывы';
-}
-.mapSection .textTitle::before,
-.mapSection .textTitle::after {
-    content: 'Контакты';
+    content: attr(data-name);
 }
 .bannSection .info-block .item.infoBann .nameCompany::before,
 .whyWeSection .textTitle::before {
