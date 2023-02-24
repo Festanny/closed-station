@@ -817,7 +817,7 @@ header nav li:hover a.c-red-h {
         opacity: .4;
     }
     100% {
-        transform: translateY(-30%);
+        transform: translateY(0%);
         opacity: 0;
     }
 }
@@ -831,7 +831,7 @@ header nav li:hover a.c-red-h {
         opacity: .2;
     }
     100% {
-        transform: translateY(-20%);
+        transform: translateY(0%);
         opacity: 0;
     }
 }
@@ -851,7 +851,7 @@ header nav li:hover a.c-red-h {
         opacity: .4;
     }
     100% {
-        transform: translate(-50%, -30%);
+        transform: translate(-50%, 0%);
         opacity: 0;
     }
 }
@@ -865,7 +865,7 @@ header nav li:hover a.c-red-h {
         opacity: .2;
     }
     100% {
-        transform: translate(-50%, -20%);
+        transform: translate(-50%, 0%);
         opacity: 0;
     }
 }

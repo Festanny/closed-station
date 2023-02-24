@@ -254,7 +254,6 @@ ymaps.modules.define('Panel', [
 
 
 
-
     // ymaps.ready(init);
 
     // function init () {
