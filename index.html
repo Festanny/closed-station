@@ -43,7 +43,7 @@
                     <a href="tel:+78482943306">+7 (8482) 94-33-06</a>
                 </div>
                 <div>
-                    <a href="#" class="btn btn-teal">
+                    <a class="btn btn-teal" data-bs-toggle="modal" data-bs-target="#application">
                         <div class="original">
                             <div><span></span><span></span></div>
                             <div><span></span><span></span></div>
@@ -184,7 +184,7 @@
                                 </div>
                             </div>
                             <div class="btn-block">
-                                <a href="#" class="btn type-2 btn-teal">
+                                <a href="#" class="btn type-2 btn-teal" data-bs-toggle="modal" data-bs-target="#application">
                                     <div class="original">
                                         <div><span></span><span></span></div>
                                         <div><span></span><span></span></div>
@@ -365,7 +365,7 @@
                             <div class="desc">Более 2 тыс. отзывов от наших посетителей</div>
                         </div>
                         <div class="btn-block">
-                            <a href="#" class="btn btn-teal">
+                            <a href="#" class="btn btn-teal" data-bs-toggle="modal" data-bs-target="#reviewModal">
                                 <div class="original">
                                     <div><span></span><span></span></div>
                                     <div><span></span><span></span></div>
@@ -664,6 +664,79 @@
             </div>
         </div>
     </footer>
+    </div>
+
+    <!-- Модальное окно -->
+    <div class="modal fade" id="application" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="h1 modal-title" id="exampleModalLabel">Введите свой телефон, чтобы забронировать игру</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <input type="text" placeholder="Имя" name="name">
+                        <input type="phone" placeholder="Номер телефона" id="phone" name="phone">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-block">
+                        <a class="btn type-2 btn-teal">
+                            <div class="original">
+                                <div><span></span><span></span></div>
+                                <div><span></span><span></span></div>
+                                <div><span></span><span></span></div>
+                                <div><span></span><span></span></div>
+                            </div>
+                            <div class="effects">
+                                <div><span></span><span></span></div>
+                                <div><span></span><span></span></div>
+                                <div><span></span><span></span></div>
+                                <div><span></span><span></span></div>
+                            </div>
+                            ХОЧУ СЫГРАТЬ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade reviewModal" id="reviewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="h1 modal-title" id="exampleModalLabel">Оставить отзыв</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <input type="text" placeholder="Имя" name="name">
+                        <input type="phone" placeholder="Номер телефона" id="phone" name="phone">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-block">
+                        <a class="btn type-2 btn-teal">
+                            <div class="original">
+                                <div><span></span><span></span></div>
+                                <div><span></span><span></span></div>
+                                <div><span></span><span></span></div>
+                                <div><span></span><span></span></div>
+                            </div>
+                            <div class="effects">
+                                <div><span></span><span></span></div>
+                                <div><span></span><span></span></div>
+                                <div><span></span><span></span></div>
+                                <div><span></span><span></span></div>
+                            </div>
+                            Отправить
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Scripts -->
