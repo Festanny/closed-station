@@ -528,3 +528,14 @@ function prevNextBtnSlide() {
         'right': `${ (($('body').width()-$('.container').width())/2)-100 }px`
     })
 }
+
+$('.modal.reviewModal .rating-mini > span').on('click', function() {
+    let num = $(this).attr('data-rating'),
+        content = $(this).parents('.rating-mini').children('span')
+    content.removeClass('active')
+    for (let i=0;i<content.length;i++) {
+        if (i <= num-1) {
+            content.eq(i).addClass('active')
+        }
+    } 
+})

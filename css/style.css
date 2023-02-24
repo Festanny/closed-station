@@ -1520,14 +1520,16 @@ form {
     justify-content: space-between;
     gap: 20px;
 }
-form input {
+form input,
+form textarea {
     width: calc(50% - 10px);
     padding: 15px;
     background-color: var(--white);
     border: 0;
     outline: none;
 }
-form input:focus {
+form input:focus,
+form textarea:focus {
     border: 0;
     outline: none;
 }
@@ -3419,7 +3421,8 @@ section.mapSection.lasertagSectionClass {
     flex-direction: column;
     gap: 20px;
 }
-.modal .modal-body form input {
+.modal .modal-body form input,
+.modal .modal-body form textarea {
     width: 100%;
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -3432,4 +3435,19 @@ section.mapSection.lasertagSectionClass {
 }
 .modal .modal-footer .btn-block a {
     text-transform: uppercase;
+}
+.modal .modal-body .rating-main {
+    padding-left: 20px;
+}
+.modal .modal-body .rating-main > span {
+    color: var(--black);
+    font-size: var(--fz18);
+    font-weight: 500;
+}
+.modal .modal-body .rating-main .rating-mini {
+    margin-top: 13px;
+}
+.modal .modal-body .rating-main .rating-mini span {
+    font-size: 23px;
+    cursor: pointer;
 }

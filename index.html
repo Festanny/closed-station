@@ -676,7 +676,7 @@
                 </div>
                 <div class="modal-body">
                     <form action="">
-                        <input type="text" placeholder="Имя" name="name">
+                        <input type="text" placeholder="Имя" name="firstname">
                         <input type="phone" placeholder="Номер телефона" id="phone" name="phone">
                     </form>
                 </div>
@@ -712,8 +712,19 @@
                 </div>
                 <div class="modal-body">
                     <form action="">
-                        <input type="text" placeholder="Имя" name="name">
-                        <input type="phone" placeholder="Номер телефона" id="phone" name="phone">
+                        <input type="text" placeholder="Имя" name="firstname">
+                        <input type="text" placeholder="Фамилия" name="lastname">
+                        <textarea name="reviewtext" id="" cols="30" rows="10" placeholder="Отзыв"></textarea>
+                        <div class="rating-main">
+                            <span>Ваша оценка</span>
+                            <div class="rating-mini">
+                                <span data-rating="1"></span>	
+                                <span data-rating="2"></span>    
+                                <span data-rating="3"></span>  
+                                <span data-rating="4"></span>    
+                                <span data-rating="5"></span>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
