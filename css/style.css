@@ -1650,6 +1650,7 @@ footer .footer-2 .info-block {
     justify-content: space-between;
     column-gap: 50px;
     row-gap: 20px;
+    flex-wrap: wrap;
 }
 footer .footer-2 .info-block .item > a {
     opacity: .4;
@@ -3465,4 +3466,58 @@ section.mapSection.lasertagSectionClass {
 .modal .modal-body .rating-main .rating-mini span {
     font-size: 23px;
     cursor: pointer;
+}
+.burgerBlock {
+    display: none;
+    justify-content: flex-end;
+}
+header .header nav {
+    display: flex;
+    justify-content: center;
+}
+header nav > ul {
+    justify-content: center;
+}
+.burger {
+    display: flex;
+    width: 23px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+.burger > div {
+    height: 2px;
+    background-color: var(--white);
+    border-radius: 1000px;
+    width: 100%;
+}
+.burger > div:last-of-type {
+    width: 75%;
+}
+.offcanvas#mobMenu {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+.offcanvas#mobMenu .offcanvas-body ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.offcanvas#mobMenu .btn-close {
+    filter: invert(100%);
+}
+.offcanvas#mobMenu .offcanvas-body ul li:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+.offcanvas#mobMenu .offcanvas-body ul li:not(.active) > .submenu {
+    display: none;
+}
+.offcanvas#mobMenu .offcanvas-body ul li .submenu {
+    margin-top: 10px;
+    margin-left: 15px;
+    border-left: 1px dashed var(--white);
+    padding-left: 15px;
+}
+.offcanvas#mobMenu .offcanvas-body ul li > a.openSub i {
+    margin-left: 5px;
 }

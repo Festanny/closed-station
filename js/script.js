@@ -539,3 +539,7 @@ $('.modal.reviewModal .rating-mini > span').on('click', function() {
         }
     } 
 })
+
+$('.offcanvas#mobMenu .offcanvas-body ul li a.openSub').on('click', function() {
+    $(this).parent('li').toggleClass('active')
+})
