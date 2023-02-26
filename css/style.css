@@ -774,7 +774,8 @@ header nav li:hover a.c-red-h {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 43px;
+    column-gap: 43px;
+    row-gap: 20px;
 }
 .bannSection .info-block .item.infoBann .nameCompany {
     position: relative;
@@ -1436,9 +1437,6 @@ footer .footer .info-block .social a img {
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid rgba(27, 211, 177, 0.2);
-    background-image: url('../img/details/grid-white-min.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
     height: auto;
 }
 .reviewsSection .item.textInfo .reviewsSlider .person {
@@ -1554,6 +1552,7 @@ form button.btn:hover,
 }
 .mapSection .info-block .item:first-of-type {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 100px;
     row-gap: 20px;
 }
@@ -3520,4 +3519,9 @@ header nav > ul {
 }
 .offcanvas#mobMenu .offcanvas-body ul li > a.openSub i {
     margin-left: 5px;
+}
+.lasertagSection .btn-block.mob,
+.questSection .btn-block.mob {
+    display: none;
+    margin-top: 30px;
 }

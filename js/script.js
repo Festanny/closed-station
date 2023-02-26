@@ -129,7 +129,11 @@ function marginsMain() {
     $('.newFormatSlider .swiper-wrapper').css({
         'transform': `translate3d(${ ($('body').width()-$('.container').width())/2 }px,0,0)`
     })
-}
+    for (let i=0;i<$('.textTitle').length;i++) {
+        if ($('.textTitle').eq(i).attr('data-name')!=undefined) {
+            $('.textTitle').eq(i).attr('data-name', $('.textTitle').eq(i).text())
+        }
+    }}
 
 if ($('#map').length != 0) {
     let centerMap = [55.733, 37.588]
