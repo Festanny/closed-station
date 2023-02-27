@@ -64,6 +64,9 @@
         --fz24: 20px;
         --fz20: 19px;
     }
+    header nav ul li a.openSub i {
+        display: none;
+    }
     .burgerBlock {
         display: flex;
     }
@@ -361,6 +364,9 @@
     .reviewsSection .info-block .item .btn-block {
         display: none;
     }
+    .bannSection .info-block .item.infoBann {
+        padding-right: 25px;
+    }
 }
 @media screen and (max-width: 428px) {
     .bannSection .info-block .item.infoBann .desc {
@@ -462,5 +468,55 @@
     }
     .footer .info-block nav {
         row-gap: 60px;
+    }
+    .advantageousOfferBlock .item .block .wholesale .item_w .desc, .advantageousOfferBlock .item .wholesale .item_w .desc, .ageLimitBlock .item .wholesale .item_w .desc {
+        flex: 1;
+    }
+    .whyWeSection .whyWeBlock-2 .info-block, .specialSolutionsSection .forWhatBlock .info-block {
+        grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+    }
+    .mapSection .info-block .item:last-of-type .social {
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 380px) {
+    .offcanvas#mobMenu .offcanvas-body .submenu li.lasertagLi {
+        display: block;
+    }
+    header .header nav {
+        display: none;
+    }
+    .mapSection .info-block .item:first-of-type .info {
+        flex-wrap: wrap;
+    }
+    footer .footer-2 .info-block .item > a {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 350px) {
+    :root {
+        --fz64: 40px;
+        --fz48: 30px;
+    }
+    .advantageousOfferBlock .item .img img {
+        max-height: 320px;
+    }
+    .advantageousOfferBlock .item .img::before {
+        width: 166px;
+        height: 148px;
+    }
+    .reviewsSection .item.textInfo .reviewsSlider .text {
+        font-size: 14px;
+    }
+    .descSection .btn-block {
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 320px) {
+    #map {
+        height: 400px!important;
+    }
+    header .header .logo {
+        width: 95px;
     }
 }

@@ -1338,7 +1338,8 @@ footer .footer .info-block .social a img {
     border-radius: 1000px;
     background-color: var(--teal);
     margin-top: 35px;
-    color: var(--black)
+    color: var(--black);
+    text-align: center;
 }
 .whyWeSection .whyWeBlockMain-1 {
     position: relative;
@@ -3529,4 +3530,7 @@ header nav > ul {
 .questSection .btn-block.mob {
     display: none;
     margin-top: 30px;
+}
+.offcanvas#mobMenu .offcanvas-body .submenu li.lasertagLi {
+    display: none;
 }
