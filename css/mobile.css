@@ -51,9 +51,6 @@
         background-position: top left;
         padding: 40px;
     }
-    .consultationSection .info-block .item.textInfo {
-        width: 100%;
-    }
 }
 @media screen and (max-width: 1099px) {
     :root {
@@ -63,6 +60,9 @@
         --fz32: 30px;
         --fz24: 20px;
         --fz20: 19px;
+    }
+    .consultationSection .info-block .item.textInfo {
+        width: 100%;
     }
     header {
         background-color: rgba(0, 0, 0, 0.5);
