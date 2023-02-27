@@ -186,10 +186,10 @@
     .mapSection .info-block .item:first-of-type {
         justify-content: space-between;
     }
-    header .header {
+    /* header .header {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
+        grid-template-columns: repeat(5, 1fr);
+    } */
     #upbutton .btn, .swiper-button-prev.btn, .swiper-button-next.btn, .btn.btn-arrow {
         width: 55px;
         height: 55px;
@@ -200,12 +200,17 @@
     }
 }
 @media screen and (max-width: 820px) {
-    .lineEffects-1::before,
-    .lineEffects-2::before,
-    .lineEffects-3::before {
-        content: none;
+    .lineEffects-1,
+    .lineEffects-2,
+    .lineEffects-3 {
+        display: none;
     }
 }
+/* @media screen and (max-width: 780px) {
+    main {
+        overflow-x: inherit;
+    }
+} */
 @media screen and (max-width: 739px) {
     :root {
         --fz64: 46px;
@@ -303,5 +308,56 @@
     }
     .consultationSection .info-block {
         grid-template-columns: 1fr;
+    }
+    .advantageousOfferBlock .item .img img {
+        max-height: 400px;
+    }
+    .advantageousOfferBlock .item .img::before {
+        width: 256px;
+        height: 228px;
+    }
+}
+@media screen and (max-width: 550px) {
+    :root {
+        --fz64: 48px;
+        --fz48: 36px;
+        --fz24: 16px;
+    }
+    .bannSection .info-block .item {
+        width: 100%;
+    }
+    .bannSection .bannBlock {
+        padding-bottom: 100px;
+    }
+    .advantageousOfferSection .advantageousOfferBlock {
+        background-position: left;
+        width: 100%;
+    }
+    .descSection {
+        padding-bottom: 50px;
+    }
+    section:not(.bannSection):not(.descSection):not(.breadcrumbsSection) {
+        padding: 50px 0;
+    }
+    .lasertagSection {
+        margin: 50px 0 100px;
+    }
+    .advantageousOfferBlock .item:first-of-type, .newYearProgramBlock .item:first-of-type, .congrSantaClausBlock .item:first-of-type, .ageLimitBlock .item:first-of-type {
+        padding: 25px;
+    }
+    .whyWeSection {
+        margin-top: 50px;
+    }
+    .reviewsSection .info-block {
+        grid-template-columns: 1fr;
+    }
+    .reviewsSection .info-block .item {
+        width: 100%;
+    }
+    .reviewsSection .info-block > .btn-block {
+        display: block;
+    }
+    .reviewsSection .info-block .item .btn-block {
+        display: none;
     }
 }

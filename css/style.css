@@ -61,6 +61,7 @@ section {
     position: relative;
     perspective: 1px;
     z-index: 300;
+    height: 100%;
 }
 strong {
     font-weight: 400;
@@ -1411,6 +1412,9 @@ footer .footer .info-block .social a img {
     font-size: var(--fz18);
     color: rgba(255, 255, 255, 0.4);
     max-width: 205px;
+}
+.reviewsSection .info-block > .btn-block {
+    display: none;
 }
 .rating-mini {
 	display: flex;
