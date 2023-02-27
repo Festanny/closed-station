@@ -311,6 +311,7 @@
     }
     .advantageousOfferBlock .item .img img {
         max-height: 400px;
+        object-fit: contain;
     }
     .advantageousOfferBlock .item .img::before {
         width: 256px;
@@ -359,5 +360,107 @@
     }
     .reviewsSection .info-block .item .btn-block {
         display: none;
+    }
+}
+@media screen and (max-width: 428px) {
+    .bannSection .info-block .item.infoBann .desc {
+        margin-left: 50px;
+    }
+    .bannSection .info-block .item.infoBann .block .connection .phone {
+        display: none;
+    }
+    .bannSection .info-block .item.infoBann .block .connection .social {
+        margin-left: 50px;
+    }
+    .bannSection .info-block .item.infoBann {
+        gap: 30px;
+    }
+    .descSection .btn-block {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .descSection .info-block .list .num.c-teal::before, .descSection .info-block .list .num.c-blue::before, .descSection .info-block .list .num.c-pink::before {
+        top: 28px;
+    }
+    .descSection .info-block .list .num-text:last-of-type .num:before {
+        height: calc(100% - 25px);
+    }
+    .advantageousOfferBlock .item .non-stop, .newYearProgramBlock .item .non-stop, .congrSantaClausBlock .item .non-stop, .ageLimitBlock .item .non-stop {
+        margin-top: 10px;
+    }
+    .advantageousOfferBlock .item .block .desc-1, .advantageousOfferBlock .item .block .desc-2 {
+        margin-left: 20px;
+    }
+    .advantageousOfferBlock .item .block .wholesale, .congrSantaClausBlock .item .wholesale, .ageLimitBlock .item .wholesale {
+        margin-top: 20px;
+    }
+    .advantageousOfferBlock .item .block .wholesale, .congrSantaClausBlock .item .wholesale, .ageLimitBlock .item .wholesale {
+        grid-template-columns: 1fr;
+    }
+    .advantageousOfferBlock .item .block .wholesale .item_w, .congrSantaClausBlock .item .wholesale .item_w, .ageLimitBlock .item .wholesale .item_w {
+        flex-direction: row;
+        column-gap: 40px;
+    }
+    .advantageousOfferBlock .item .img img {
+        max-height: 495px;
+    }
+    .advantageousOfferBlock .item .img::before {
+        width: 216px;
+        height: 198px;
+    }
+    .whyWeSection .whyWeBlock-1 {
+        text-align: left;
+    }
+    .whyWeSection .whyWeBlock-1 .block-text .item .textTitle {
+        margin-left: 0;
+    }
+    .whyWeSection .whyWeBlock-1 .block-text .item .hlt {
+        margin-top: 0;
+    }
+    .consultationSection .item.textInfo .text {
+        padding-left: 20px;
+    }
+    .consultationSection .consultationBlock {
+        width: 100%;
+        padding: 25px;
+    }
+    .consultationSection .item:first-of-type .textTitle-desc .desc,
+    .consultationSection .item.textInfo .text {
+        font-size: 16px;
+    }
+    .consultationSection .item:first-of-type .textTitle-desc,
+    .consultationSection .info-block {
+        gap: 20px;
+    }
+    .consultationSection .item.textInfo .text {
+        max-width: none;
+    }
+    .consultationSection .item.textInfo .text {
+        margin-bottom: 40px;
+    }
+    section.mapSection {
+        padding-top: 100px!important;
+    }
+    .consultationBlock::before {
+        content: none;
+    }
+    footer .footer .info-block,
+    .footer .info-block .logo {
+        width: 100%;
+    }
+    .footer .info-block .logo .copyright,
+    .footer .info-block .logo .phone {
+        display: none;
+    }
+    .footer .info-block .logo {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .footer .info-block .logo .logo-img {
+        width: 108px;
+    }
+    .footer .info-block nav {
+        row-gap: 60px;
     }
 }
