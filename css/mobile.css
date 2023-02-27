@@ -64,6 +64,9 @@
         --fz24: 20px;
         --fz20: 19px;
     }
+    header {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
     header nav ul li a.openSub i {
         display: none;
     }
