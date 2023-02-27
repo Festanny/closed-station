@@ -481,6 +481,9 @@
     .mapSection .info-block .item:last-of-type .social {
         flex-wrap: wrap;
     }
+    .mapSection .info-block .item:first-of-type .info {
+        flex-wrap: wrap;
+    }
 }
 @media screen and (max-width: 380px) {
     .offcanvas#mobMenu .offcanvas-body .submenu li.lasertagLi {
@@ -488,9 +491,6 @@
     }
     header .header nav {
         display: none;
-    }
-    .mapSection .info-block .item:first-of-type .info {
-        flex-wrap: wrap;
     }
     footer .footer-2 .info-block .item > a {
         font-size: 14px;
