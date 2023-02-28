@@ -120,7 +120,7 @@ function marginsMain() {
     if ($('.bannSection').hasClass('containerBanner')) {
         $('.bannSection .info-block .item:not(.infoBann)').css({
             'padding-right': ($('body').width()-$('.container').width())/2,
-            'display': 'block'
+            'display': 'flex'
         })
     }
     $('.bannBlock').css({'padding-top': $('header').height() + 40})
