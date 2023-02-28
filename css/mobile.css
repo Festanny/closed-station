@@ -61,6 +61,9 @@
         --fz24: 20px;
         --fz20: 19px;
     }
+    .bannSection.new-year-bg .nameCompany {
+        width: 100%;
+    }
     .consultationSection .info-block .item.textInfo {
         width: 100%;
     }
@@ -116,6 +119,23 @@
     .consultationSection .info-block {
         gap: 50px;
     }
+    .bannSection .info-block .item .img img {
+        transform: translateX(0)!important;
+        width: 100%!important;
+    }
+    .bannSection .info-block-promo::before {
+        width: 100%;
+        left: 0;
+    }
+    .bannSection .info-block-promo {
+        padding: 35px 40px;
+    }
+    .lineEffects-1, .lineEffects-2, .lineEffects-3 {
+        display: none;
+    }
+    .newYearProgramBlock::before {
+        content: none;
+    }
 }
 @media screen and (max-width: 849px) {
     :root {
@@ -126,9 +146,18 @@
         --fz24: 18px;
         --fz20: 17px;
     }
-    .descSection .info-block {
+    .bannSection .info-block .item.infoBann {
+        padding-top: 0;
+    }
+    .descSection .info-block, .advantageousOfferBlock .info-block, .newYearProgramBlock .info-block, .congrSantaClausBlock .info-block, .ageLimitBlock .info-block {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+    .newYearProgramBlock .item .img img, .congrSantaClausBlock .item .img img, .ageLimitBlock .item .img img {
+        max-height: 500px;
+    }
+    .advantageousOfferSection .advantageousOfferBlock, .newYearProgramSection .newYearProgramBlock, .congrSantaClausSection .congrSantaClausBlock, .ageLimitSection .ageLimitBlock {
+        background-position: left;
     }
     .descSection .info-block .item:first-of-type {
         order: 2;
@@ -203,13 +232,6 @@
     }
     #upbutton {
         right: 50px;
-    }
-}
-@media screen and (max-width: 820px) {
-    .lineEffects-1,
-    .lineEffects-2,
-    .lineEffects-3 {
-        display: none;
     }
 }
 /* @media screen and (max-width: 780px) {

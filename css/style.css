@@ -1830,6 +1830,7 @@ footer .footer-2 .info-block .item {
 }
 .photoGallerySection .swiper-wrapper {
     height: 480px;
+    width: 10px;
 }
 .photoGallerySection .swiper-wrapper .swiper-slide {
     height: auto;
