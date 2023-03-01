@@ -1942,8 +1942,9 @@ footer .footer-2 .info-block .item {
 }
 .questCatalogBlock .title-filter {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
+    gap: 20px;
 }
 .questCatalogBlock .title-filter .filter {
     display: flex;
@@ -1956,6 +1957,25 @@ footer .footer-2 .info-block .item {
     background: rgba(27, 211, 178, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    position: relative;
+}
+.questCatalogSection .title-filter label.filter-name {
+    background: rgba(255, 255, 255, 0.2);
+    display: none;
+}
+.questCatalogSection .title-filter .filter-name i {
+    position: absolute;
+    right: 19px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.questCatalogSection .title-filter .filter-name input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    color: var(--white);
 }
 .questCatalogBlock .title-filter .filter label > span {
     opacity: .6;
@@ -1992,6 +2012,7 @@ footer .footer-2 .info-block .item {
 .newFormatSection .info-block .swiper-slide .more {
     position: absolute;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     top: 20px;
     left: 20px;

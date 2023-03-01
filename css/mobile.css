@@ -336,8 +336,35 @@
         height: 100%;
         transform: none;
     }
+    .questCatalogBlock .title-filter {
+        grid-template-columns: 1fr;
+    }
+    .questCatalogBlock .title-filter .filter {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 @media screen and (max-width: 630px) {
+    .questCatalogBlock .title-filter .filter {
+        grid-template-columns: 1fr;
+    }
+    .questCatalogBlock .title-filter .filter label {
+        display: flex;
+        gap: 5px;
+        justify-content: space-between;
+    }
+    .questCatalogBlock .info-block .item .info .title {
+        font-size: 20px;
+    }
+    .questCatalogBlock .info-block .item .price {
+        font-size: 24px;
+    }
+    .questCatalogBlock .title-filter .filter label > select {
+        flex: 1;
+    }
+    .questCatalogSection .title-filter label.filter-name {
+        display: block;
+    }
     .bannSection .info-block .item.infoBann {
         padding-top: 0;
     }
@@ -395,6 +422,9 @@
     }
     .newYearProgramBlock .item .img img, .congrSantaClausBlock .item .img img, .ageLimitBlock .item .img img {
         max-height: 400px;
+    }
+    .lasertagSection .info-block, .questSection .info-block, .reviewsSection .info-block, .consultationSection .info-block, .photoGallerySection .info-block, .infoQuestSection .info-block .item, .moreQuestInfoSection .detailedInformation, .detailedInformationSection .info-block, .descriptionSection .info-block, .descriptionLasertagSection .info-block, .descriptionSection .info-block {
+        grid-template-columns: 1fr;
     }
 }
 @media screen and (max-width: 550px) {
@@ -592,6 +622,12 @@
     .photoGallerySection .info-block .item .block .info-phone a:hover {
         opacity: 1;
     }
+    .questCatalogBlock .info-block, .infoQuestPageBlock .info-block {
+        grid-template-columns: 1fr;
+    }
+    .questCatalogBlock .info-block, .infoQuestPageBlock .info-block {
+        margin-top: 30px;
+    }
 }
 @media screen and (max-width: 380px) {
     .offcanvas#mobMenu .offcanvas-body .submenu li.lasertagLi {
@@ -608,6 +644,18 @@
     }
     .photoGallerySection .item .photoGallerySlider .swiper-wrapper .swiper-slide img {
         height: 200px;
+    }
+    .questCatalogBlock .info-block .item .more span.new, .newFormatSection .info-block .swiper-slide .more span.new,
+    .questCatalogBlock .info-block .item .more span:not(.new), .newFormatSection .info-block .swiper-slide .more span:not(.new) {
+        font-size: 14px;
+    }
+    .questCatalogBlock .title-filter .filter label > select {
+        width: 20px;
+    }
+    .questCatalogBlock .info-block .item .more, .newFormatSection .info-block .swiper-slide .more {
+        gap: 5px;
+        top: 10px;
+        left: 10px;
     }
 }
 @media screen and (max-width: 350px) {
@@ -627,6 +675,9 @@
     }
     .descSection .btn-block {
         grid-template-columns: 1fr;
+    }
+    .questCatalogBlock .info-block .item .img, .infoQuestPageBlock .info-block .item .img, .newFormatSection.birthdayCorporatePage .info-block .swiper-slide .img {
+        height: 210px;
     }
 }
 @media screen and (max-width: 320px) {

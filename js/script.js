@@ -552,3 +552,20 @@ $('.modal.reviewModal .rating-mini > span').on('click', function() {
 $('.offcanvas#mobMenu .offcanvas-body ul li a.openSub').on('click', function() {
     $(this).parent('li').toggleClass('active')
 })
+
+$('.questCatalogSection .title-filter .filter-name input').on('input', function() {
+    let temp = $(this).val()
+    if (temp) {
+        $('.questCatalogBlock .info-block .item').each(function () {
+            if ($(this).attr('data-search').toLowerCase().indexOf(temp.toLowerCase()) > -1) {
+                $(this).removeClass('d-none')
+            } else {
+                $(this).addClass('d-none')
+            }
+        })
+    } else {
+        $('.questCatalogBlock .info-block .item').each(function () {
+            $(this).removeClass('d-none')
+        })
+    }
+})
