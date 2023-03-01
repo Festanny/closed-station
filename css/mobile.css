@@ -146,6 +146,19 @@
         --fz24: 18px;
         --fz20: 17px;
     }
+    .lasertagSection,
+    .photoGallerySection {
+        margin-top: 60px;
+    }
+    .bannSection.usuallyPB .bannBlock {
+        padding-bottom: 60px;
+    }
+    .newYearProgramSection {
+        padding-bottom: 60px!important;
+    }
+    .congrSantaClausSection {
+        padding-top: 60px!important;
+    }
     .bannSection .info-block .item.infoBann {
         padding-top: 0;
     }
@@ -233,6 +246,9 @@
     #upbutton {
         right: 50px;
     }
+    .photoGallerySection .info-block {
+        grid-template-columns: 1fr;
+    }
 }
 /* @media screen and (max-width: 780px) {
     main {
@@ -304,6 +320,22 @@
     .advantageousOfferBlock .item .block .desc-2 {
         width: 80%;
     }
+    .photoGallerySection .item .photoGallerySlider .swiper-wrapper .swiper-slide img {
+        height: 230px;
+    }
+    .photoGallerySection .swiper-wrapper .swiper-slide .settings {
+        display: block;
+    }
+    .photoGallerySection .swiper-wrapper {
+        height: 100%;
+    }
+    .photoGallerySection .info-block .item:last-of-type::before {
+        left: -50px;
+        top: -20px;
+        width: 100%;
+        height: 100%;
+        transform: none;
+    }
 }
 @media screen and (max-width: 630px) {
     .bannSection .info-block .item.infoBann {
@@ -344,6 +376,25 @@
     .advantageousOfferBlock .item .img::before {
         width: 256px;
         height: 228px;
+    }
+    .bannSection .info-block-promo {
+        grid-template-columns: 1fr;
+    }
+    .bannSection .info-block-promo .btn-block {
+        justify-content: flex-start;
+    }
+    .bannSection .info-block-promo::before {
+        width: calc(100% + 50px);
+        left: -25px;
+    }
+    .bannSection .info-block-promo {
+        padding: 35px 0;
+    }
+    .newYearProgramBlock .item .block .wholesale {
+        grid-template-columns: 1fr;
+    }
+    .newYearProgramBlock .item .img img, .congrSantaClausBlock .item .img img, .ageLimitBlock .item .img img {
+        max-height: 400px;
     }
 }
 @media screen and (max-width: 550px) {
@@ -391,6 +442,35 @@
     }
     .bannSection .info-block .item.infoBann {
         padding-right: 25px;
+    }
+    .bannSection.usuallyPB .bannBlock {
+        padding-bottom: 50px;
+    }
+    .newYearProgramSection {
+        padding-bottom: 50px!important;
+    }
+    .congrSantaClausSection {
+        padding-top: 50px!important;
+    }
+    .lasertagSection, .photoGallerySection {
+        margin-top: 50px;
+    }
+    .photoGallerySection .item .photoGallerySlider .swiper-wrapper .swiper-slide img {
+        height: 180px;
+    }
+    .advantageousOfferSection .advantageousOfferBlock, .newYearProgramSection .newYearProgramBlock, .congrSantaClausSection .congrSantaClausBlock, .ageLimitSection .ageLimitBlock {
+        width: 100%;
+    }
+    .bannSection .info-block .item:last-of-type {
+        padding-right: 0!important;
+    }
+    .bannSection .info-block-promo .btn-block {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+        justify-content: inherit;
+    }
+    .bannSection .info-block-promo .btn-block .btn {
+        width: 100%;
     }
 }
 @media screen and (max-width: 428px) {
@@ -506,6 +586,12 @@
     .mapSection .info-block .item:first-of-type .info {
         flex-wrap: wrap;
     }
+    .photoGallerySection .info-block .item .block .info-phone a {
+        opacity: .6;
+    }
+    .photoGallerySection .info-block .item .block .info-phone a:hover {
+        opacity: 1;
+    }
 }
 @media screen and (max-width: 380px) {
     .offcanvas#mobMenu .offcanvas-body .submenu li.lasertagLi {
@@ -516,6 +602,12 @@
     }
     footer .footer-2 .info-block .item > a {
         font-size: 14px;
+    }
+    .congrSantaClausBlock .item .wholesale .item_w .desc {
+        opacity: .6;
+    }
+    .photoGallerySection .item .photoGallerySlider .swiper-wrapper .swiper-slide img {
+        height: 200px;
     }
 }
 @media screen and (max-width: 350px) {

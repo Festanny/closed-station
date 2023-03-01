@@ -70,7 +70,7 @@ let swiper = new Swiper(".reviewsSlider", {
 });
 
 let swiper2 = new Swiper(".photoGallerySlider", {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 20,
     slidesPerGroup: 2,
     mousewheel: true,
@@ -80,6 +80,11 @@ let swiper2 = new Swiper(".photoGallerySlider", {
         pauseOnMouseEnter: true,
         disableOnInteraction: false,
     },
+    breakpoints: {
+        381: {
+            slidesPerView: 2,
+        },
+    }
 });
 
 let swiper3 = new Swiper(".ratesSlider", {
@@ -98,7 +103,7 @@ let swiper3 = new Swiper(".ratesSlider", {
             slidesPerView: 2,
             spaceBetween: 10,
         },
-      }
+    }
   });
 
 $('.demoVideoSection .play').on('click', function() {
