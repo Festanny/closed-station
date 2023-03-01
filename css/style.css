@@ -1205,7 +1205,7 @@ footer .footer .info-block .social a img {
 .descriptionLasertagSection .info-block,
 .descriptionSection .info-block {
     display: grid;
-    grid-template-columns: auto 65%;
+    grid-template-columns: 3fr 5fr;
     gap: 45px;
 }
 .lasertagBlock,
@@ -1911,6 +1911,7 @@ footer .footer-2 .info-block .item {
 }
 .breadCrumbsBlock ul {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 36px;
     row-gap: 10px;
     list-style: none;
@@ -2160,6 +2161,7 @@ footer .footer-2 .info-block .item {
     font-size: var(--fz18);
     padding: 10px 20px 10px 54px;
     color: var(--black);
+    display: inline-block;
 }
 .moreQuestInfoSection .title-time .time-main span::before {
     content: '';
@@ -2354,7 +2356,7 @@ footer .footer-2 .info-block .item {
 }
 .detailedInformationSection .info-block {
     column-gap: 90px;
-    row-gap: 45px;
+    row-gap: 20px;
 }
 .detailedInformationSection .info-block .item:first-of-type {
     display: flex;
@@ -2367,6 +2369,7 @@ footer .footer-2 .info-block .item {
     font-size: var(--fz20);
     padding: 10px 20px;
     background: rgba(255, 255, 255, 0.1);
+    display: inline-block;
 }
 .bannSection.pb0 {
     padding-bottom: 0!important;

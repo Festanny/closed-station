@@ -28,6 +28,15 @@
     .consultationSection .info-block .item.textInfo {
         width: 80%;
     }
+    .moreQuestInfoSection .info-block .item.video-photo .block.gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .moreQuestInfoSection .info-block .item.video-photo .block.gallery .img {
+        height: 120px;
+    }
+    .moreQuestInfoSection .info-block .item.video-photo .block.vk-video {
+        height: 440px;
+    }
 }
 @media screen and (max-width: 1279px) {
     :root {
@@ -51,6 +60,21 @@
         background-position: top left;
         padding: 40px;
     }
+    .lineEffects-2::before,
+    .lineEffects-3::before {
+        content: '';
+        background-image: url('../img/details/line-2.svg');
+        width: 23px;
+        min-height: 100vh;
+        height: 100%;
+    }
+    .moreQuestInfoSection .info-block {
+        grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+    }
+    .moreQuestInfoSection .info-block .item.video-photo .block.gallery {
+        column-gap: 17px;
+        row-gap: 10px;
+    }
 }
 @media screen and (max-width: 1099px) {
     :root {
@@ -60,6 +84,16 @@
         --fz32: 30px;
         --fz24: 20px;
         --fz20: 19px;
+    }
+    .detailedInformationSection .info-block {
+        column-gap: 40px;
+    }
+    .moreQuestInfoSection .info-block .item.video-photo .block.gallery .img {
+        height: 160px;
+    }
+    .moreQuestInfoSection .info-block .item.information > .desc .text-4,
+    .moreQuestInfoSection .info-block .item.information .price .price-block .item_p .count {
+        color: var(--teal);
     }
     .bannSection.new-year-bg .nameCompany {
         width: 100%;
@@ -343,6 +377,9 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+    .moreQuestInfoSection .info-block {
+        grid-template-columns: 1fr;
+    }
 }
 @media screen and (max-width: 630px) {
     .questCatalogBlock .title-filter .filter {
@@ -433,6 +470,12 @@
         --fz48: 36px;
         --fz24: 16px;
     }
+    .moreQuestInfoSection .info-block .item.video-photo .block.gallery .img {
+        height: 110px;
+    }
+    .moreQuestInfoSection .info-block .item.video-photo .block.vk-video {
+        height: 330px;
+    }
     .bannSection .info-block .item {
         width: 100%;
     }
@@ -504,8 +547,21 @@
     }
 }
 @media screen and (max-width: 428px) {
+    .moreQuestInfoSection .info-block .item.video-photo .block.vk-video {
+        height: 285px;
+    }
     .bannSection .info-block .item.infoBann .desc {
         margin-left: 50px;
+    }
+    .moreQuestInfoSection .info-block .item.video-photo .block.gallery .img {
+        height: 78px;
+    }
+    .moreQuestInfoSection .info-block .item.video-photo {
+        gap: 17px;
+    }
+    .moreQuestInfoSection .info-block .item.information > .desc .bg-white,
+    .moreQuestInfoSection .info-block .item.information .price {
+        margin-top: 30px;
     }
     .bannSection .info-block .item.infoBann .block .connection .phone {
         display: none;
