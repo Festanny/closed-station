@@ -2379,8 +2379,8 @@ footer .footer-2 .info-block .item {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: flex-end;
-    gap: 50px;
-    margin-bottom: 40px;
+    gap: 20px;
+    margin-bottom: 50px;
 }
 .infoQuestPageSection .title-age .age,
 .newFormatSection.birthdayCorporatePage .title-age .age {
@@ -2398,6 +2398,7 @@ footer .footer-2 .info-block .item {
     text-transform: uppercase;
     margin-bottom: 5px;
     color: var(--black);
+    text-align: center;
 }
 .newFormatSection.birthdayCorporatePage .title-age .age span.bg-pink {
     background-color: var(--pink);
@@ -3558,4 +3559,9 @@ header nav > ul {
 }
 .offcanvas#mobMenu .offcanvas-body .submenu li.lasertagLi {
     display: none;
+}
+.swiper-pagination .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    background: var(--pink);
 }

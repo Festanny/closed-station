@@ -180,6 +180,9 @@
         --fz24: 18px;
         --fz20: 17px;
     }
+    .showProgramsSection .info-block {
+        grid-template-columns: 1fr;
+    }
     .lasertagSection,
     .photoGallerySection {
         margin-top: 60px;
@@ -462,6 +465,50 @@
     }
     .lasertagSection .info-block, .questSection .info-block, .reviewsSection .info-block, .consultationSection .info-block, .photoGallerySection .info-block, .infoQuestSection .info-block .item, .moreQuestInfoSection .detailedInformation, .detailedInformationSection .info-block, .descriptionSection .info-block, .descriptionLasertagSection .info-block, .descriptionSection .info-block {
         grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 599px) {
+    .swiper.newFormatSlider1,
+    .swiper.newFormatSlider2,
+    .swiper.newFormatSlider3,
+    .swiper.newFormatSlider4 {
+        padding-bottom: 102px!important;
+    }
+    .swiper.newFormatSlider1 .swiper-pagination,
+    .swiper.newFormatSlider2,
+    .swiper.newFormatSlider3,
+    .swiper.newFormatSlider4 {
+        bottom: 28px;
+    }
+    .swiper .swiper-button-prev.btn,
+    .swiper .swiper-button-next.btn {
+        bottom: 10px;
+        top: auto;
+        z-index: 100;
+    }
+    .swiper .swiper-button-prev.btn {
+        left: 25px;
+    }
+    .swiper .swiper-button-next.btn {
+        right: 25px;
+    }
+    .swiper .swiper-button-prev.btn:hover {
+        transform: scale(1) rotate(-90deg);
+    }
+    .swiper .swiper-button-next.btn:hover {
+        transform: scale(1) rotate(90deg);
+    }
+    .infoQuestPageSection .title-age, .newFormatSection.birthdayCorporatePage .title-age {
+        grid-template-columns: 1fr;
+    }
+    .infoQuestPageSection .title-age .age, .newFormatSection.birthdayCorporatePage .title-age .age {
+        text-align: left;
+    }
+    .specialSolutionsSection .text .textTitle, .specialSolutionsSection .text .desc {
+        width: 100%;
+    }
+    .specialSolutionsSection .forWhatBlock {
+        padding: 20px 25px 56px;
     }
 }
 @media screen and (max-width: 550px) {
