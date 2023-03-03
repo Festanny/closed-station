@@ -194,6 +194,10 @@
         --fz24: 18px;
         --fz20: 17px;
     }
+    .descriptionSection.lasertagSectionClass .info-block {
+        column-gap: 40px;
+        row-gap: 20px;
+    }
     .newFormatSection.scriptedActionGames .title-age .desc {
         width: 100%;
     }
@@ -309,6 +313,10 @@
         --fz32: 26px;
         --fz24: 17px;
         --fz20: 16px;
+        --fz18: 16px;
+    }
+    .blogItemSection .info-block {
+        grid-template-columns: 1fr;
     }
     .ratesSection .info-block {
         grid-template-columns: 1fr;
@@ -652,6 +660,15 @@
     }
 }
 @media screen and (max-width: 428px) {
+    .blogItemSection .info-block {
+        margin-top: 20px;
+    }
+    .descriptionSection.lasertagSectionClass .item:first-of-type {
+        gap: 30px;
+    }
+    .descriptionSection.lasertagSectionClass .info-block {
+        row-gap: 30px;
+    }
     .showProgramsSection .info-block .item {
         grid-template-columns: 1fr;
     }

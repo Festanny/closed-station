@@ -141,9 +141,6 @@ function marginsMain() {
     $('.bannBlock').css({'padding-top': $('header').height() + 40})
     $('.ptBlock').css({'padding-top': $('header').height() + 40})
     $('.ptBlockBlog').css({'margin-top': $('header').height()})
-    // $('.newFormatSlider1 .swiper-wrapper').css({
-    //     'transform': `translate3d(${ ($('body').width()-$('.container').width())/2 }px,0,0)`
-    // })
     for (let i=0;i<$('.textTitle').length;i++) {
         if ($('.textTitle').eq(i).attr('data-name')!=undefined) {
             $('.textTitle').eq(i).attr('data-name', $('.textTitle').eq(i).text())
@@ -512,20 +509,22 @@ swiperSettings.forEach((swiper) => {
 });
 
 for (let i = 1; i <= 4; i++) {
-    if ($('body').width() > 599) {
-        $(`.newFormatSlider${i}`).css({'padding': '0'})
-        $(`.newFormatSlider${i} .swiper-wrapper`).css({
-            'transform': `translate3d(${(($('body').width() - $('.container').width()) / 2)}px,0,0)`
-        });
-        $(`.newFormatSlider${i} .swiper-button-prev`).on('click', function() {
-        if ($(`.newFormatSlider${i} .swiper-slide:first-of-type`).hasClass('swiper-slide-active')) {
+    if ($(`.newFormatSlider${i}`) != 0) {
+        if ($('body').width() > 599) {
+            $(`.newFormatSlider${i}`).css({'padding': '0'})
             $(`.newFormatSlider${i} .swiper-wrapper`).css({
                 'transform': `translate3d(${(($('body').width() - $('.container').width()) / 2)}px,0,0)`
             });
+            $(`.newFormatSlider${i} .swiper-button-prev`).on('click', function() {
+            if ($(`.newFormatSlider${i} .swiper-slide:first-of-type`).hasClass('swiper-slide-active')) {
+                $(`.newFormatSlider${i} .swiper-wrapper`).css({
+                    'transform': `translate3d(${(($('body').width() - $('.container').width()) / 2)}px,0,0)`
+                });
+            }
+            });
+        } else {
+            $(`.newFormatSlider${i}`).css({'padding': '0 25px'})
         }
-        });
-    } else {
-        $(`.newFormatSlider${i}`).css({'padding': '0 25px'})
     }
 }
 function prevNextBtnSlide() {
