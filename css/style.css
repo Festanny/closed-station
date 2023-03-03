@@ -2512,7 +2512,6 @@ footer .footer-2 .info-block .item {
 }
 .priceServiceSection .info-block .item .info-body .list .item_l {
     display: flex;
-    flex-wrap: wrap;
     gap: 10px;
     justify-content: space-between;
     align-items: center;
@@ -2520,6 +2519,13 @@ footer .footer-2 .info-block .item {
     background: rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
+}
+.priceServiceSection .info-block .item .info-body .list .item_l .day-price {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 5px;
 }
 .priceServiceSection .info-block .item .info-body .additionally {
     margin-top: 20px;
@@ -2590,6 +2596,9 @@ footer .footer-2 .info-block .item {
 .ratesSection .info-block .swiper-slide ul li .mob {
     display: none;
 }
+.ratesSection .info-block .swiper-slide ul li .mob:not(.enabled) {
+    opacity: .2;
+}
 .ratesSection .info-block .item.title-desc .title__block_min {
     position: relative;
     height: 70px;
@@ -2653,7 +2662,7 @@ footer .footer-2 .info-block .item {
 }
 .ratesSection .info-block .item .swiper-slide .info .priceBlockRates > div span {
     color: var(--teal);
-    font-size: var(--fz20);
+    font-size: var(--fz24);
 }
 .ratesSection.bg-pink .info-block .item .swiper-slide .info .priceBlockRates > div span {
     color: var(--pink);
@@ -3205,7 +3214,8 @@ section.mapSection.lasertagSectionClass {
 .priceServiceSection.birthdayCorporatePage .item.stocks .info-body .list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
+    column-gap: 60px;
+    row-gap: 20px;
     padding: 20px;
     background: rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.1);

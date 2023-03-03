@@ -43,6 +43,20 @@
         --fz48: 40px;
         --fz64: 58px;
     }
+    .priceServiceSection.birthdayCorporatePage .item.stocks .info-body .list {
+        grid-template-columns: 1fr;
+        row-gap: 0;
+    }
+    .priceServiceSection.birthdayCorporatePage .item.stocks .info-body .list .item_l:not(:last-of-type) {
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .priceServiceSection.birthdayCorporatePage .item.stocks .info-body .list .item_l:not(:first-of-type) {
+        padding-top: 20px;
+    }
+    .priceServiceSection.birthdayCorporatePage .item.stocks .info-body .list .item_l:not(:last-of-type)::before {
+        content: none;
+    }
     header .btn-header {
         display: none;
     }
@@ -180,6 +194,10 @@
         --fz24: 18px;
         --fz20: 17px;
     }
+    .newFormatSection.scriptedActionGames .title-age .desc {
+        width: 100%;
+    }
+    .priceServiceSection .info-block,
     .showProgramsSection .info-block {
         grid-template-columns: 1fr;
     }
@@ -271,10 +289,6 @@
     .mapSection .info-block .item:first-of-type {
         justify-content: space-between;
     }
-    /* header .header {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-    } */
     #upbutton .btn, .swiper-button-prev.btn, .swiper-button-next.btn, .btn.btn-arrow {
         width: 55px;
         height: 55px;
@@ -287,11 +301,6 @@
         grid-template-columns: 1fr;
     }
 }
-/* @media screen and (max-width: 780px) {
-    main {
-        overflow-x: inherit;
-    }
-} */
 @media screen and (max-width: 739px) {
     :root {
         --fz64: 46px;
@@ -300,6 +309,22 @@
         --fz32: 26px;
         --fz24: 17px;
         --fz20: 16px;
+    }
+    .ratesSection .info-block {
+        grid-template-columns: 1fr;
+    }
+    .ratesSection .info-block .item.title-desc .desc,
+    .ratesSection.bg-pink .info-block .item.title-desc .contact {
+        display: none;
+    }
+    .ratesSection .info-block .swiper-slide ul li .mob {
+        display: block;
+    }
+    .ratesSection .info-block .swiper-slide ul li {
+        height: auto!important;
+    }
+    .ratesSection .info-block .swiper-slide ul li .img {
+        display: none;
     }
     .advantageousOfferBlock .item:first-of-type .textTitle {
         width: 60%;
@@ -471,13 +496,15 @@
     .swiper.newFormatSlider1,
     .swiper.newFormatSlider2,
     .swiper.newFormatSlider3,
-    .swiper.newFormatSlider4 {
+    .swiper.newFormatSlider4,
+    .ratesSlider {
         padding-bottom: 102px!important;
     }
     .swiper.newFormatSlider1 .swiper-pagination,
-    .swiper.newFormatSlider2,
-    .swiper.newFormatSlider3,
-    .swiper.newFormatSlider4 {
+    .swiper.newFormatSlider2 .swiper-pagination,
+    .swiper.newFormatSlider3 .swiper-pagination,
+    .swiper.newFormatSlider4 .swiper-pagination,
+    .swiper.ratesSlider .swiper-pagination {
         bottom: 28px;
     }
     .swiper .swiper-button-prev.btn,
@@ -491,6 +518,12 @@
     }
     .swiper .swiper-button-next.btn {
         right: 25px;
+    }
+    .swiper.ratesSlider .swiper-button-prev.btn {
+        left: 0;
+    }
+    .swiper.ratesSlider .swiper-button-next.btn {
+        right: 0;
     }
     .swiper .swiper-button-prev.btn:hover {
         transform: scale(1) rotate(-90deg);
@@ -510,12 +543,37 @@
     .specialSolutionsSection .forWhatBlock {
         padding: 20px 25px 56px;
     }
+    .videoReviewSection .info-block {
+        grid-template-columns: 1fr;
+    }
+    .ratesSection .info-block .item.title-desc .title__block_min {
+        height: auto;
+    }
+    .ratesSection .info-block .item.title-desc .title__block_min::before {
+        content: none;
+    }
+    .ratesSection .info-block {
+        gap: 30px;
+    }
+    .ratesSection .info-block .item .swiper-slide .info .priceBlockRates > div span,
+    .videoReviewSection .additionally .text .price {
+        font-size: 24px;
+    }
+    .videoReviewSection .additionally .text {
+        width: 100%;
+    }
 }
 @media screen and (max-width: 550px) {
     :root {
         --fz64: 48px;
         --fz48: 36px;
         --fz24: 16px;
+    }
+    .videoReviewSection .info-block .item {
+        height: 350px;
+    }
+    section.mapSection.lasertagSectionClass {
+        padding-top: 50px!important;
     }
     .moreQuestInfoSection .info-block .item.video-photo .block.gallery .img {
         height: 110px;
@@ -594,6 +652,18 @@
     }
 }
 @media screen and (max-width: 428px) {
+    .showProgramsSection .info-block .item {
+        grid-template-columns: 1fr;
+    }
+    .loungeAreaSection .info-block .item .img {
+        height: 370px;
+    }
+    .infoQuestSection .info-block .item:first-of-type {
+        padding-bottom: 30px;
+    }
+    .infoQuestSection .info-block .item:not(:first-of-type) {
+        padding: 30px 0;
+    }
     .moreQuestInfoSection .info-block .item.video-photo .block.vk-video {
         height: 285px;
     }
@@ -731,10 +801,30 @@
     .questCatalogBlock .info-block, .infoQuestPageBlock .info-block {
         margin-top: 30px;
     }
+    .priceServiceSection .info-block .item .info-header .name {
+        font-size: 24px;
+        font-weight: normal;
+        text-transform: none;
+    }
+    .priceServiceSection .info-block .info-body .btn.btn-arrow {
+        display: none;
+    }
 }
 @media screen and (max-width: 380px) {
+    :root {
+        --fz64: 40px;
+    }
     .offcanvas#mobMenu .offcanvas-body .submenu li.lasertagLi {
         display: block;
+    }
+    .mapSection .mapBlock #map {
+        height: 450px!important;
+    }
+    .infoQuestSection .item .block .text ul {
+        gap: 10px;
+    }
+    .specialSolutionsSection.birthdayCorporatePage .textTitle {
+        font-size: 25px;
     }
     header .header nav {
         display: none;
@@ -760,10 +850,19 @@
         top: 10px;
         left: 10px;
     }
+    .ratesSection .info-block .swiper-slide ul li .mob {
+        font-size: 14px;
+    }
+    .videoReviewSection .info-block .item {
+        height: 250px;
+    }
+    .loungeAreaSection .info-block .item .img {
+        height: 320px;
+    }
 }
 @media screen and (max-width: 350px) {
     :root {
-        --fz64: 40px;
+        --fz64: 37px;
         --fz48: 30px;
     }
     .advantageousOfferBlock .item .img img {

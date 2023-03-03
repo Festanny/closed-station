@@ -95,13 +95,23 @@ let swiper3 = new Swiper(".ratesSlider", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    pagination: {
+        el: ".ratesSlider .swiper-pagination",
+        clickable: true,
+    },
     breakpoints: {
-        1100: {
+        1280: {
             slidesPerView: 3,
+            pagination: false
         },
         850: {
             slidesPerView: 2,
             spaceBetween: 10,
+            pagination: false
+        },
+        600: {
+            slidesPerView: 2,
+            pagination: false
         },
     }
   });
@@ -131,9 +141,9 @@ function marginsMain() {
     $('.bannBlock').css({'padding-top': $('header').height() + 40})
     $('.ptBlock').css({'padding-top': $('header').height() + 40})
     $('.ptBlockBlog').css({'margin-top': $('header').height()})
-    $('.newFormatSlider1 .swiper-wrapper').css({
-        'transform': `translate3d(${ ($('body').width()-$('.container').width())/2 }px,0,0)`
-    })
+    // $('.newFormatSlider1 .swiper-wrapper').css({
+    //     'transform': `translate3d(${ ($('body').width()-$('.container').width())/2 }px,0,0)`
+    // })
     for (let i=0;i<$('.textTitle').length;i++) {
         if ($('.textTitle').eq(i).attr('data-name')!=undefined) {
             $('.textTitle').eq(i).attr('data-name', $('.textTitle').eq(i).text())
@@ -472,7 +482,7 @@ const swiperSettings = [
             clickable: true,
         },
     },
-  ];
+];
 swiperSettings.forEach((swiper) => {
     new Swiper(swiper.el, {
         slidesPerView: 1,
