@@ -2804,6 +2804,9 @@ footer .footer-2 .info-block .item {
 }
 .advantageousOfferSection.lasertagSectionClass .advantageousOfferBlock .item .img img {
     transform: none;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 .advantageousOfferSection.lasertagSectionClass .advantageousOfferBlock .info-block {
     align-items: flex-end
@@ -3601,6 +3604,9 @@ header nav > ul {
     width: 14px;
     height: 14px;
     background: var(--pink);
+}
+.swiper-pagination.c-teal .swiper-pagination-bullet {
+    background: var(--teal);
 }
 .swiper .swiper-wrapper {
     max-width: 0px;

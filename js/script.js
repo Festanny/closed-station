@@ -92,8 +92,8 @@ let swiper3 = new Swiper(".ratesSlider", {
     spaceBetween: 20,
     slidesPerGroup: 1,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".ratesSlider .swiper-button-next",
+      prevEl: ".ratesSlider .swiper-button-prev",
     },
     pagination: {
         el: ".ratesSlider .swiper-pagination",
@@ -114,7 +114,7 @@ let swiper3 = new Swiper(".ratesSlider", {
             pagination: false
         },
     }
-  });
+});
 
 $('.demoVideoSection .play').on('click', function() {
     $('#videoModal .modal-body video')[0].play()
@@ -145,7 +145,42 @@ function marginsMain() {
         if ($('.textTitle').eq(i).attr('data-name')!=undefined) {
             $('.textTitle').eq(i).attr('data-name', $('.textTitle').eq(i).text())
         }
-    }}
+    }
+    if ($('body').width() <= 630) {
+        $('.areaSection .swiper.areaSlider').removeClass('info-block')
+        new Swiper(".areaSlider", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            slidesPerGroup: 1,
+            navigation: {
+              nextEl: ".areaSlider .swiper-button-next",
+              prevEl: ".areaSlider .swiper-button-prev",
+            },
+            pagination: {
+                el: ".areaSlider .swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                1280: {
+                    slidesPerView: 3,
+                    pagination: false
+                },
+                850: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                    pagination: false
+                },
+                600: {
+                    slidesPerView: 2,
+                    pagination: false
+                },
+            }
+        });
+    } else {
+        $('.areaSection .swiper.areaSlider').addClass('info-block')
+    }
+}
+
 
 if ($('#map').length != 0) {
     let centerMap = [55.733, 37.588]
@@ -433,6 +468,32 @@ scroll.on("call", (value, way, obj) => {
 function checkScroll() {
     marginsMain();
 }
+$(window).scroll(function () {
+    if (!$('html').hasClass('has-scroll-smooth')) {
+        if ($(window).scrollTop() > 0) {
+            $('header').addClass('fixed');
+        }
+        else {
+            $('header').removeClass('fixed');
+        }
+        if ($(this).scrollTop() > 100) {
+            if ($('#upbutton').is(':hidden')) {
+                $('#upbutton').css({
+                    opacity: 1
+                }).fadeIn('slow').css('display', 'flex');
+            }
+        } else {
+            $('#upbutton').stop(true, false).fadeOut('fast');
+        }
+    }
+})
+$('#upbutton').click(function () {
+    if (!$('html').hasClass('has-scroll-smooth')) {
+        $('html, body').stop().animate({
+            scrollTop: 0
+        }, 500);
+    }
+});
 
 const swiperSettings = [
     {
