@@ -39,15 +39,12 @@ body {
     font-family: 'TT Firs Neue', sans-serif;
     font-size: 16px;
 }
-body {
-    overflow-x: hidden;
-}
-html::-webkit-scrollbar { width: 0; }
-html { -ms-overflow-style: none; }
-html { overflow-x: -moz-scrollbars-none; }
 /* .contMain {
     perspective: 1px;
 } */
+.contMain {
+    overflow: hidden;
+}
 a {
     color: var(--white);
     text-decoration: none;
@@ -57,7 +54,7 @@ a:hover {
     color: var(--white);
 }
 main {
-    /* overflow-x: clip; */
+    overflow-x: hidden;
     /* min-height: 100vh; */
 }
 section:not(.bannSection):not(.descSection):not(.breadcrumbsSection) {
