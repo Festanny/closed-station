@@ -38,6 +38,7 @@ body {
     color: var(--white);
     font-family: 'TT Firs Neue', sans-serif;
     font-size: 16px;
+    overflow-x: hidden;
 }
 /* .contMain {
     perspective: 1px;
@@ -51,7 +52,7 @@ a:hover {
     color: var(--white);
 }
 main {
-    overflow-x: clip;
+    /* overflow-x: clip; */
     /* min-height: 100vh; */
 }
 section:not(.bannSection):not(.descSection):not(.breadcrumbsSection) {

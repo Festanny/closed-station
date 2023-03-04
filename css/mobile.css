@@ -501,6 +501,9 @@
     }
 }
 @media screen and (max-width: 599px) {
+    .advantageousOfferBlock .item:first-of-type .textTitle {
+        width: 100%;
+    }
     .swiper.newFormatSlider1,
     .swiper.newFormatSlider2,
     .swiper.newFormatSlider3,
