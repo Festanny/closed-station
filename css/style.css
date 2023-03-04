@@ -42,9 +42,6 @@ body {
 /* .contMain {
     perspective: 1px;
 } */
-.contMain {
-    overflow: hidden;
-}
 a {
     color: var(--white);
     text-decoration: none;
@@ -3604,4 +3601,7 @@ header nav > ul {
     width: 14px;
     height: 14px;
     background: var(--pink);
+}
+.swiper .swiper-wrapper {
+    max-width: 0px;
 }

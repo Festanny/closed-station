@@ -140,6 +140,7 @@
         transform: scale(1);
         width: 100%;
         max-height: 500px;
+        object-fit: contain;
     }
     .advantageousOfferBlock .info-block {
         align-items: flex-end;
@@ -471,7 +472,6 @@
     }
     .advantageousOfferBlock .item .img img {
         max-height: 400px;
-        object-fit: contain;
     }
     .advantageousOfferBlock .item .img::before {
         width: 256px;
