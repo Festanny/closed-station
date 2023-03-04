@@ -75,6 +75,7 @@ strong {
     font-size: var(--fz18);
     font-weight: 500;
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     text-align: center;
     transition: all .3s ease-in-out;
 }
@@ -325,10 +326,12 @@ header {
     background-color: rgba(0, 0, 0, 0);
     z-index: 1000;
     backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
     transition: all .3s ease-in-out;
 }
 header.fixed {
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 header::before,
 header::after,
@@ -1179,6 +1182,7 @@ footer .footer .info-block .social a img {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 .advantageousOfferBlock .item .block .wholesale .item_w .price,
 .congrSantaClausBlock .item .wholesale .item_w .price,
@@ -1452,6 +1456,7 @@ footer .footer .info-block .social a img {
     background: rgba(27, 211, 178, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 .reviewsSection .item.textInfo .reviewsSlider .img {
     width: 48px;
@@ -1683,6 +1688,7 @@ footer .footer-2 .info-block .item {
     background: rgba(121, 192, 242, 0.05);
     border: 2px solid rgba(121, 192, 242, 0.1);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 .bannSection .info-block-promo .btn-block {
     display: flex;
@@ -1739,6 +1745,7 @@ footer .footer-2 .info-block .item {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 .newYearProgramBlock .item .block .wholesale .item_w:first-of-type {
     display: flex;
@@ -1958,6 +1965,7 @@ footer .footer-2 .info-block .item {
     background: rgba(27, 211, 178, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     position: relative;
 }
 .questCatalogSection .title-filter label.filter-name {
@@ -2066,6 +2074,7 @@ footer .footer-2 .info-block .item {
     background: rgba(27, 211, 178, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     height: 100%;
     flex: 1;
 }
@@ -2312,6 +2321,7 @@ footer .footer-2 .info-block .item {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 .moreQuestInfoSection .info-block .item.information .price .price-block .item_p .count {
     font-size: var(--fz24);
@@ -2326,6 +2336,7 @@ footer .footer-2 .info-block .item {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     width: fit-content;
 }
 .moreQuestInfoSection .info-block .item.information .desc.landmark {
@@ -2519,6 +2530,7 @@ footer .footer-2 .info-block .item {
     background: rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 .priceServiceSection .info-block .item .info-body .list .item_l .day-price {
     display: flex;
@@ -2558,6 +2570,7 @@ footer .footer-2 .info-block .item {
     background: rgba(27, 211, 178, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 .ratesSection .info-block .item .swiper-slide .detailed {
     display: flex;
@@ -2574,6 +2587,7 @@ footer .footer-2 .info-block .item {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 .ratesSection .info-block ul {
     display: flex;
@@ -2627,6 +2641,7 @@ footer .footer-2 .info-block .item {
     background: rgba(27, 211, 178, 0.05);
     border: 1px solid rgba(27, 211, 178, 0.2);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     height: 100%;
 }
 .ratesSection .info-block .item.title-desc .contact .phone {
@@ -2763,6 +2778,7 @@ footer .footer-2 .info-block .item {
     padding: 10px 20px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     width: fit-content;
     font-size: var(--fz18);
 }
@@ -2781,6 +2797,7 @@ footer .footer-2 .info-block .item {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 .advantageousOfferSection.lasertagSectionClass .advantageousOfferBlock .item .img::before {
     display: none!important;
@@ -2938,6 +2955,7 @@ section.mapSection.lasertagSectionClass {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     text-align: center;
     width: fit-content;
 }
@@ -3338,6 +3356,7 @@ section.mapSection.lasertagSectionClass {
     background: rgba(255, 114, 213, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -3413,6 +3432,7 @@ section.mapSection.lasertagSectionClass {
     background: rgba(255, 114, 213, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     color: var(--pink);
     text-transform: uppercase;
     font-size: var(--fz18);
@@ -3429,6 +3449,7 @@ section.mapSection.lasertagSectionClass {
     background: rgba(255, 114, 213, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 .customControl {
     display: none;
@@ -3488,6 +3509,7 @@ section.mapSection.lasertagSectionClass {
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 .modal.reviewModal .modal-header .modal-title {
     font-size: var(--fz32);
@@ -3542,6 +3564,7 @@ header nav > ul {
 .offcanvas#mobMenu {
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 .offcanvas#mobMenu .offcanvas-body ul {
     padding: 0;
