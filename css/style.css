@@ -18,6 +18,7 @@
     --blue3: rgba(0, 132, 255, 0.3);
     --white3: rgba(255, 255, 255, 0.3);
     --white1: rgba(255, 255, 255, 0.1);
+    --black1: rgba(0, 0, 0, 0.1);
 
     --fz64: 64px;
     --fz48: 48px;
@@ -51,7 +52,7 @@ a:hover {
     color: var(--white);
 }
 main {
-    overflow-x: hidden;
+    overflow: hidden;
     /* min-height: 100vh; */
 }
 section:not(.bannSection):not(.descSection):not(.breadcrumbsSection) {
@@ -794,6 +795,7 @@ header nav li:hover a.c-red-h {
     text-transform: uppercase;
     font-weight: 500;
     line-height: 110%;
+    transform: translateY(10px);
 }
 .bannSection .info-block .item.infoBann .nameCompany::before,
 .bannSection .info-block .item.infoBann .nameCompany::after,
@@ -2826,10 +2828,16 @@ footer .footer-2 .info-block .item {
     gap: 20px;
     margin-top: 40px;
 }
-.areaBlock .info-block .item {
+.areaBlock .swiper.areaSlider {
+    display: none;
+    margin-top: 40px;
+}
+.areaBlock .info-block .item,
+.areaBlock .swiper.areaSlider .swiper-slide {
     border: 1px solid #FF72D5;
 }
-.areaBlock .info-block .item img {
+.areaBlock .info-block .item img,
+.areaBlock .swiper.areaSlider .swiper-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -3105,6 +3113,24 @@ section.mapSection.lasertagSectionClass {
     linear-gradient(
     90deg,
     var(--white15), transparent 1px
+    );
+}
+.backGrid.backGridBlack {
+    background:
+    -webkit-linear-gradient(
+    var(--black1), transparent 1px
+    ),
+    -webkit-linear-gradient(
+    90deg,
+    var(--black1), transparent 1px
+    );
+    background:
+    linear-gradient(
+        var(--black1), transparent 1px
+    ),
+    linear-gradient(
+    90deg,
+    var(--black1), transparent 1px
     );
 }
 .backGrid.backGridPink3 {
@@ -3456,26 +3482,79 @@ section.mapSection.lasertagSectionClass {
 }
 .customControl {
     display: none;
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 3px;
-    max-width: 250px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: var(--white);
+    width: 260px;
+    position: relative;
+    border: 1px solid var(--teal);
 }
 .customControl .closeButton {
+    position: absolute;
+    top: 6px;
+    right: 5px;
     flex-basis: 15px;
     flex-grow: 0;
     flex-shrink: 0;
     padding: 3px;
-    height: 15px;
+    height: 11px;
+    width: 11px;
     cursor: pointer;
-    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTQgLjdsLS43LS43TDcgNi4zLjcgMCAwIC43IDYuMyA3IDAgMTMuM2wuNy43TDcgNy43bDYuMyA2LjMuNy0uN0w3LjcgN3oiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==") 50% no-repeat;
-    opacity: 0.3;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTQgLjdsLS43LS43TDcgNi4zLjcgMCAwIC43IDYuMyA3IDAgMTMuM2wuNy43TDcgNy43bDYuMyA2LjMuNy0uN0w3LjcgN3oiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==) 50% no-repeat;
+    background-size: contain;
 }
 .customControl .content {
-    padding: 5px;
-    max-height: 250px;
+    width: 100%;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+.customControl .content .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 47px;
+    gap: 10px;
+    padding: 20px;
+    max-height: 265px;
+    overflow-y: auto;
+}
+.customControl .content .gallery .img {
+    width: 100%;
+    height: 100%;
+}
+.customControl .content .gallery .img:first-of-type {
+    grid-column: span 3;
+    grid-row: span 3;
+}
+.customControl .content .gallery .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.customControl .addressBlock {
+    display: flex;
+    gap: 10px;
+    background-color: var(--teal);
+    padding: 20px;
+}
+.customControl .addressBlock .icon {
+    width: 20px;
+    height: 20px;
+}
+.customControl .addressBlock .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.customControl .addressBlock .address-floor {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.customControl .addressBlock .address-floor .address {
+    font-weight: 500;
+}
+.customControl .addressBlock .address-floor .floor {
+    opacity: .4;
 }
 .modal .modal-content {
     border-radius: 0;
@@ -3610,4 +3689,7 @@ header nav > ul {
 }
 .swiper .swiper-wrapper {
     max-width: 0px;
+}
+.ymaps-2-1-79-gototech {
+    display: none!important;
 }

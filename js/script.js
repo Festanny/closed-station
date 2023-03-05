@@ -115,6 +115,24 @@ let swiper3 = new Swiper(".ratesSlider", {
         },
     }
 });
+new Swiper(".areaSlider", {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    slidesPerGroup: 1,
+    navigation: {
+      nextEl: ".areaSlider .swiper-button-next",
+      prevEl: ".areaSlider .swiper-button-prev",
+    },
+    pagination: {
+        el: ".areaSlider .swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        600: {
+            pagination: false
+        },
+    }
+});
 
 $('.demoVideoSection .play').on('click', function() {
     $('#videoModal .modal-body video')[0].play()
@@ -146,39 +164,6 @@ function marginsMain() {
             $('.textTitle').eq(i).attr('data-name', $('.textTitle').eq(i).text())
         }
     }
-    if ($('body').width() <= 630) {
-        $('.areaSection .swiper.areaSlider').removeClass('info-block')
-        new Swiper(".areaSlider", {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            slidesPerGroup: 1,
-            navigation: {
-              nextEl: ".areaSlider .swiper-button-next",
-              prevEl: ".areaSlider .swiper-button-prev",
-            },
-            pagination: {
-                el: ".areaSlider .swiper-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                1280: {
-                    slidesPerView: 3,
-                    pagination: false
-                },
-                850: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                    pagination: false
-                },
-                600: {
-                    slidesPerView: 2,
-                    pagination: false
-                },
-            }
-        });
-    } else {
-        $('.areaSection .swiper.areaSlider').addClass('info-block')
-    }
 }
 
 
@@ -191,17 +176,65 @@ if ($('#map').length != 0) {
             controls: []
         });
         // Создадим контент для меток.
-        var firstOffice = 'Первый полноценный офис Яндекса появился в Москве в 2001 году. ' +
-            'Тогда компания занимала небольшой корпус Вычислительного центра РАН на улице Вавилова, там работало 60 человек.';
-        var secondOffice = 'Второй офис Яндекса на Самокатной улице.';
-        var thirdOffice = '<a href="https://yandex.ru/company/contacts/moscow/">Главный офис Яндекса</a>' +
-            '<p><img style="width: 190px;" src="img/office.jpeg"></p>' +
-            '<p>В офисе на улице Льва Толстого находится штаб-квартира Яндекса, он самый большой и по размерам, ' +
-            'и по численности сотрудников. Сейчас он занимает почти целый квартал между улицами Льва Толстого ' +
-            'и Тимура Фрунзе. Общая площадь всех зданий — более 50 тысяч квадратных метров.</p>';
+        var offices = [
+            `<div class="gallery backGrid backGridBlack">
+                <div class="img">
+                    <img src="img/points/29101c4b4ff9149742891cb56a6375f2.png" class="minimized">
+                </div>
+                <div class="img">
+                    <img src="img/points/69aa09f545522c21f8b84a66c8898017.png" class="minimized">
+                </div>
+                <div class="img">
+                    <img src="img/points/a2f65b55cd05ff572ed1c92fd2f54b74.png" class="minimized">
+                </div>
+            </div>
+            <div class="addressBlock">
+                <div class="icon"><img src="img/details/position.svg"></div>
+                <div class="address-floor">
+                    <div class="address">ул. Ворошилова, 55а</div>
+                    <div class="floor">2 этаж</div>
+                </div>
+            </div>`,
+            `<div class="gallery backGrid backGridBlack">
+                <div class="img">
+                    <img src="img/points/29101c4b4ff9149742891cb56a6375f2.png" class="minimized">
+                </div>
+                <div class="img">
+                    <img src="img/points/69aa09f545522c21f8b84a66c8898017.png" class="minimized">
+                </div>
+                <div class="img">
+                    <img src="img/points/a2f65b55cd05ff572ed1c92fd2f54b74.png" class="minimized">
+                </div>
+            </div>
+            <div class="addressBlock">
+                <div class="icon"><img src="img/details/position.svg"></div>
+                <div class="address-floor">
+                    <div class="address">ул. Ворошилова, 55а</div>
+                    <div class="floor">2 этаж</div>
+                </div>
+            </div>`,
+            `<div class="gallery backGrid backGridBlack">
+                <div class="img">
+                    <img src="img/points/29101c4b4ff9149742891cb56a6375f2.png" class="minimized">
+                </div>
+                <div class="img">
+                    <img src="img/points/69aa09f545522c21f8b84a66c8898017.png" class="minimized">
+                </div>
+                <div class="img">
+                    <img src="img/points/a2f65b55cd05ff572ed1c92fd2f54b74.png" class="minimized">
+                </div>
+            </div>
+            <div class="addressBlock">
+                <div class="icon"><img src="img/details/position.svg"></div>
+                <div class="address-floor">
+                    <div class="address">ул. Ворошилова, 55а</div>
+                    <div class="floor">2 этаж</div>
+                </div>
+            </div>`,
+        ];
         // Создадим и добавим панель на карту.
         var panel = new ymaps.Panel();
-        map.controls.add(panel, {
+            map.controls.add(panel, {
             float: 'left'
         });
         // Создадим коллекцию геообъектов.
@@ -211,16 +244,15 @@ if ($('#map').length != 0) {
             preset: 'islands#yellowIcon'
         });
         // Добавим геообъекты в коллекцию.
-        collection
-            .add(new ymaps.Placemark([55.733838, 37.588100], {
-                balloonContent: thirdOffice
-            }))
-            .add(new ymaps.Placemark([55.758240, 37.678523], {
-                balloonContent: secondOffice
-            }))
-            .add(new ymaps.Placemark([55.693784, 37.564942], {
-                balloonContent: firstOffice
-            }));
+        collection.add(new ymaps.Placemark([55.733838, 37.588100], {
+            balloonContent: offices[2]
+        }))
+        .add(new ymaps.Placemark([55.758240, 37.678523], {
+            balloonContent: offices[1]
+        }))
+        .add(new ymaps.Placemark([55.693784, 37.564942], {
+            balloonContent: offices[0]
+        }));
         // Добавим коллекцию на карту.
         map.geoObjects.add(collection);
         // Подпишемся на событие клика по коллекции.
@@ -234,11 +266,15 @@ if ($('#map').length != 0) {
         });
         collection.events.add('click', function(e) {
             var coords = e.get('target').geometry.getCoordinates();
+            console.log(map);
             map.setCenter(coords, 17);
+            $('.ymaps-2-1-79-controls-pane').css({
+                'top': 'auto',
+                'bottom': `${$('.customControl').height()+60}px`,
+            })
         });
     });
 
-    // Пример реализации боковой панели на основе наследования от collection.Item.
 // Боковая панель отображает информацию, которую мы ей передали.
 ymaps.modules.define('Panel', [
     'util.augment',
@@ -260,7 +296,7 @@ ymaps.modules.define('Panel', [
             map.margin.addArea({
                 top: 0,
                 left: 0,
-                width: '250px',
+                width: '260px',
                 height: '100%'
             })
         },
@@ -275,11 +311,13 @@ ymaps.modules.define('Panel', [
         _onGetChildElement: function (parentDomContainer) {
             // Создаем HTML-элемент с текстом.
             // По-умолчанию HTML-элемент скрыт.
-            this._$control = $('<div class="customControl"><div class="content"></div><div class="closeButton"></div></div>').appendTo(parentDomContainer);
+            this._$control = $(`
+                <div class="customControl">
+                    <div class="content"></div>
+                    <div class="closeButton"></div>
+                </div>
+            `).appendTo(parentDomContainer);
             this._$content = $('.content');
-            // При клике по крестику будем скрывать панель.
-            // $('.closeButton').on('click', this._onClose);
-
             let self = this;
             $('.closeButton').on('click', function () {
                 self._onClose();
@@ -300,45 +338,11 @@ ymaps.modules.define('Panel', [
 
     provide(Panel);
 });
-
-
-
-
-
-    // ymaps.ready(init);
-
-    // function init () {
-    //     var myMap = new ymaps.Map("map", {
-    //             center: [53.5303, 49.3461],
-    //             zoom: 12,
-    //             controls: []
-    //         }, {
-    //             searchControlProvider: 'yandex#search'
-    //         }),
-    //         myPlacemark = new ymaps.Placemark([53.5403, 49.3461], {
-    //             // Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
-    //             balloonContentHeader: "Балун метки",
-    //             balloonContentBody: "Содержимое <em>балуна</em> метки",
-    //             balloonContentFooter: "Подвал",
-    //             hintContent: "Хинт метки",
-    //         },{
-    //             preset: 'islands#yellowIcon'
-    //         });
-
-    //     myMap.geoObjects.add(myPlacemark);
-
-    //     myPlacemark.events.add('click', function(e) {
-    //         var coords = e.get('target').geometry.getCoordinates();
-    //         myMap.setCenter(coords, 17);
-    //     });
-
-    //     // myMap.behaviors.disable('scrollZoom');
-    // }
 }
 
 // Просмотр изображения
 $(function () {
-    $('.minimized').click(function (event) {
+    $(document).on('click', '.minimized', function() {
         let i_path = $(this).attr('src')
         $('body').append('<div id="overlay"></div><div id="magnify"><img src="' + i_path + '"><div id="close-popup"><i></i></div></div>');
         $('#overlay, #magnify').fadeIn('fast').css({'display': 'flex'});
@@ -350,82 +354,6 @@ $(function () {
         });
     });
 });
-
-
-
-
-
-
-
-// gsap.registerPlugin(ScrollTrigger);
-
-//         const pageContainer = document.querySelector(".contMain");
-
-//         const scroller = new LocomotiveScroll({
-//             el: pageContainer,
-//             smooth: true
-//         });
-
-//         // scroller.on("scroll", ScrollTrigger.update);
-//         scroller.on("scroll", function() {
-//             checkScroll()
-//         });
-
-
-
-
-
-
-
-
-
-        // ScrollTrigger.scrollerProxy(pageContainer, {
-        // scrollTop(value) {
-        //     return arguments.length
-        //     ? scroller.scrollTo(value, 0, 0)
-        //     : scroller.scroll.instance.scroll.y;
-        // },
-        // getBoundingClientRect() {
-        //     return {
-        //     left: 0,
-        //     top: 0,
-        //     width: window.innerWidth,
-        //     height: window.innerHeight
-        //     };
-        // },
-        // pinType: pageContainer.style.transform ? "transform" : "fixed"
-        // });
-
-        ////////////////////////////////////
-        ////////////////////////////////////
-        // window.addEventListener("load", function () {
-        // let pinBoxes = document.querySelectorAll(".pin-wrap > *");
-        // let pinWrap = document.querySelector(".pin-wrap");
-        // let pinWrapWidth = pinWrap.offsetWidth;
-        // let horizontalScrollLength = pinWrapWidth - window.innerWidth;
-
-        // // Pinning and horizontal scrolling
-
-        // gsap.to(".pin-wrap", {
-        //     scrollTrigger: {
-        //     scroller: pageContainer, //locomotive-scroll
-        //     scrub: true,
-        //     // trigger: "#sectionPin",
-        //     pin: true,
-        //     // anticipatePin: 1,
-        //     // start: "top top",
-        //     // end: pinWrapWidth
-        //     },
-        //     x: -horizontalScrollLength,
-        //     ease: "none"
-        // });
-
-        // // ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
-
-        // ScrollTrigger.refresh();
-        // });
-
-
 
 function heightRates() {
     let countLi = $('.ratesSection .info-block .item.title-desc .desc ul li'),
@@ -440,16 +368,12 @@ function heightRates() {
     }
 }
 
-
 const scroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
   tablet: { smooth: true },
   smartphone: { smooth: true }
 });
-// scroll.on("scroll", function() {
-//     checkScroll()
-// });
 scroll.on("call", (value, way, obj) => {
     if (value === "toggleBackToTop") {
         if (way === "enter") {

@@ -44,6 +44,12 @@
         --fz48: 40px;
         --fz64: 58px;
     }
+    .textErrorSection .textErrorBlock .item .textMain {
+        font-size: 70px;
+    }
+    .textErrorSection .textErrorBlock .item {
+        width: 100%;
+    }
     .priceServiceSection.birthdayCorporatePage .item.stocks .info-body .list {
         grid-template-columns: 1fr;
         row-gap: 0;
@@ -204,6 +210,9 @@
         --fz32: 28px;
         --fz24: 18px;
         --fz20: 17px;
+    }
+    .textErrorSection .textErrorBlock .item {
+        padding: 80px 25px;
     }
     .areaBlock .info-block {
         gap: 15px;
@@ -442,6 +451,12 @@
     }
 }
 @media screen and (max-width: 630px) {
+    .areaBlock .info-block {
+        display: none;
+    }
+    .areaBlock .swiper.areaSlider {
+        display: block;
+    }
     .questCatalogBlock .title-filter .filter {
         grid-template-columns: 1fr;
     }
@@ -524,21 +539,36 @@
     }
 }
 @media screen and (max-width: 599px) {
-    .advantageousOfferBlock .item:first-of-type .textTitle {
+    .textErrorSection .textErrorBlock .item .textMain {
+        font-size: 64px;
+    }
+    .textErrorSection .textErrorBlock .item .desc {
+        max-width: none;
+    }
+    .textErrorSection .textErrorBlock .item .desc {
+        margin-top: 20px;
+    }
+    .textErrorSection .textErrorBlock .item .btn-block {
+        margin-top: 50px;
+    }
+    .advantageousOfferBlock .item:first-of-type .textTitle,
+    .textErrorSection .textErrorBlock {
         width: 100%;
     }
     .swiper.newFormatSlider1,
     .swiper.newFormatSlider2,
     .swiper.newFormatSlider3,
     .swiper.newFormatSlider4,
-    .ratesSlider {
+    .ratesSlider,
+    .swiper.areaSlider {
         padding-bottom: 102px!important;
     }
     .swiper.newFormatSlider1 .swiper-pagination,
     .swiper.newFormatSlider2 .swiper-pagination,
     .swiper.newFormatSlider3 .swiper-pagination,
     .swiper.newFormatSlider4 .swiper-pagination,
-    .swiper.ratesSlider .swiper-pagination {
+    .swiper.ratesSlider .swiper-pagination,
+    .swiper.areaSlider .swiper-pagination {
         bottom: 28px;
     }
     .swiper .swiper-button-prev.btn,
@@ -553,10 +583,12 @@
     .swiper .swiper-button-next.btn {
         right: 25px;
     }
-    .swiper.ratesSlider .swiper-button-prev.btn {
+    .swiper.ratesSlider .swiper-button-prev.btn,
+    .swiper.areaSlider .swiper-button-prev.btn {
         left: 0;
     }
-    .swiper.ratesSlider .swiper-button-next.btn {
+    .swiper.ratesSlider .swiper-button-next.btn,
+    .swiper.areaSlider .swiper-button-next.btn {
         right: 0;
     }
     .swiper .swiper-button-prev.btn:hover {
@@ -596,6 +628,13 @@
         --fz64: 48px;
         --fz48: 36px;
         --fz24: 16px;
+    }
+    .textErrorSection .textErrorBlock .item .btn-block > a {
+        min-width: auto;
+        width: 80%;
+    }
+    .advantageousOfferSection.bigTextSectionLasertag .textTitle {
+        font-size: 32px;
     }
     .videoReviewSection .info-block .item {
         height: 350px;
@@ -677,6 +716,9 @@
     }
     .bannSection .info-block-promo .btn-block .btn {
         width: 100%;
+    }
+    .mapSection.contactPage {
+        padding-top: 60px!important;
     }
 }
 @media screen and (max-width: 428px) {
@@ -788,7 +830,7 @@
         gap: 20px;
     }
     .consultationSection .item.textInfo .text {
-        max-width: none;
+        max-width: auto;
     }
     .consultationSection .item.textInfo .text {
         margin-bottom: 40px;
@@ -850,15 +892,30 @@
     .priceServiceSection .info-block .info-body .btn.btn-arrow {
         display: none;
     }
+    .advantageousOfferSection.lasertagSectionClass .advantageousOfferBlock .item .img.bigPhoto {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 425px) {
+    .advantageousOfferSection.bigTextSectionLasertag .textTitle {
+        font-size: 28px;
+    }
 }
 @media screen and (max-width: 380px) {
     :root {
         --fz64: 40px;
     }
+    .textErrorSection .textErrorBlock .item .textMain {
+        font-size: 50px;
+    }
+    .textErrorSection .textErrorBlock .item .btn-block > a {
+        width: 100%;
+    }
     .offcanvas#mobMenu .offcanvas-body .submenu li.lasertagLi {
         display: block;
     }
-    .mapSection .mapBlock #map {
+    #map {
         height: 450px!important;
     }
     .infoQuestSection .item .block .text ul {
@@ -923,6 +980,9 @@
     .questCatalogBlock .info-block .item .img, .infoQuestPageBlock .info-block .item .img, .newFormatSection.birthdayCorporatePage .info-block .swiper-slide .img {
         height: 210px;
     }
+    .textErrorSection .textErrorBlock .item {
+        padding: 25px;
+    }
 }
 @media screen and (max-width: 320px) {
     #map {
@@ -930,5 +990,8 @@
     }
     header .header .logo {
         width: 95px;
+    }
+    .textErrorSection .textErrorBlock .item .textMain {
+        font-size: 45px;
     }
 }
