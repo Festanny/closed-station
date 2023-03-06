@@ -3724,3 +3724,6 @@ header nav > ul {
 .addressMapBtn.pink .item_address.active {
     background-color: var(--pink);
 }
+footer .footer .info-block .logo .social {
+    display: none;
+}

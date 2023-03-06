@@ -731,6 +731,12 @@
     .mapSection.contactPage {
         padding-top: 60px!important;
     }
+    footer .footer .info-block .logo .social {
+        display: flex;
+    }
+    footer .footer .info-block > .social {
+        display: none;
+    }
 }
 @media screen and (max-width: 428px) {
     .congrSantaClausBlock .item .desc-main, .ageLimitBlock .item .desc-main,
