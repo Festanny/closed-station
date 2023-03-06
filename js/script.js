@@ -266,13 +266,18 @@ if ($('#map').length != 0) {
         });
         collection.events.add('click', function(e) {
             var coords = e.get('target').geometry.getCoordinates();
-            console.log(map);
             map.setCenter(coords, 17);
             $('.ymaps-2-1-79-controls-pane').css({
                 'top': 'auto',
                 'bottom': `${$('.customControl').height()+60}px`,
             })
         });
+        $('.addressMapBtn .item_address').on('click', function() {
+            var string = $(this).attr('data-coordinates');
+            var coords = string.split(',');
+            coords = coords.map(function(x) { return parseFloat(x); });
+            map.setCenter(coords, 17);
+        })
     });
 
 // Боковая панель отображает информацию, которую мы ей передали.
@@ -300,14 +305,12 @@ ymaps.modules.define('Panel', [
                 height: '100%'
             })
         },
-
         onRemoveFromMap: function (oldMap) {
             if (this._$control) {
                 this._$control.remove();
             }
             Panel.superclass.onRemoveFromMap.call(this, oldMap);
         },
-
         _onGetChildElement: function (parentDomContainer) {
             // Создаем HTML-элемент с текстом.
             // По-умолчанию HTML-элемент скрыт.

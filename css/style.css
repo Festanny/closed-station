@@ -3693,3 +3693,23 @@ header nav > ul {
 .ymaps-2-1-79-gototech {
     display: none!important;
 }
+.addressMapBtn {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 10px;
+    padding-bottom: 20px;
+}
+.addressMapBtn .item_address {
+    padding: 14px 20px;
+    background: var(--black);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    color: var(--white);
+    font-weight: 500;
+    cursor: pointer;
+}
+.addressMapBtn .item_address.active {
+    background-color: var(--teal);
+    color: var(--black);
+}
