@@ -539,6 +539,13 @@
     }
 }
 @media screen and (max-width: 599px) {
+    .addressMapBtn {
+        position: initial;
+        padding: 10px 0 20px;
+    }
+    .addressMapBtn .item_address {
+        background: rgba(255, 255, 255, 0.1);
+    }
     .textErrorSection .textErrorBlock .item .textMain {
         font-size: 64px;
     }

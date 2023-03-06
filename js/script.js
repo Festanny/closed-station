@@ -164,6 +164,11 @@ function marginsMain() {
             $('.textTitle').eq(i).attr('data-name', $('.textTitle').eq(i).text())
         }
     }
+    if ($('body').width() > 599) {
+        $('.mapBlock .addressMapBtn').css({
+            'top': `${$('.mapBlock .info-block').height()+40}px`
+        })
+    }
 }
 
 
@@ -342,6 +347,14 @@ ymaps.modules.define('Panel', [
     provide(Panel);
 });
 }
+$('.addressMapBtn .item_address').on('click', function() {
+    let content = $('.addressMapBtn .item_address'),
+        block = $(this)
+    content.removeClass('active')
+    if (!block.hasClass('active')) {
+        block.addClass('active')
+    }
+})
 
 // Просмотр изображения
 $(function () {

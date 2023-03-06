@@ -3693,12 +3693,19 @@ header nav > ul {
 .ymaps-2-1-79-gototech {
     display: none!important;
 }
+.mapSection .mapBlock {
+    position: relative;
+}
 .addressMapBtn {
+    position: absolute;
     display: flex;
     flex-wrap: wrap;
     column-gap: 20px;
     row-gap: 10px;
     padding-bottom: 20px;
+    z-index: 100;
+    width: 100%;
+    padding: 30px;
 }
 .addressMapBtn .item_address {
     padding: 14px 20px;
