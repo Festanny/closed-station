@@ -546,6 +546,10 @@
     .addressMapBtn .item_address {
         background: rgba(255, 255, 255, 0.1);
     }
+    .addressMapBtn .item_address {
+        font-size: 14px;
+        padding: 7px 15px;
+    }
     .textErrorSection .textErrorBlock .item .textMain {
         font-size: 64px;
     }
@@ -912,6 +916,9 @@
 @media screen and (max-width: 380px) {
     :root {
         --fz64: 40px;
+    }
+    .addressMapBtn .item_address {
+        width: 100%;
     }
     .textErrorSection .textErrorBlock .item .textMain {
         font-size: 50px;

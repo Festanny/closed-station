@@ -3715,8 +3715,12 @@ header nav > ul {
     color: var(--white);
     font-weight: 500;
     cursor: pointer;
+    text-align: center;
 }
 .addressMapBtn .item_address.active {
     background-color: var(--teal);
     color: var(--black);
+}
+.addressMapBtn.pink .item_address.active {
+    background-color: var(--pink);
 }
