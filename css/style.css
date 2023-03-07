@@ -1958,6 +1958,7 @@ footer .footer-2 .info-block .item {
 }
 .questCatalogBlock .title-filter .filter {
     display: flex;
+    justify-content: flex-end;
     column-gap: 20px;
     row-gap: 10px;
 }
