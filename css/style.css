@@ -43,6 +43,7 @@ body {
 /* .contMain {
     perspective: 1px;
 } */
+[data-scroll-container], [data-scroll-section] { transform-style: preserve-3d; will-change: transform; }
 a {
     color: var(--white);
     text-decoration: none;
@@ -578,10 +579,10 @@ header nav li:hover a.c-red-h {
     background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('../img/other/purple-alcohol-ink-abstract-background.jpeg') center;
 }
 .bannSection.squidGame {
-    background: url('../img/other/red-background.jpg') center;
+    background: url('../img/other/red-background.jpg') center / cover;
 }
 .bannSection.lasertagSectionPage {
-    background: url('../img/other/purple-background.jpg') center;
+    background: url('../img/other/purple-background.jpg') center / cover;
 }
 .bannSection.new-year-bg .nameCompany {
     width: 80%;
@@ -2970,6 +2971,9 @@ section.mapSection.lasertagSectionClass {
     -webkit-backdrop-filter: blur(5px);
     text-align: center;
     width: fit-content;
+}
+.bannSection {
+    background-size: cover;
 }
 .bannSection.lasertagSectionPage .info-block .item .img {
     position: relative;

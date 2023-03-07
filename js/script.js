@@ -249,13 +249,13 @@ if ($('#map').length != 0) {
             preset: 'islands#yellowIcon'
         });
         // Добавим геообъекты в коллекцию.
-        collection.add(new ymaps.Placemark([55.733838, 37.588100], {
-            balloonContent: offices[2]
+        collection.add(new ymaps.Placemark([55.758240, 37.668523], {
+            balloonContent: offices[2],
         }))
         .add(new ymaps.Placemark([55.758240, 37.678523], {
-            balloonContent: offices[1]
+            balloonContent: offices[1],
         }))
-        .add(new ymaps.Placemark([55.693784, 37.564942], {
+        .add(new ymaps.Placemark([55.758240, 37.658523], {
             balloonContent: offices[0]
         }));
         // Добавим коллекцию на карту.
@@ -276,6 +276,24 @@ if ($('#map').length != 0) {
                 'top': 'auto',
                 'bottom': `${$('.customControl').height()+60}px`,
             })
+            if (coords) {
+                $('.addressMapBtn .item_address').each(function () {
+                    let coordsNew = coords.join(", "),
+                        str = $(this).attr('data-coordinates'),
+                        nums = str.split(',').map(num => parseFloat(num.replace(/(\.\d*?[1-9])0+$/, "$1"))),
+                        newStr = nums.join(', ');                    
+                    // console.log($(this).attr('data-coordinates').toLowerCase());
+                    if (newStr.indexOf(coordsNew) > -1) {
+                        $(this).addClass('active')
+                    } else {
+                        $(this).removeClass('active')
+                    }
+                })
+            } else {
+                $('.addressMapBtn .item_address').each(function () {
+                    $(this).removeClass('active')
+                })
+            }
         });
         $('.addressMapBtn .item_address').on('click', function() {
             var string = $(this).attr('data-coordinates');
@@ -333,6 +351,7 @@ ymaps.modules.define('Panel', [
         },
         _onClose: function () {
             $('.customControl').css('display', 'none');
+            $('.addressMapBtn .item_address').removeClass('active');
             let map = this.getMap();
             map.setCenter(centerMap, 10);
         },
@@ -384,27 +403,7 @@ function heightRates() {
     }
 }
 
-const scroll = new LocomotiveScroll({
-  el: document.querySelector("[data-scroll-container]"),
-  smooth: true,
-  tablet: { smooth: true },
-  smartphone: { smooth: true }
-});
-scroll.on("call", (value, way, obj) => {
-    if (value === "toggleBackToTop") {
-        if (way === "enter") {
-            $('#upbutton').stop(true, false).fadeOut('fast');
-            $('header').removeClass('fixed')
-        } else {
-            if ($('#upbutton').is(':hidden')) {
-                $('#upbutton').css({
-                    opacity: 1
-                }).fadeIn('slow').css('display', 'flex');
-            }
-            $('header').addClass('fixed')
-        }
-    }
-});
+
 function checkScroll() {
     marginsMain();
 }
