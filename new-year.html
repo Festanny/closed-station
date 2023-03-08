@@ -9,9 +9,13 @@
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/0396950dcd.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 </head>
 <body>
-    <div class="contMain" data-scroll-container>
+    <div class="locomotive__load-container" data-load-container="1">
+        <div class="locomotive__scroll-container" data-scroll-container="1">
     <header>
         <div class="header container">
             <div class="logo">
@@ -279,23 +283,6 @@
                 </div>
             </div>
         </section>
-        <a href="#intro" id="upbutton" data-scroll-to>
-            <div class="btn btn-teal">
-                <div class="original">
-                    <div><span></span><span></span></div>
-                    <div><span></span><span></span></div>
-                    <div><span></span><span></span></div>
-                    <div><span></span><span></span></div>
-                </div>
-                <div class="effects">
-                    <div><span></span><span></span></div>
-                    <div><span></span><span></span></div>
-                    <div><span></span><span></span></div>
-                    <div><span></span><span></span></div>
-                </div>
-                <img src="img/details/upButton.svg">
-            </div>
-        </a>
     </main>
 
     <footer class="backGrid backGridWhite1" data-scroll-section>
@@ -368,6 +355,24 @@
             </div>
         </div>
     </footer>
+    <a href="#intro" id="upbutton" data-scroll-to>
+        <div class="btn btn-teal">
+            <div class="original">
+                <div><span></span><span></span></div>
+                <div><span></span><span></span></div>
+                <div><span></span><span></span></div>
+                <div><span></span><span></span></div>
+            </div>
+            <div class="effects">
+                <div><span></span><span></span></div>
+                <div><span></span><span></span></div>
+                <div><span></span><span></span></div>
+                <div><span></span><span></span></div>
+            </div>
+            <img src="img/details/upButton.svg">
+        </div>
+    </a>
+    </div>
     </div>
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="mobMenu" aria-labelledby="offcanvasRightLabel">
@@ -400,15 +405,12 @@
     </div>
 
     <!-- Scripts -->
-    
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=b9f86102-2842-4593-9f48-25f8d16d0de2&lang=ru_RU" type="text/javascript"></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/locomotive-script.js"></script>
     <script src="js/script.js"></script>
 
 </body>
