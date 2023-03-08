@@ -3614,6 +3614,20 @@ section.mapSection.lasertagSectionClass {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
+form input.error,
+form textarea.error {
+    border: 1px solid red!important;
+}
+.modal .modal-body form .btn-block {
+    padding-top: 16px;
+}
+.modal .modal-body form .btn-block,
+.modal .modal-body form .btn-block .btn {
+    width: 100%;
+}
+.modal .modal-body form .btn-block .btn:hover {
+    transform: scale(0.95);
+}
 .modal.reviewModal .modal-header .modal-title {
     font-size: var(--fz32);
     text-transform: uppercase;
@@ -3733,6 +3747,7 @@ header nav > ul {
     background: var(--black);
     border: 1px solid rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     color: var(--white);
     font-weight: 500;
     cursor: pointer;

@@ -176,18 +176,6 @@ swiperSettings.forEach((swiper) => {
     });
 });
 
-$('.demoVideoSection .play').on('click', function() {
-    $('#videoModal .modal-body video')[0].play()
-})
-
-$('.modal').on("click", function() {
-    setTimeout(function() {
-        if (!$('.modal').hasClass('show')) {
-            $('#videoModal .modal-body video')[0].pause()
-        }
-    }, 500)
-});
-
 function marginsMain() {
     $('.bannSection .info-block .item.infoBann').css({
         'padding-left': ($('body').width()-$('.container').width())/2,
@@ -570,3 +558,42 @@ $('.questCatalogSection .title-filter .filter-name input').on('input', function(
         })
     }
 })
+
+$('.checkField').on('click', function(el) {
+    el.preventDefault();
+    checkField(el)
+})
+function checkField(el) {
+    let field = $(el.target).parents('form').find('input, textarea, select')
+
+    for (let i=0;i<field.length;i++) {
+        if ($(field[i]).val()!=null) {
+            if ($(field[i]).val()!='') {
+                if ($(field[i]).attr('type')=='phone' || $(field[i]).hasClass('phone') || $(field[i]).attr('id')=='phone' || $(field[i]).attr('name')=='phone') {
+                    if ($(field[i]).val().length < 17) {
+                        $(field[i]).addClass('error')
+                    } else {
+                        $(field[i]).removeClass('error')
+                    }
+                } else {
+                    $(field[i]).removeClass('error')
+                }
+            } else {
+                $(field[i]).addClass('error')
+            }
+        } else {
+            $(field[i]).addClass('error')
+        }
+        
+    }
+    if ($(el.target).parents('form').find('.error').length==0) {
+        sendAjax(field)
+    } else {
+        alert('Не заполнены поля, либо заполнены некорректно')
+    }
+}
+function sendAjax(dataForm) {
+    let obj = {}
+    console.log(dataForm);
+    alert('Запрос Ajax')
+}
