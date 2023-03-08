@@ -2,7 +2,7 @@
     marginsMain()
     checkScroll()
     heightRates()
-    // prevNextBtnSlide()
+    prevNextBtnSlide()
 })(jQuery);
 
 $(window).resize(function () {
