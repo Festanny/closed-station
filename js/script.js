@@ -2,7 +2,7 @@
     marginsMain()
     checkScroll()
     heightRates()
-    prevNextBtnSlide()
+    // prevNextBtnSlide()
 })(jQuery);
 
 $(window).resize(function () {
@@ -132,6 +132,80 @@ new Swiper(".areaSlider", {
             pagination: false
         },
     }
+});
+const swiperSettings = [
+    {
+        el: ".newFormatSlider1",
+        navigation: {
+            nextEl: ".newFormatSlider1 .swiper-button-next",
+            prevEl: ".newFormatSlider1 .swiper-button-prev",
+        },
+        pagination: {
+            el: ".newFormatSlider1 .swiper-pagination",
+            clickable: true,
+        },
+    },
+    {
+        el: ".newFormatSlider2",
+        navigation: {
+            nextEl: ".swiper-button-next.scripted",
+            prevEl: ".swiper-button-prev.scripted",
+        },
+        pagination: {
+            el: ".newFormatSlider2 .swiper-pagination",
+            clickable: true,
+        },
+    },
+    {
+        el: ".newFormatSlider3",
+        navigation: {
+            nextEl: ".newFormatSlider3 .swiper-button-next",
+            prevEl: ".newFormatSlider3 .swiper-button-prev",
+        },
+        pagination: {
+            el: ".newFormatSlider3 .swiper-pagination",
+            clickable: true,
+        },
+    },
+    {
+        el: ".newFormatSlider4",
+        navigation: {
+            nextEl: ".newFormatSlider4 .swiper-button-next",
+            prevEl: ".newFormatSlider4 .swiper-button-prev",
+        },
+        pagination: {
+            el: ".newFormatSlider4 .swiper-pagination",
+            clickable: true,
+        },
+    },
+];
+swiperSettings.forEach((swiper) => {
+    new Swiper(swiper.el, {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        watchSlidesProgress: true,
+        navigation: swiper.navigation,
+        pagination: swiper.pagination,
+        touchEventsTarget: 'wrapper',
+        breakpoints: {
+            1381: {
+                slidesPerView: 5,
+                pagination: false
+            },
+            1100: {
+                slidesPerView: 4,
+                pagination: false
+            },
+            850: {
+                slidesPerView: 3,
+                pagination: false
+            },
+            600: {
+                slidesPerView: 2,
+                pagination: false
+            },
+        }
+    });
 });
 
 $('.demoVideoSection .play').on('click', function() {
@@ -281,8 +355,7 @@ if ($('#map').length != 0) {
                     let coordsNew = coords.join(", "),
                         str = $(this).attr('data-coordinates'),
                         nums = str.split(',').map(num => parseFloat(num.replace(/(\.\d*?[1-9])0+$/, "$1"))),
-                        newStr = nums.join(', ');                    
-                    // console.log($(this).attr('data-coordinates').toLowerCase());
+                        newStr = nums.join(', ');
                     if (newStr.indexOf(coordsNew) > -1) {
                         $(this).addClass('active')
                     } else {
@@ -300,6 +373,7 @@ if ($('#map').length != 0) {
             var coords = string.split(',');
             coords = coords.map(function(x) { return parseFloat(x); });
             map.setCenter(coords, 17);
+            $('.customControl').css('display', 'none');
         })
     });
 
@@ -404,6 +478,21 @@ function heightRates() {
 }
 
 
+// scroll.on("call", (value, way, obj) => {
+//     if (value === "toggleBackToTop") {
+//         if (way === "enter") {
+//             $('#upbutton').stop(true, false).fadeOut('fast');
+//             $('header').removeClass('fixed')
+//         } else {
+//             if ($('#upbutton').is(':hidden')) {
+//                 $('#upbutton').css({
+//                     opacity: 1
+//                 }).fadeIn('slow').css('display', 'flex');
+//             }
+//             $('header').addClass('fixed')
+//         }
+//     }
+// });
 function checkScroll() {
     marginsMain();
 }
@@ -434,79 +523,7 @@ $('#upbutton').click(function () {
     }
 });
 
-const swiperSettings = [
-    {
-        el: ".newFormatSlider1",
-        navigation: {
-            nextEl: ".newFormatSlider1 .swiper-button-next",
-            prevEl: ".newFormatSlider1 .swiper-button-prev",
-        },
-        pagination: {
-            el: ".newFormatSlider1 .swiper-pagination",
-            clickable: true,
-        },
-    },
-    {
-        el: ".newFormatSlider2",
-        navigation: {
-            nextEl: ".swiper-button-next.scripted",
-            prevEl: ".swiper-button-prev.scripted",
-        },
-        pagination: {
-            el: ".newFormatSlider2 .swiper-pagination",
-            clickable: true,
-        },
-    },
-    {
-        el: ".newFormatSlider3",
-        navigation: {
-            nextEl: ".newFormatSlider3 .swiper-button-next",
-            prevEl: ".newFormatSlider3 .swiper-button-prev",
-        },
-        pagination: {
-            el: ".newFormatSlider3 .swiper-pagination",
-            clickable: true,
-        },
-    },
-    {
-        el: ".newFormatSlider4",
-        navigation: {
-            nextEl: ".newFormatSlider4 .swiper-button-next",
-            prevEl: ".newFormatSlider4 .swiper-button-prev",
-        },
-        pagination: {
-            el: ".newFormatSlider4 .swiper-pagination",
-            clickable: true,
-        },
-    },
-];
-swiperSettings.forEach((swiper) => {
-    new Swiper(swiper.el, {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        watchSlidesProgress: true,
-        navigation: swiper.navigation,
-        pagination: swiper.pagination,
-        breakpoints: {
-            1381: {
-                slidesPerView: 5,
-                pagination: false
-            },
-            1100: {
-                slidesPerView: 4,
-                pagination: false
-            },
-            850: {
-                slidesPerView: 3,
-                pagination: false
-            },
-            600: {
-                slidesPerView: 2,
-                pagination: false
-            },
-        }
-    });
-});
+
 
 for (let i = 1; i <= 4; i++) {
     if ($(`.newFormatSlider${i}`) != 0) {

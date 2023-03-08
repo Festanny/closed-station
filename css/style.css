@@ -40,10 +40,23 @@ body {
     font-family: 'TT Firs Neue', sans-serif;
     font-size: 16px;
 }
+
+/* html.has-scroll-smooth {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+[data-scroll-container] {
+    perspective: 1px;
+}
+[data-scroll-container],
+[data-scroll-section] {
+    transform-style: preserve-3d;
+    will-change: transform;
+} */
+
 /* .contMain {
     perspective: 1px;
 } */
-[data-scroll-container], [data-scroll-section] { transform-style: preserve-3d; will-change: transform; }
 a {
     color: var(--white);
     text-decoration: none;
@@ -65,6 +78,9 @@ section {
     z-index: 300;
     height: 100%;
 }
+/* [data-scroll-section] {
+    opacity: 1!important;
+} */
 strong {
     font-weight: 400;
 }

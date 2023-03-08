@@ -9,10 +9,14 @@
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/0396950dcd.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 </head>
 <body>
     
-    <div class="contMain" data-scroll-container>
+    <div class="locomotive__load-container" data-load-container="1">
+    <div class="locomotive__scroll-container" data-scroll-container="1">
         <header>
             <div class="header container">
                 <div class="logo">
@@ -636,9 +640,9 @@
                     </div>
                 </div>
                 <div class="addressMapBtn">
-                    <div class="item_address" data-coordinates="55.693784, 37.564942">б-р Туполева, 17а</div>
+                    <div class="item_address" data-coordinates="55.758240, 37.668523">б-р Туполева, 17а</div>
                     <div class="item_address" data-coordinates="55.758240, 37.678523">ул. Ворошилова, 55а</div>
-                    <div class="item_address" data-coordinates="55.733838, 37.588100">ул. Дзержинского, 35а</div>
+                    <div class="item_address" data-coordinates="55.758240, 37.658523">ул. Дзержинского, 35а</div>
                 </div>
                 <div id="map" style="height: 600px" data-coord='{{ all_yandex_map_points }}'></div>
             </div>
@@ -732,6 +736,7 @@
             </div>
         </div>
     </footer>
+    </div>
     </div>
 
     <!-- Модальное окно -->
@@ -853,9 +858,11 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=b9f86102-2842-4593-9f48-25f8d16d0de2&lang=ru_RU" type="text/javascript"></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <!-- <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/locomotive-script.js"></script>
     <script src="js/script.js"></script>
 
 </body>
