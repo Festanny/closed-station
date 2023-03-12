@@ -484,12 +484,13 @@ function transformSlide() {
 }
 
 $('.sliderTransformLeft .swiper-button-prev').on('click', function() {
-    let content = $(this).parents('.sliderTransformLeft')
-    console.log(content.find('.swiper-wrapper'));
-    if (content.find('.swiper-slide:first-of-type').hasClass('swiper-slide-active')) {
-        $(content.find('.swiper-wrapper')).css({
-            'transform': `translate3d(${(($('body').width() - $('.container').width()) / 2)}px,0,0)`
-        });
+    if ($('body').width() > 599) {
+        let content = $(this).parents('.sliderTransformLeft')
+        if (content.find('.swiper-slide:first-of-type').hasClass('swiper-slide-active')) {
+            $(content.find('.swiper-wrapper')).css({
+                'transform': `translate3d(${(($('body').width() - $('.container').width()) / 2)}px,0,0)`
+            });
+        }
     }
 })
 
