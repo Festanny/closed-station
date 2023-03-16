@@ -20,7 +20,6 @@ window.onload = function() {
         document.body.classList.remove('loaded_hiding');
     }, 500);
     document.body.style.overflow = 'auto';
-
     transformSlide()
  };
 

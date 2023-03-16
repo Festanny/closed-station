@@ -737,6 +737,9 @@
     footer .footer .info-block > .social {
         display: none;
     }
+    .content .loading {
+        transform: scale(1.5);
+    }
 }
 @media screen and (max-width: 428px) {
     .congrSantaClausBlock .item .desc-main, .ageLimitBlock .item .desc-main,

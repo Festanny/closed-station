@@ -485,11 +485,12 @@ header .submenu {
     transition: .3s ease-in-out;
 }
 header .submenu > ul {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    /* background-color: rgba(0, 0, 0, 0.9); */
+    background-color: rgba(255, 255, 255, 0.85);
 }
 header .submenu li > a {
-    color: var(--white);
+    color: var(--black);
     text-align: left;
     display: block;
     font-weight: 500;
@@ -508,7 +509,8 @@ header nav .submenu li {
     transition: all .3s;
 }
 header nav .submenu li:hover {
-    background-color: rgba(0, 0, 0, 0.5)
+    background-color: var(--pink);
+    color: #fff
 }
 header .submenu a:hover {
     color: var(--dark);
@@ -522,7 +524,10 @@ header nav li:hover a {
     color: var(--teal);
 }
 header nav li:hover .submenu li a {
-    color: var(--white);
+    color: var(--black);
+}
+header nav li:hover .submenu li:hover a {
+    color: #fff;
 }
 header nav li a.c-teal-h.active,
 header nav li:hover a.c-teal-h {
@@ -3796,7 +3801,6 @@ footer .footer .info-block .logo .social {
     padding: 0;
     margin: 0;
     color: var(--teal);
-    font-family: "Oxygen", sans-serif;
     animation: text 3.5s ease both infinite;
     font-size: 12px;
     letter-spacing: 1px;
