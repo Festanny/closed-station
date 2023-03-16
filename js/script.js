@@ -19,7 +19,9 @@ window.onload = function() {
         document.body.classList.add('loaded');
         document.body.classList.remove('loaded_hiding');
     }, 500);
-    document.body.style.overflow = 'auto';
+    if ($('body').width() < 850) {
+        document.body.style.overflow = 'auto';
+    }
     transformSlide()
  };
 
