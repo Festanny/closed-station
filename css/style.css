@@ -3813,10 +3813,12 @@ footer .footer .info-block .logo .social {
     40% {
         letter-spacing: 2px;
         transform: translateX(26px);
+        color: var(--pink);
     }
     80% {
         letter-spacing: 1px;
         transform: translateX(32px);
+        color: var(--pink);
     }
     90% {
         letter-spacing: 2px;
