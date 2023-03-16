@@ -38,6 +38,13 @@ ScrollTrigger.addEventListener('refresh', () => locomotive.update());
 
 ScrollTrigger.refresh();
 
+const stopScrollClasses = ['mapMain', 'swiper-wrapper'];
+const stopScrollElements = document.querySelectorAll(stopScrollClasses.map(className => `.${className}`).join(', '));
+stopScrollElements.forEach(element => {
+    element.addEventListener('mouseenter', () => locomotive.stop());
+    element.addEventListener('mouseleave', () => locomotive.start());
+});
+
 locomotive.on("call", (value, way, obj) => {
     if (value === "toggleBackToTop") {
         if (way === "enter") {
