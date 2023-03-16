@@ -623,14 +623,14 @@ header nav li:hover a.c-red-h {
 }
 .bannSection .info-block .item .img img {
     width: 100%;
-    -webkit-animation-duration:1s;
+    /* -webkit-animation-duration:1s;
     animation-duration:1s;
     -webkit-animation-timing-function:linear;
     animation-timing-function:linear;
     -webkit-animation-name:glitch-anim;
     animation-name:glitch-anim;
     -webkit-animation-direction:alternate;
-    animation-direction:alternate
+    animation-direction:alternate */
 }
 
 @keyframes glitch-anim {
