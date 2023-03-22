@@ -2336,7 +2336,7 @@ footer .footer-2 .info-block .item {
     color: var(--teal);
     margin-top: 10px;
 }
-.moreQuestInfoSection .info-block .item.information > .desc .bg-white {
+.moreQuestInfoSection .info-block .item.information > .desc .bg-white-add {
     color: var(--black);
     font-size: var(--fz20);
     text-transform: uppercase;
@@ -2644,6 +2644,8 @@ footer .footer-2 .info-block .item {
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
 }
 .ratesSection .info-block ul {
     display: flex;
@@ -2718,6 +2720,15 @@ footer .footer-2 .info-block .item {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
+    justify-content: space-between;
+    height: 100%;
+    flex: 1;
+}
+.ratesSection .info-block .item .swiper-slide .info .addt,
+.ratesSection .info-block .item .swiper-slide .info .price-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .ratesSection .info-block .item .swiper-slide .info .addPeople {
     display: flex;

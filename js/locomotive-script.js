@@ -5,6 +5,7 @@ var locomotive = new LocomotiveScroll({
     smooth: true,
     multiplier: 1.0,
     getDirection: true,
+    offset: -250
 })
 
 locomotive.on('scroll', () => {

@@ -592,9 +592,11 @@ function checkField(el) {
         }
         
     }
-    // if ($(rating).find('span.active').length == 0) {
-    //     $(rating)
-    // }
+    if ($(rating).find('span.active').length == 0) {
+        $(rating).addClass('error')
+    } else {
+        $(rating).removeClass('error')
+    }
     if ($(el.target).parents('form').find('.error').length==0) {
         sendAjax(field)
     } else {
