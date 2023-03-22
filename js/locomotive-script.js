@@ -38,7 +38,7 @@ ScrollTrigger.addEventListener('refresh', () => locomotive.update());
 
 ScrollTrigger.refresh();
 
-const stopScrollClasses = ['mapMain', 'swiper-wrapper'];
+const stopScrollClasses = ['mapMain'];
 const stopScrollElements = document.querySelectorAll(stopScrollClasses.map(className => `.${className}`).join(', '));
 stopScrollElements.forEach(element => {
     element.addEventListener('mouseenter', () => locomotive.stop());

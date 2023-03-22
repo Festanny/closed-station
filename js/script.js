@@ -13,6 +13,9 @@ $(window).resize(function () {
     transformSlide()
 });
 
+let img = document.getElementsByTagName('img');
+for(let i in img){img[i].oncontextmenu = function(){return false;}}
+
 window.onload = function() {
     document.body.classList.add('loaded_hiding');
     window.setTimeout(function () {
@@ -566,8 +569,9 @@ $('.checkField').on('click', function(el) {
     checkField(el)
 })
 function checkField(el) {
-    let field = $(el.target).parents('form').find('input, textarea, select')
-
+    let field = $(el.target).parents('form').find('input, textarea, select'),
+        rating = $(el.target).parents('form').find('.rating-mini')
+    
     for (let i=0;i<field.length;i++) {
         if ($(field[i]).val()!=null) {
             if ($(field[i]).val()!='') {
@@ -588,6 +592,9 @@ function checkField(el) {
         }
         
     }
+    // if ($(rating).find('span.active').length == 0) {
+    //     $(rating)
+    // }
     if ($(el.target).parents('form').find('.error').length==0) {
         sendAjax(field)
     } else {
