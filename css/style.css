@@ -3935,3 +3935,6 @@ footer .footer .info-block .logo .social {
         width: 16px;
     }
 }
+select option {
+    color: var(--black)!important;
+}
