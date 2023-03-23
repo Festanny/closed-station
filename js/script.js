@@ -564,7 +564,7 @@ $('.questCatalogSection .title-filter .filter-name input').on('input', function(
     }
 })
 
-$('.checkField').on('click', function(el) {
+$(document).on('click', '.checkField', function (el) {
     el.preventDefault();
     checkField(el)
 })
