@@ -2262,7 +2262,7 @@ footer .footer-2 .info-block .item {
 }
 .moreQuestInfoSection .info-block .item.video-photo .block.gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
     row-gap: 20px;
 }
