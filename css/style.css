@@ -2229,6 +2229,20 @@ footer .footer-2 .info-block .item {
     height: 500px;
     position: relative;
 }
+.moreQuestInfoSection .info-block .item.video-photo .block.vk-video .img {
+    width: 100%;
+    height: 100%;
+}
+.moreQuestInfoSection .info-block .item.video-photo .block.vk-video img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.moreQuestInfoSection .info-block .item.video-photo .block.vk-video .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .moreQuestInfoSection .info-block .item.video-photo .block.vk-video iframe {
     width: 100%!important;
     height: 100%!important;
@@ -3395,6 +3409,15 @@ section.mapSection.lasertagSectionClass {
 .videoReviewSection .info-block .item {
     border: 1px solid var(--pink);
     height: 430px;
+}
+.videoReviewSection .info-block .item .img {
+    width: 100%;
+    height: 100%;
+}
+.videoReviewSection .info-block .item .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .videoReviewSection .info-block .item iframe {
     width: 100%;
